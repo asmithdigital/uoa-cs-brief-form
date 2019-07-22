@@ -266,6 +266,7 @@ function previousStep3() {
 }
 
 function nextStep5() {
+    var test = $('#test').val();
     var opsys = $('input[name=opsys]:checked').val();
     var androidreqsevice = $("#androidreqsevice").val();
     var androidreqfeatures = $("#androidreqfeatures").val();
@@ -297,6 +298,7 @@ function nextStep5() {
         $("#windowsserviceData").html('<strong>Selected Windows Service:</strong> ' + windowsreqsevice);
         $("#windowsreqfeaturesData").html('<strong>Selected Windows Features:</strong> ' + windowsreqfeatures);
     }
+    $("#testData").html('<strong>Test:</strong> ' + test);
     $("#probudgetData").html('<strong>Project Budget:</strong> ' + probudget);
     $("#priorityData").html('<strong>priority:</strong> ' + priority);
     $("#launchdateData").html('<strong>Estimated Launch Date:</strong> ' + launchdate);
