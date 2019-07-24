@@ -102,11 +102,14 @@
           </form>
         </div>
       </div>
+
+      {# Steps form #}
       <div class="row">
         <div class="col-lg-12">
           <form class="QuoteForm" data-toggle="validator" enctype="multipart/form-data" id="QuoteForm" name="QuoteForm" novalidate="true">
             <div class="section-wrap">
               <div class="section" id="section-1">
+                
                 <fieldset>
                   <h3 class="section-title">Step 1 of 5</h3>
                   <div class="progress">
@@ -115,36 +118,45 @@
                     </div>
                   </div>
                   <div class="help-block with-errors mandatory-error"></div>
+                  
                   <h4>Select OS:</h4>
                   <div class="form-group validopsys">
-                    
-                    
-                    <input class="form-control input-sm text-right" id="test" data-cell="A1" data-format="0[.]00">
-                    <input class="form-control input-sm text-right" id="test2" data-cell="A2" data-format="0[.]00">
-                    <input class="form-control input-sm text-right" data-cell="F1" data-format="$ 0,0.00" data-formula="A1*A2"></td>
+
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <input class="form-control input-sm text-right" id="test" data-cell="A1" data-format="0[.]00" placeholder="value 1">
+                      </div>
+                      <div class="col-sm-4">
+                        <input class="form-control input-sm text-right" id="test2" data-cell="A2" data-format="0[.]00" placeholder="value 2">
+                      </div>
+                      <div class="col-sm-4">
+                        <input class="form-control input-sm text-right" id="result" data-cell="F1" data-format="$ 0,0.00" data-formula="A1+A2">
+                      </div>
+                    </div>
+                    <div class="help-block with-errors"></div>
 
 
-                    <ul class="list-unstyled mgs-radio">
+                    <!-- <ul class="list-unstyled mgs-radio">
                       <li>
                         <input id="opsys1" name="opsys" type="radio" value="Android">
                         <label for="opsys1">
-                          <!-- <img src="./Multistep HTML Form - Multi Step Multipurpose HTML Form_files/logo-android.jpg"> -->
+                          <img src="./Multistep HTML Form - Multi Step Multipurpose HTML Form_files/logo-android.jpg">
                         </label>
                       </li>
                       <li>
                         <input id="opsys2" name="opsys" type="radio" value="Apple">
                         <label for="opsys2">
-                          <!-- <img src="./Multistep HTML Form - Multi Step Multipurpose HTML Form_files/logo-apple.jpg"> -->
+                          <img src="./Multistep HTML Form - Multi Step Multipurpose HTML Form_files/logo-apple.jpg">
                         </label>
                       </li>
                       <li>
                         <input id="opsys3" name="opsys" type="radio" value="Windows">
                         <label for="opsys3">
-                          <!-- <img src="./Multistep HTML Form - Multi Step Multipurpose HTML Form_files/logo-windows.jpg"> -->
+                          <img src="./Multistep HTML Form - Multi Step Multipurpose HTML Form_files/logo-windows.jpg">
                         </label>
                       </li>
                     </ul>
-                    <div class="help-block with-errors"></div>
+                    <div class="help-block with-errors"></div> -->
                   </div>
                   <div id="android-services-box" style="display: none;">
                     <h4>Select Android Service:</h4>

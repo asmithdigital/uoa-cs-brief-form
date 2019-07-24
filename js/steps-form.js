@@ -107,55 +107,19 @@ $(function() {
 });
 
 function nextStep2() {
-    var opsys = $('input[name=opsys]:checked').val();
-    var androidreqsevice = $("#androidreqsevice").val();
-    var androidreqfeatures = $("#androidreqfeatures").val();
-    var applereqsevice = $("#applereqsevice").val();
-    var applereqfeatures = $("#applereqfeatures").val();
-    var windowsreqsevice = $("#windowsreqsevice").val();
-    var windowsreqfeatures = $("#windowsreqfeatures").val();
-    if (opsys) $(".validopsys .help-block.with-errors").html('');
+    var testValue = $('#test').val();
+    var testValue2 = $('#test2').val();
+    var resultValue = $('#result').val();
+
+    console.log(testValue);
+    console.log(testValue2);
+    console.log(resultValue);
+
+    if (resultValue) $(".validopsys .help-block.with-errors").html('');
     else
-        $(".validopsys .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select OS</li></ul>');
-    if (opsys == "Android") {
-        var opsysandroidpart = '';
-        if (androidreqsevice) $(".validandroidreqsevice .help-block.with-errors").html('');
-        else
-            $(".validandroidreqsevice .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Android Service</li></ul>');
-        if (androidreqfeatures) $(".validandroidreqfeatures .help-block.with-errors").html('');
-        else
-            $(".validandroidreqfeatures .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Android Features</li></ul>');
-        if (androidreqsevice && androidreqfeatures) {
-            var opsysandroidpart = 1;
-        }
-    } else if (opsys == "Apple") {
-        var opsysapplepart = '';
-        if (applereqsevice) $(".validapplereqsevice .help-block.with-errors").html('');
-        else
-            $(".validapplereqsevice .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Apple Service</li></ul>');
-        if (applereqfeatures) $(".validapplereqfeatures .help-block.with-errors").html('');
-        else
-            $(".validapplereqfeatures .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Apple Features</li></ul>');
-        if (applereqsevice && applereqfeatures) {
-            var opsysapplepart = 1;
-        }
-    } else {
-        var opsyswindowspart = '';
-        if (windowsreqsevice) $(".validwindowsreqsevice .help-block.with-errors").html('');
-        else
-            $(".validwindowsreqsevice .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Windows Service</li></ul>');
-        if (windowsreqfeatures) $(".validwindowsreqfeatures .help-block.with-errors").html('');
-        else
-            $(".validwindowsreqfeatures .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Windows Features</li></ul>');
-        if (windowsreqsevice && windowsreqfeatures) {
-            var opsyswindowspart = 1;
-        }
-    }
-    if (opsys == "Android") var opsysselectfieldpart = opsysandroidpart;
-    else if (opsys == "Apple") var opsysselectfieldpart = opsysapplepart;
-    else
-        var opsysselectfieldpart = opsyswindowspart;
-    if (opsys && opsysselectfieldpart) {
+        $(".validopsys .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value</li></ul>');
+
+    if (resultValue) {
         $("#section-1 .help-block.with-errors").html('');
         $("#section-1").removeClass("open");
         $("#section-1").addClass("slide-left");
@@ -169,6 +133,70 @@ function nextStep2() {
         sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
     }
 }
+
+// function nextStep2() {
+//     var opsys = $('input[name=opsys]:checked').val();
+//     var androidreqsevice = $("#androidreqsevice").val();
+//     var androidreqfeatures = $("#androidreqfeatures").val();
+//     var applereqsevice = $("#applereqsevice").val();
+//     var applereqfeatures = $("#applereqfeatures").val();
+//     var windowsreqsevice = $("#windowsreqsevice").val();
+//     var windowsreqfeatures = $("#windowsreqfeatures").val();
+//     if (opsys) $(".validopsys .help-block.with-errors").html('');
+//     else
+//         $(".validopsys .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select OS</li></ul>');
+//     if (opsys == "Android") {
+//         var opsysandroidpart = '';
+//         if (androidreqsevice) $(".validandroidreqsevice .help-block.with-errors").html('');
+//         else
+//             $(".validandroidreqsevice .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Android Service</li></ul>');
+//         if (androidreqfeatures) $(".validandroidreqfeatures .help-block.with-errors").html('');
+//         else
+//             $(".validandroidreqfeatures .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Android Features</li></ul>');
+//         if (androidreqsevice && androidreqfeatures) {
+//             var opsysandroidpart = 1;
+//         }
+//     } else if (opsys == "Apple") {
+//         var opsysapplepart = '';
+//         if (applereqsevice) $(".validapplereqsevice .help-block.with-errors").html('');
+//         else
+//             $(".validapplereqsevice .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Apple Service</li></ul>');
+//         if (applereqfeatures) $(".validapplereqfeatures .help-block.with-errors").html('');
+//         else
+//             $(".validapplereqfeatures .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Apple Features</li></ul>');
+//         if (applereqsevice && applereqfeatures) {
+//             var opsysapplepart = 1;
+//         }
+//     } else {
+//         var opsyswindowspart = '';
+//         if (windowsreqsevice) $(".validwindowsreqsevice .help-block.with-errors").html('');
+//         else
+//             $(".validwindowsreqsevice .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Windows Service</li></ul>');
+//         if (windowsreqfeatures) $(".validwindowsreqfeatures .help-block.with-errors").html('');
+//         else
+//             $(".validwindowsreqfeatures .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select Windows Features</li></ul>');
+//         if (windowsreqsevice && windowsreqfeatures) {
+//             var opsyswindowspart = 1;
+//         }
+//     }
+//     if (opsys == "Android") var opsysselectfieldpart = opsysandroidpart;
+//     else if (opsys == "Apple") var opsysselectfieldpart = opsysapplepart;
+//     else
+//         var opsysselectfieldpart = opsyswindowspart;
+//     if (opsys && opsysselectfieldpart) {
+//         $("#section-1 .help-block.with-errors").html('');
+//         $("#section-1").removeClass("open");
+//         $("#section-1").addClass("slide-left");
+//         $("#section-2").removeClass("slide-right");
+//         $("#section-2").addClass("open");
+//     } else {
+//         $("#section-1 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
+//         $('html,body').animate({
+//             scrollTop: $("#section-1 .help-block.with-errors.mandatory-error").offset().top - 80
+//         }, 'slow');
+//         sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
+//     }
+// }
 
 function previousStep1() {
     $("#section-1").removeClass("slide-left");
