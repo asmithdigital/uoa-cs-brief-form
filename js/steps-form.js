@@ -109,11 +109,7 @@ $(function() {
 function nextStep2() {
     var testValue = $('#test1').val();
     var testValue2 = $('#test2').val();
-    var resultValue = $('#result').val();
-
-    console.log(testValue);
-    console.log(testValue2);
-    console.log(resultValue);
+    // var resultValue = $('#result').val();
 
     if (testValue) $(".validtest1 .help-block.with-errors").html('');
     else
@@ -297,7 +293,7 @@ function previousStep3() {
 }
 
 function nextStep5() {
-    var test = $('#test').val();
+    var test = $('#result').val();
     var opsys = $('input[name=opsys]:checked').val();
     var androidreqsevice = $("#androidreqsevice").val();
     var androidreqfeatures = $("#androidreqfeatures").val();
