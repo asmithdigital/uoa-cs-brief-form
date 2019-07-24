@@ -107,7 +107,7 @@ $(function() {
 });
 
 function nextStep2() {
-    var testValue = $('#test').val();
+    var testValue = $('#test1').val();
     var testValue2 = $('#test2').val();
     var resultValue = $('#result').val();
 
@@ -115,11 +115,14 @@ function nextStep2() {
     console.log(testValue2);
     console.log(resultValue);
 
-    if (resultValue) $(".validopsys .help-block.with-errors").html('');
+    if (testValue) $(".validtest1 .help-block.with-errors").html('');
     else
-        $(".validopsys .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value</li></ul>');
+        $(".validtest1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
+    if (testValue2) $(".validtest2 .help-block.with-errors").html('');
+    else
+        $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
 
-    if (resultValue) {
+    if (testValue && testValue2) {
         $("#section-1 .help-block.with-errors").html('');
         $("#section-1").removeClass("open");
         $("#section-1").addClass("slide-left");

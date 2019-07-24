@@ -119,25 +119,20 @@
                   </div>
                   <div class="help-block with-errors mandatory-error"></div>
                   
-                  <h4>Select OS:</h4>
-                  <div class="form-group validopsys">
+                  <h4>Enter value:</h4>
+                  <div class="form-group validtest1">
 
                     <div class="row">
                       <div class="col-sm-4">
-                        <input class="form-control" id="test" data-cell="A1" data-format="0[.]00" placeholder="value 1">
-                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
+                        <p>Some words</p>
                       </div>
                       <div class="col-sm-4">
-                        <input class="form-control" id="test2" data-cell="A2" data-format="0[.]00" placeholder="value 2">
+                        <input class="form-control" id="test1" data-cell="A1" data-format="0[.]00" placeholder="value 2">
                         <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
                       </div>
-                      <div class="col-sm-4">
-                        <input class="form-control" id="result" data-cell="F1" data-format="$ 0,0.00" data-formula="A1+A2">
-                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
-                      </div>
+                      
                     </div>
                     <div class="help-block with-errors"></div>
-
 
                     <!-- <ul class="list-unstyled mgs-radio">
                       <li>
@@ -161,7 +156,34 @@
                     </ul>
                     <div class="help-block with-errors"></div> -->
                   </div>
-                  <div id="android-services-box" style="display: none;">
+
+                  <h4>Enter value:</h4>
+                  <div class="form-group validtest2">
+
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <p>Some words</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <input class="form-control" id="test2" data-cell="A2" data-format="0[.]00" placeholder="value 2">
+                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
+                      </div>
+                      
+                    </div>
+                    <div class="help-block with-errors"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <h4>Subtotal:</h4>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <input class="form-control" id="result" data-cell="F1" data-format="0[.]00" data-formula="A1+A2" disabled>
+                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <div id="android-services-box" style="display: none;">
                     <h4>Select Android Service:</h4>
                     <div class="form-group validandroidreqsevice">
                       <select class="form-control" id="androidreqsevice" name="androidreqsevice">
@@ -247,7 +269,8 @@
                       </div>
                       <div class="help-block with-errors"></div>
                     </div>
-                  </div>
+                  </div> -->
+
                   <div class="form-group quoteForm-step-1">
                     <button class="btn btn-default disable" type="button">Are You ready!</button>
                     <button class="btn btn-custom pull-right" type="button" onclick="nextStep2()">Next <span class="fa fa-arrow-right"></span>
