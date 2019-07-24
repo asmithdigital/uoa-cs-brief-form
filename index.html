@@ -12,6 +12,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-datepicker3.min.css" rel="stylesheet">
     <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/sweetalert.css" rel="stylesheet">
     <link href="css/multi-step-html-form.css" rel="stylesheet">
   </head>
@@ -22,7 +23,7 @@
     
 
     <div id="page-wrapper" class="container">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-12">
           <form class="form-horizontal" id="dynamic">
             <table class="table">
@@ -101,9 +102,8 @@
             </table>
           </form>
         </div>
-      </div>
+      </div> -->
 
-      {# Steps form #}
       <div class="row">
         <div class="col-lg-12">
           <form class="QuoteForm" data-toggle="validator" enctype="multipart/form-data" id="QuoteForm" name="QuoteForm" novalidate="true">
@@ -124,13 +124,16 @@
 
                     <div class="row">
                       <div class="col-sm-4">
-                        <input class="form-control input-sm text-right" id="test" data-cell="A1" data-format="0[.]00" placeholder="value 1">
+                        <input class="form-control" id="test" data-cell="A1" data-format="0[.]00" placeholder="value 1">
+                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
                       </div>
                       <div class="col-sm-4">
-                        <input class="form-control input-sm text-right" id="test2" data-cell="A2" data-format="0[.]00" placeholder="value 2">
+                        <input class="form-control" id="test2" data-cell="A2" data-format="0[.]00" placeholder="value 2">
+                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
                       </div>
                       <div class="col-sm-4">
-                        <input class="form-control input-sm text-right" id="result" data-cell="F1" data-format="$ 0,0.00" data-formula="A1+A2">
+                        <input class="form-control" id="result" data-cell="F1" data-format="$ 0,0.00" data-formula="A1+A2">
+                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
                       </div>
                     </div>
                     <div class="help-block with-errors"></div>
