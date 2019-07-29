@@ -120,12 +120,12 @@ function previousStep1() {
 function nextStep3() {
     var testValue = $('#test1').val();
     var testValue2 = $('#test2').val();
-    if (testValue && testValue2) $(".validtest1 .help-block.with-errors").html('');
+    if (testValue) $(".validtest1 .help-block.with-errors").html('');
     else
-        $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
+        $(".validtest1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
     if (testValue2) $(".validtest2 .help-block.with-errors").html('');
     else
-        $(".validtest3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+        $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
     if (testValue && testValue2) {
 
         $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
