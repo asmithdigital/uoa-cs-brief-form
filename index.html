@@ -46,67 +46,31 @@
 
               <div class="section" id="section-1">
                 <fieldset>
-                  
+
                   <div class="help-block with-errors mandatory-error"></div>
                   <h4>Select OS:</h4>
                   <div class="form-group validopsys">
                     <ul class="list-unstyled mgs-radi4o">
                       <li>
-                        <input id="opsys1" name="opsys" type="checkbox" value="Android">
+                        <input id="opsys1" name="opsys" type="radio" value="Android">
                         <label for="opsys1">Opt 1</label>
                       </li>
                       <li>
-                        <input id="opsys2" name="opsys" type="checkbox" value="Apple">
+                        <input id="opsys2" name="opsys" type="radio" value="Apple">
                         <label for="opsys2">Opt 2</label>
-                      </li>
-                      <li>
-                        <input id="opsys3" name="opsys" type="checkbox" value="Windows">
-                        <label for="opsys3">Opt 3</label>
                       </li>
                     </ul>
                     <div class="help-block with-errors"></div>
                   </div>
 
-                  <div id="android-services-box" style="display: none;">
-                    <h4>Select Android Service:</h4>
-                    <div class="form-group validandroidreqsevice">
-                      Option 1
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <h4>Select Android Features:</h4>
-                    <div class="form-group validandroidreqfeatures">
-                      Option 1
-                      <div class="help-block with-errors"></div>
-                    </div>
+
+
+                  <div class="form-group quoteForm-step-1-fast" id="stepOneFast" style="display: none;">
+                    <button class="btn btn-custom pull-right" type="button" onclick="nextStep5Fast()">Fast Next <span class="fa fa-arrow-right"></span>
+                    </button>
                   </div>
 
-                  <div id="apple-services-box" style="display: none;">
-                    <h4>Select Apple Service:</h4>
-                    <div class="form-group validapplereqsevice">
-                      Option 2
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <h4>Select Apple Features:</h4>
-                    <div class="form-group validapplereqfeatures">
-                      Option 2
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  
-                  <div id="windows-services-box" style="display: none;">
-                    <h4>Select Windows Service:</h4>
-                    <div class="form-group validwindowsreqsevice">
-                      Option 3
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <h4>Select Windows Features:</h4>
-                    <div class="form-group validwindowsreqfeatures">
-                      Option 3
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-
-                  <div class="form-group quoteForm-step-1">
+                  <div class="form-group quoteForm-step-1" id="stepOne" style="display: none;">
                     <button class="btn btn-custom pull-right" type="button" onclick="nextStep2()">Next <span class="fa fa-arrow-right"></span>
                     </button>
                   </div>
@@ -348,7 +312,12 @@
                       </p>
                       <div class="hidden" id="mgsContactSubmit"></div>
                       <div class="form-group quoteForm-step-5" id="final-step-buttons">
-                        <button class="btn btn-custom" type="button" onclick="previousStep4()"><span class="fa fa-arrow-left"></span> Back</button>
+                        <div id="backto4">
+                          <button class="btn btn-custom" type="button" onclick="previousStep4()"><span class="fa fa-arrow-left"></span> Back 4</button>
+                        </div>
+                        <div id="backto1">
+                            <button class="btn btn-custom" type="button" onclick="previousStep1Fast()"><span class="fa fa-arrow-left"></span> Back 1</button>
+                          </div>
                         <button class="btn btn-custom pull-right disabled" type="submit" id="Submit">Submit</button>
                       </div>
                     </div>

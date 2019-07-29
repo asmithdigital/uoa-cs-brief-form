@@ -86,23 +86,16 @@ function isEmail(email) {
 }
 
 $(function() {
-    $("#android-services-box").css('display', 'none');
-    $("#apple-services-box").css('display', 'none');
-    $("#windows-services-box").css('display', 'none');
+    $("#stepOne").css('display', 'none');
+    $("#stepOneFast").css('display', 'none');
     $("input[name='opsys']").on("click", function() {
         var opsys = $('input[name=opsys]:checked').val();
         if (opsys == "Android") {
-            $("#android-services-box").css('display', 'block');
-            $("#apple-services-box").css('display', 'none');
-            $("#windows-services-box").css('display', 'none');
-        } else if (opsys == "Apple") {
-            $("#apple-services-box").css('display', 'block');
-            $("#android-services-box").css('display', 'none');
-            $("#windows-services-box").css('display', 'none');
+            $("#stepOne").css('display', 'block');
+            $("#stepOneFast").css('display', 'none');
         } else {
-            $("#windows-services-box").css('display', 'block');
-            $("#apple-services-box").css('display', 'none');
-            $("#android-services-box").css('display', 'none');
+            $("#stepOneFast").css('display', 'block');
+            $("#stepOne").css('display', 'none');
         }
     });
 });
@@ -227,6 +220,9 @@ function nextStep5() {
     $("#section-4").addClass("slide-left");
     $("#section-5").removeClass("slide-right");
     $("#section-5").addClass("open");
+
+    $("#backto4").css('display', 'block');
+    $("#backto1").css('display', 'none');
 }
 
 function previousStep4() {
@@ -235,6 +231,27 @@ function previousStep4() {
 
     $("#section-4").removeClass("slide-left");
     $("#section-4").addClass("open");
+    $("#section-5").removeClass("open");
+    $("#section-5").addClass("slide-right");
+}
+
+function nextStep5Fast() {
+    $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');
+    $("#section-1 .help-block.with-errors").html('');
+    $("#section-1").removeClass("open");
+    $("#section-1").addClass("slide-left");
+    $("#section-5").removeClass("slide-right");
+    $("#section-5").addClass("open");
+
+    $("#backto4").css('display', 'none');
+    $("#backto1").css('display', 'block');
+
+}
+
+function previousStep1Fast() {
+    $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
+    $("#section-1").removeClass("slide-left");
+    $("#section-1").addClass("open");
     $("#section-5").removeClass("open");
     $("#section-5").addClass("slide-right");
 }
