@@ -249,7 +249,7 @@ function nextStep5Fast() {
 }
 
 function previousStep1Fast() {
-    $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
+    $("#progress").css('width', "0%").find(".progress-bar-text").html('0% Complete');
     $("#section-1").removeClass("slide-left");
     $("#section-1").addClass("open");
     $("#section-5").removeClass("open");
