@@ -107,6 +107,9 @@ $(function() {
 });
 
 function nextStep2() {
+
+    $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');;
+
     var testValue = $('#test1').val();
     var testValue2 = $('#test2').val();
     // var resultValue = $('#result').val();
@@ -134,6 +137,9 @@ function nextStep2() {
 }
 
 function previousStep1() {
+
+    $("#progress").css('width', "0%").find(".progress-bar-text").html('0% Complete');;
+
     $("#section-1").removeClass("slide-left");
     $("#section-1").addClass("open");
     $("#section-2").removeClass("open");
@@ -141,6 +147,9 @@ function previousStep1() {
 }
 
 function nextStep3() {
+    
+    $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
+
     $("#section-2 .help-block.with-errors.mandatory-error").html('');
     $("#section-2").removeClass("open");
     $("#section-2").addClass("slide-left");
@@ -149,6 +158,9 @@ function nextStep3() {
 }
 
 function previousStep2() {
+
+    $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
+
     $("#section-2").removeClass("slide-left");
     $("#section-2").addClass("open");
     $("#section-3").removeClass("open");
@@ -156,6 +168,9 @@ function previousStep2() {
 }
 
 function nextStep4() {
+
+    $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
+
     $("#section-3 .help-block.with-errors.mandatory-error").html('');
     $("#section-3").removeClass("open");
     $("#section-3").addClass("slide-left");
@@ -164,6 +179,9 @@ function nextStep4() {
 }
 
 function previousStep3() {
+
+    $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
+
     $("#section-3").removeClass("slide-left");
     $("#section-3").addClass("open");
     $("#section-4").removeClass("open");
@@ -171,6 +189,9 @@ function previousStep3() {
 }
 
 function nextStep5() {
+
+    $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');;
+
     var test = $('#result').val();
     var opsys = $('input[name=opsys]:checked').val();
     var androidreqsevice = $("#androidreqsevice").val();
@@ -215,6 +236,9 @@ function nextStep5() {
 }
 
 function previousStep4() {
+
+    $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
+
     $("#section-4").removeClass("slide-left");
     $("#section-4").addClass("open");
     $("#section-5").removeClass("open");
