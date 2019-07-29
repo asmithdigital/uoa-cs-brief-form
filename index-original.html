@@ -22,7 +22,88 @@
     <![endif]-->
     
 
-    <div id="page-wrapper" class="container" style="margin-top: 10rem;">
+    <div id="page-wrapper" class="container">
+      <!-- <div class="row">
+        <div class="col-lg-12">
+          <form class="form-horizontal" id="dynamic">
+            <table class="table">
+              <thead>
+                  <tr>
+                      <td style="width:  5%" class="text-center"><label>No.</label></td>
+                      <td style="width: 45%"><label>Item Name</label></td>
+                      <td style="width: 15%" class="text-center"><label>Price</label></td>
+                      <td style="width:  5%" class="text-center"><label>Qty</label></td>
+                      <td style="width:  5%" class="text-center"><label>% Disc</label></td>
+                      <td style="width: 15%" class="text-center"><label>Total Price</label></td>
+                      <td style="width:  5%" class="text-center"><label>Remove</label></td>
+                  </tr>
+              </thead>
+              <tbody id="itemlist">
+                  <tr>
+                      <td><input class="form-control input-sm text-right" data-cell="A1" data-format="0"></td>
+                      <td><input class="form-control input-sm" data-cell="B1"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="C1" data-format="$ 0,0.00"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="D1" data-format="0[.]00"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="E1" data-format="0,0[.]00 %"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="F1" data-format="$ 0,0.00" data-formula="D1*(C1-(C1*E1))"></td>
+                      <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
+                  </tr>
+                  <tr>
+                      <td><input class="form-control input-sm text-right" data-cell="A2" data-format="0"></td>
+                      <td><input class="form-control input-sm" data-cell="B2"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="C2" data-format="$ 0,0.00"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="D2" data-format="0[.]00"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="E2" data-format="0,0[.]00 %"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="F2" data-format="$ 0,0.00" data-formula="D2*(C2-(C2*E2))"></td>
+                      <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
+                  </tr>
+                  <tr>
+                      <td><input class="form-control input-sm text-right" data-cell="A3" data-format="0"></td>
+                      <td><input class="form-control input-sm" data-cell="B3"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="C3" data-format="$ 0,0.00"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="D3" data-format="0[.]00"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="E3" data-format="0,0[.]00 %"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="F3" data-format="$ 0,0.00" data-formula="D3*(C3-(C3*E3))"></td>
+                      <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
+                  </tr>
+                  <tr>
+                      <td><input class="form-control input-sm text-right" data-cell="A4" data-format="0"></td>
+                      <td><input class="form-control input-sm" data-cell="B4"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="C4" data-format="$ 0,0.00"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="D4" data-format="0[.]00"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="E4" data-format="0,0[.]00 %"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="F4" data-format="$ 0,0.00" data-formula="D4*(C4-(C4*E4))"></td>
+                      <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
+                  </tr>
+                  <tr>
+                      <td><input class="form-control input-sm text-right" data-cell="A5" data-format="0"></td>
+                      <td><input class="form-control input-sm" data-cell="B5"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="C5" data-format="$ 0,0.00"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="D5" data-format="0[.]00"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="E5" data-format="0,0[.]00 %"></td>
+                      <td><input class="form-control input-sm text-right" data-cell="F5" data-format="$ 0,0.00" data-formula="D5*(C5-(C5*E5))"></td>
+                      <td class="text-center"><button class="btn-remove btn btn-sm btn-danger"><i class="fa fa-times fa-fw"></i></button></td>
+                  </tr>
+              </tbody>
+              <tfoot>
+                  <tr style="margin-top:30px">
+                      <td>
+                          <button id="add_item" class="btn btn-sm btn-primary">Add Item</button>
+                      </td>
+                      <td colspan="4" class="text-right">
+                          <label for="total">Total Price - Discount :</label>
+                      </td>
+                      <td class="text-right">
+                          <label data-cell="G1" data-format="$ 0,0.00" data-formula="SUM(F1:F5)"></label>
+                      </td>
+                      <td>&nbsp;</td>
+                  </tr>
+              </tfoot>
+            </table>
+          </form>
+        </div>
+      </div> -->
+
       <div class="row">
         <div class="col-lg-12">
           <form class="QuoteForm" data-toggle="validator" enctype="multipart/form-data" id="QuoteForm" name="QuoteForm" novalidate="true">
@@ -30,6 +111,7 @@
               <div class="section" id="section-1">
                 
                 <fieldset>
+                  <h3 class="section-title">Step 1 of 5</h3>
                   <div class="progress">
                     <div class="progress-bar" style="width:0%">
                       <div class="progress-bar-text">0% Complete</div>
@@ -42,7 +124,7 @@
                   <div class="form-group validtest1">
                     <div class="row">
                       <div class="col-sm-4">
-                        <input class="form-control" id="test1" data-cell="A1" data-format="0[.]00" placeholder="value 1">
+                        <input class="form-control" id="test1" data-cell="A1" data-format="0[.]00" placeholder="value 2">
                         <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
                       </div>
                     </div>
@@ -62,9 +144,11 @@
                   </div>
                   
                   <div class="form-group">
+                    <h4>Subtotal:</h4>
                     <div class="row">
                       <div class="col-sm-4">
-                        <h2><input id="result" data-cell="F1" data-format="0[.]00" data-formula="A1+A2"></h2>
+                        <input class="form-control" id="result" data-cell="F1" data-format="0[.]00" data-formula="A1+A2" disabled>
+                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
                       </div>
                     </div>
 
@@ -99,9 +183,100 @@
                         <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
                       </div>
                     </div>
+
+                    <!-- <div data-formula="GRAPH(F1:F5, ['type=bar', 'label=F1:F5', 'legend=F1:F5'])"></div> -->
                   </div>
 
+                  <!-- <div id="android-services-box" style="display: none;">
+                    <h4>Select Android Service:</h4>
+                    <div class="form-group validandroidreqsevice">
+                      <select class="form-control" id="androidreqsevice" name="androidreqsevice">
+                        <option value="">--- Select a Sevice* ---</option>
+                        <option value="App Devlopment">App Devlopment</option>
+                        <option value="App Design">App Design</option>
+                        <option value="Add-ons">Add-ons</option>
+                        <option value="Game Devlopment">Game Devlopment</option>
+                      </select>
+                      <div class="input-group-icon"><i class="fa fa-cogs"></i>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <h4>Select Android Features:</h4>
+                    <div class="form-group validandroidreqfeatures">
+                      <select class="form-control" id="androidreqfeatures" name="androidreqfeatures[]" multiple="">
+                        <option value="Features Android1">Features Android1</option>
+                        <option value="Features Android2">Features Android2</option>
+                        <option value="Features Android3">Features Android3</option>
+                        <option value="Features Android4">Features Android4</option>
+                        <option value="Features Android5">Features Android5</option>
+                        <option value="Features Android6">Features Android6</option>
+                      </select>
+                      <div class="input-group-icon"><i class="fa fa-bars"></i>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div id="apple-services-box" style="display: none;">
+                    <h4>Select Apple Service:</h4>
+                    <div class="form-group validapplereqsevice">
+                      <select class="form-control" id="applereqsevice" name="applereqsevice">
+                        <option value="">--- Select a Sevice* ---</option>
+                        <option value="App Devlopment">App Devlopment</option>
+                        <option value="App Design">App Design</option>
+                        <option value="Add-ons">Add-ons</option>
+                        <option value="Game Devlopment">Game Devlopment</option>
+                      </select>
+                      <div class="input-group-icon"><i class="fa fa-cogs"></i>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <h4>Select Apple Features:</h4>
+                    <div class="form-group validapplereqfeatures">
+                      <select class="form-control" id="applereqfeatures" name="applereqfeatures[]" multiple="">
+                        <option value="Features Apple1">Features Apple1</option>
+                        <option value="Features Apple2">Features Apple2</option>
+                        <option value="Features Apple3">Features Apple3</option>
+                        <option value="Features Apple4">Features Apple4</option>
+                        <option value="Features Apple5">Features Apple5</option>
+                        <option value="Features Apple6">Features Apple6</option>
+                      </select>
+                      <div class="input-group-icon"><i class="fa fa-bars"></i>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div id="windows-services-box" style="display: none;">
+                    <h4>Select Windows Service:</h4>
+                    <div class="form-group validwindowsreqsevice">
+                      <select class="form-control" id="windowsreqsevice" name="windowsreqsevice">
+                        <option value="">--- Select a Sevice* ---</option>
+                        <option value="Web Devlopment">Web Devlopment</option>
+                        <option value="Web Design">Web Design</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="e-Commerce">e-Commerce</option>
+                      </select>
+                      <div class="input-group-icon"><i class="fa fa-cogs"></i>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <h4>Select Windows Features:</h4>
+                    <div class="form-group validwindowsreqfeatures">
+                      <select class="form-control" id="windowsreqfeatures" name="windowsreqfeatures[]" multiple="">
+                        <option value="Features 1">Features 1</option>
+                        <option value="Features 2">Features 2</option>
+                        <option value="Features 3">Features 3</option>
+                        <option value="Features 4">Features 4</option>
+                        <option value="Features 5">Features 5</option>
+                        <option value="Features 6">Features 6</option>
+                      </select>
+                      <div class="input-group-icon"><i class="fa fa-bars"></i>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div> -->
+
                   <div class="form-group quoteForm-step-1">
+                    <button class="btn btn-default disable" type="button">Are You ready!</button>
                     <button class="btn btn-custom pull-right" type="button" onclick="nextStep2()">Next <span class="fa fa-arrow-right"></span>
                     </button>
                   </div>
@@ -109,6 +284,7 @@
               </div>
               <div class="section slide-right" id="section-2">
                 <fieldset>
+                  <h3 class="section-title">Step 2 of 5</h3>
                   <div class="progress">
                     <div class="progress-bar" style="width:25%">
                       <div class="progress-bar-text">25% Complete</div>
@@ -116,13 +292,17 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-4">
-                      <h2 data-cell="D2" data-formula="F1" data-format="0[.]00"></h2>
+                      <!-- <input class="form-control" id="result" data-cell="G1" data-format="0[.]00" data-formula="A1+A2" disabled> -->
+                      <label data-cell="D2" data-formula="SUM(A1:A2)" data-format="0[.]00"></label>
+                      <div data-formula="GRAPH(A1:A2, ['type=donut', 'legend=T1:T2'])" style="width:250px; height:250px;"></div>
+                      <div data-formula="GRAPH(A1:A2, ['type=bar', 'label=T1:T2', 'legend=T1:T2'])"></div>
+                      <!-- <div class="input-group-icon"><i class="fa fa-cogs"></i></div> -->
                     </div>
                   </div>
                   <h4>Project Budget:</h4>
                   <div class="help-block with-errors mandatory-error"></div>
                   <div class="form-group validprobudget">
-                    <select class="form-control" id="probudget" name="probudget" data-error="Please Select Budget">
+                    <select class="form-control" id="probudget" name="probudget" data-error="Please Select Budget" required="">
                       <option value="">--- Select Budget* ---</option>
                       <option value="Around $500">Around $500</option>
                       <option value="$500 - $1000">$500 - $1000</option>
@@ -150,7 +330,7 @@
                   </div>
                   <h4>Estimated Launch Date*:</h4>
                   <div class="form-group validlaunchdate" id="estimated-launch-date">
-                    <input id="launchdate" name="launchdate" class="form-control" data-error="Please Select Launch Date" placeholder="dd MM, yyyy">
+                    <input id="launchdate" name="launchdate" class="form-control" data-error="Please Select Launch Date" placeholder="dd MM, yyyy" required="">
                     <div class="input-group-icon"><i class="fa fa-calendar"></i>
                     </div>
                     <div class="help-block with-errors"></div>
@@ -164,6 +344,7 @@
               </div>
               <div class="section slide-right" id="section-3">
                 <fieldset>
+                  <h3 class="section-title">Step 3 of 5</h3>
                   <div class="progress">
                     <div class="progress-bar" style="width:50%">
                       <div class="progress-bar-text">50% Complete</div>
@@ -172,19 +353,19 @@
                   <h4>Provide Your Identity:</h4>
                   <div class="help-block with-errors mandatory-error"></div>
                   <div class="form-group validfname">
-                    <input id="fname" name="fname" class="form-control" data-error="Please enter First Name" placeholder="First Name*" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                    <input id="fname" name="fname" class="form-control" data-error="Please enter First Name" placeholder="First Name*" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
                     <div class="input-group-icon"><i class="fa fa-user"></i>
                     </div>
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group validlname">
-                    <input id="lname" name="lname" class="form-control" data-error="Please enter Last Name" placeholder="Last Name*">
+                    <input id="lname" name="lname" class="form-control" data-error="Please enter Last Name" placeholder="Last Name*" required="">
                     <div class="input-group-icon"><i class="fa fa-user"></i>
                     </div>
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group validgender">
-                    <select class="form-control" id="gender" name="gender" data-error="Please Select Gender">
+                    <select class="form-control" id="gender" name="gender" data-error="Please Select Gender" required="">
                       <option value="">--- Select Your Gender* ---</option>
                       <option value="Male">Male</option>
                       <option value="Femal">Female</option>
@@ -194,19 +375,19 @@
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group validaddress">
-                    <input id="address" name="address" class="form-control" data-error="Please enter address" placeholder="Address*" autocomplete="off">
+                    <input id="address" name="address" class="form-control" data-error="Please enter address" placeholder="Address*" required="" autocomplete="off">
                     <div class="input-group-icon"><i class="fa fa-map-marker"></i>
                     </div>
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group validemail">
-                    <input id="email" name="email" type="email" class="form-control" data-error="Please enter valid email" placeholder="Email*">
+                    <input id="email" name="email" type="email" class="form-control" data-error="Please enter valid email" placeholder="Email*" required="">
                     <div class="input-group-icon"><i class="fa fa-envelope"></i>
                     </div>
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="form-group validphone">
-                    <input id="phone" name="phone" class="form-control" data-error="Please enter valid phone" placeholder="Phone*">
+                    <input id="phone" name="phone" class="form-control" data-error="Please enter valid phone" placeholder="Phone*" required="">
                     <div class="input-group-icon"><i class="fa fa-phone"></i>
                     </div>
                     <div class="help-block with-errors"></div>
@@ -220,6 +401,7 @@
               </div>
               <div class="section slide-right" id="section-4">
                 <fieldset>
+                  <h3 class="section-title">Step 4 of 5</h3>
                   <div class="progress">
                     <div class="progress-bar" style="width:75%">
                       <div class="progress-bar-text">75% Complete</div>
@@ -228,7 +410,7 @@
                   <div class="help-block with-errors mandatory-error"></div>
                   <h4>Provide Requirement Details:</h4>
                   <div class="form-group validreqdetails">
-                    <textarea class="form-control" id="requirementdetails" name="requirementdetails" placeholder="Provide Requirement Details*" rows="3" data-error="Provide Requirement Details"></textarea>
+                    <textarea class="form-control" id="requirementdetails" name="requirementdetails" placeholder="Provide Requirement Details*" rows="3" data-error="Provide Requirement Details" required=""></textarea>
                     <div class="input-group-icon"><i class="fa fa-info-circle"></i>
                     </div>
                     <div class="help-block with-errors"></div>
@@ -262,6 +444,7 @@
               </div>
               <div class="section slide-right review-submit-section" id="section-5">
                 <fieldset>
+                  <h3 class="section-title">Step 5 of 5: Review &amp; Submit</h3>
                   <div class="progress">
                     <div class="progress-bar" style="width:100%">
                       <div class="progress-bar-text">100% Complete</div>
