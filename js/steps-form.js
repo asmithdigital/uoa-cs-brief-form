@@ -120,12 +120,12 @@ function previousStep1() {
 function nextStep3() {
     var testValue = $('#test1').val();
     var testValue2 = $('#test2').val();
-    if (testValue) $(".validtest1 .help-block.with-errors").html('');
+    if (testValue && testValue2) $(".validtest1 .help-block.with-errors").html('');
     else
-        $(".validtest1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
+        $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
     if (testValue2) $(".validtest2 .help-block.with-errors").html('');
     else
-        $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+        $(".validtest3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
     if (testValue && testValue2) {
 
         $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
@@ -136,9 +136,9 @@ function nextStep3() {
         $("#section-3").removeClass("slide-right");
         $("#section-3").addClass("open");
     } else {
-        $("#section-1 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
+        $("#section-2 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
         $('html,body').animate({
-            scrollTop: $("#section-1 .help-block.with-errors.mandatory-error").offset().top - 80
+            scrollTop: $("#section-2 .help-block.with-errors.mandatory-error").offset().top - 80
         }, 'slow');
         sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
     } 
