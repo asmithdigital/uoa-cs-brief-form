@@ -107,33 +107,30 @@ $(function() {
 });
 
 function nextStep2() {
+    // var testValue = $('#test1').val();
+    // var testValue2 = $('#test2').val();
 
-    $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');;
+    // if (testValue) $(".validtest1 .help-block.with-errors").html('');
+    // else
+    //     $(".validtest1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
+    // if (testValue2) $(".validtest2 .help-block.with-errors").html('');
+    // else
+    //     $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
 
-    var testValue = $('#test1').val();
-    var testValue2 = $('#test2').val();
-    // var resultValue = $('#result').val();
-
-    if (testValue) $(".validtest1 .help-block.with-errors").html('');
-    else
-        $(".validtest1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
-    if (testValue2) $(".validtest2 .help-block.with-errors").html('');
-    else
-        $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
-
-    if (testValue && testValue2) {
+    // if (testValue && testValue2) {
+        $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
         $("#section-1 .help-block.with-errors").html('');
         $("#section-1").removeClass("open");
         $("#section-1").addClass("slide-left");
         $("#section-2").removeClass("slide-right");
         $("#section-2").addClass("open");
-    } else {
-        $("#section-1 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
-        $('html,body').animate({
-            scrollTop: $("#section-1 .help-block.with-errors.mandatory-error").offset().top - 80
-        }, 'slow');
-        sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
-    }
+    // } else {
+    //     $("#section-1 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
+    //     $('html,body').animate({
+    //         scrollTop: $("#section-1 .help-block.with-errors.mandatory-error").offset().top - 80
+    //     }, 'slow');
+    //     sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
+    // }
 }
 
 function previousStep1() {
@@ -147,14 +144,33 @@ function previousStep1() {
 }
 
 function nextStep3() {
-    
-    $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
 
-    $("#section-2 .help-block.with-errors.mandatory-error").html('');
-    $("#section-2").removeClass("open");
-    $("#section-2").addClass("slide-left");
-    $("#section-3").removeClass("slide-right");
-    $("#section-3").addClass("open");
+    var testValue = $('#test1').val();
+    var testValue2 = $('#test2').val();
+
+    if (testValue) $(".validtest1 .help-block.with-errors").html('');
+    else
+        $(".validtest1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
+    if (testValue2) $(".validtest2 .help-block.with-errors").html('');
+    else
+        $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+
+    if (testValue && testValue2) {
+        $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
+        $("#section-2 .help-block.with-errors.mandatory-error").html('');
+        $("#section-2").removeClass("open");
+        $("#section-2").addClass("slide-left");
+        $("#section-3").removeClass("slide-right");
+        $("#section-3").addClass("open");
+    } else {
+        $("#section-1 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
+        $('html,body').animate({
+            scrollTop: $("#section-1 .help-block.with-errors.mandatory-error").offset().top - 80
+        }, 'slow');
+        sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
+    }
+    
+    
 }
 
 function previousStep2() {

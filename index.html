@@ -27,71 +27,76 @@
         <div class="col-lg-12">
           <form class="QuoteForm" data-toggle="validator" enctype="multipart/form-data" id="QuoteForm" name="QuoteForm" novalidate="true">
             
-                 <!-- Some calcs -->
-                 <p><strong>1 * 2:</strong> <span data-cell="C1" data-format="0[.]00" data-formula="A1*A2"></span> 
-                  <strong>1 / 2:</strong> <span data-cell="C2" data-format="0[.]00" data-formula="A1/A2"></span>
-                  <strong>1 - 2:</strong> <span data-cell="C3" data-format="0[.]00" data-formula="A1-A2"></span>
-                  <strong>1 + 2 * 6:</strong> <span data-cell="C4" data-format="0[.]00" data-formula="(A1+A2)*6"></span></p>
-                  <!-- / Some calcs -->
+            <!-- Some calcs -->
+            <p><strong>1 * 2:</strong> <span data-cell="C1" data-format="0[.]00" data-formula="A1*A2"></span> 
+            <strong>1 / 2:</strong> <span data-cell="C2" data-format="0[.]00" data-formula="A1/A2"></span>
+            <strong>1 - 2:</strong> <span data-cell="C3" data-format="0[.]00" data-formula="A1-A2"></span>
+            <strong>1 + 2 * 6:</strong> <span data-cell="C4" data-format="0[.]00" data-formula="(A1+A2)*6"></span></p>
+            <!-- / Some calcs -->
 
+            <!-- Progress bar -->
             <div class="progress">
               <div class="progress-bar" id="progress"" style="width:0%">
                 <div class="progress-bar-text">0% Complete</div>
               </div>
             </div>
+            <!-- / Progress bar -->
             
             <div class="section-wrap">
+
               <div class="section" id="section-1">
-                
                 <fieldset>
-
-                  <div class="help-block with-errors mandatory-error"></div>
-                  
-                  <h4 data-cell="T1">Enter value 1:</h4>
-                  <p>Some words</p>
-                  <div class="form-group validtest1">
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <input class="form-control" id="test1" data-cell="A1" data-format="0[.]00" placeholder="value 1">
-                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
-                      </div>
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <h4 data-cell="T2">Enter value 2:</h4>
-                  <p>Some words</p>
-                  <div class="form-group validtest2">
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <input class="form-control" id="test2" data-cell="A2" data-format="0[.]00" placeholder="value 2">
-                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
-                      </div>                      
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h2><input id="result" data-cell="F1" data-format="0[.]00" data-formula="A1+A2"></h2>
-                      </div>
-                    </div>
-                  </div>
-
+                  <p>Hello</p>
                   <div class="form-group quoteForm-step-1">
                     <button class="btn btn-custom pull-right" type="button" onclick="nextStep2()">Next <span class="fa fa-arrow-right"></span>
                     </button>
                   </div>
                 </fieldset>
               </div>
+
               <div class="section slide-right" id="section-2">
                 <fieldset>
+                  <div class="help-block with-errors mandatory-error"></div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h4 data-cell="T1">Enter value 1:</h4>
+                      <p>Some words</p>
+                      <div class="form-group validtest1">
+                        <input class="form-control" id="test1" data-cell="A1" data-format="0[.]00" placeholder="value 1">
+                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <h4 data-cell="T2">Enter value 2:</h4>
+                      <p>Some words</p>
+                      <div class="form-group validtest2">
+                        <input class="form-control" id="test2" data-cell="A2" data-format="0[.]00" placeholder="value 2">
+                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
+                        <div class="help-block with-errors"></div>
+                      </div>                      
+                    </div>
+                  </div>
+
+                  <input id="result" class="hidden" data-cell="F1" data-format="0[.]00" data-formula="A1+A2">
+                  
+                  
                   <div class="row">
                     <div class="col-sm-4">
                       <h2 data-cell="D2" data-formula="F1" data-format="0[.]00"></h2>
                     </div>
                   </div>
+
+                  <div class="form-group quoteForm-step-2">
+                    <button class="btn btn-custom" type="button" onclick="previousStep1()"><span class="fa fa-arrow-left"></span> Back</button>
+                    <button class="btn btn-custom pull-right" type="button" onclick="nextStep3()">Next <span class="fa fa-arrow-right"></span>
+                    </button>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="section slide-right" id="section-3">
+                <fieldset>
+
                   <h4>Project Budget:</h4>
                   <div class="help-block with-errors mandatory-error"></div>
                   <div class="form-group validprobudget">
@@ -128,15 +133,9 @@
                     </div>
                     <div class="help-block with-errors"></div>
                   </div>
-                  <div class="form-group quoteForm-step-2">
-                    <button class="btn btn-custom" type="button" onclick="previousStep1()"><span class="fa fa-arrow-left"></span> Back</button>
-                    <button class="btn btn-custom pull-right" type="button" onclick="nextStep3()">Next <span class="fa fa-arrow-right"></span>
-                    </button>
-                  </div>
                 </fieldset>
-              </div>
-              <div class="section slide-right" id="section-3">
                 <fieldset>
+
                   <h4>Provide Your Identity:</h4>
                   <div class="help-block with-errors mandatory-error"></div>
                   <div class="form-group validfname">
