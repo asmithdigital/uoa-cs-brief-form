@@ -84,6 +84,7 @@ function isEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
 }
+
 $(function() {
     $("#android-services-box").css('display', 'none');
     $("#apple-services-box").css('display', 'none');
@@ -107,36 +108,16 @@ $(function() {
 });
 
 function nextStep2() {
-    // var testValue = $('#test1').val();
-    // var testValue2 = $('#test2').val();
-
-    // if (testValue) $(".validtest1 .help-block.with-errors").html('');
-    // else
-    //     $(".validtest1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
-    // if (testValue2) $(".validtest2 .help-block.with-errors").html('');
-    // else
-    //     $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
-
-    // if (testValue && testValue2) {
-        $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
-        $("#section-1 .help-block.with-errors").html('');
-        $("#section-1").removeClass("open");
-        $("#section-1").addClass("slide-left");
-        $("#section-2").removeClass("slide-right");
-        $("#section-2").addClass("open");
-    // } else {
-    //     $("#section-1 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
-    //     $('html,body').animate({
-    //         scrollTop: $("#section-1 .help-block.with-errors.mandatory-error").offset().top - 80
-    //     }, 'slow');
-    //     sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
-    // }
+    $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
+    $("#section-1 .help-block.with-errors").html('');
+    $("#section-1").removeClass("open");
+    $("#section-1").addClass("slide-left");
+    $("#section-2").removeClass("slide-right");
+    $("#section-2").addClass("open");
 }
 
 function previousStep1() {
-
     $("#progress").css('width', "0%").find(".progress-bar-text").html('0% Complete');;
-
     $("#section-1").removeClass("slide-left");
     $("#section-1").addClass("open");
     $("#section-2").removeClass("open");
@@ -144,19 +125,18 @@ function previousStep1() {
 }
 
 function nextStep3() {
-
     var testValue = $('#test1').val();
     var testValue2 = $('#test2').val();
-
     if (testValue) $(".validtest1 .help-block.with-errors").html('');
     else
         $(".validtest1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
     if (testValue2) $(".validtest2 .help-block.with-errors").html('');
     else
         $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
-
     if (testValue && testValue2) {
+
         $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
+
         $("#section-2 .help-block.with-errors.mandatory-error").html('');
         $("#section-2").removeClass("open");
         $("#section-2").addClass("slide-left");
@@ -168,9 +148,7 @@ function nextStep3() {
             scrollTop: $("#section-1 .help-block.with-errors.mandatory-error").offset().top - 80
         }, 'slow');
         sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
-    }
-    
-    
+    } 
 }
 
 function previousStep2() {

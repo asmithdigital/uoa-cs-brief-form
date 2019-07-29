@@ -46,11 +46,126 @@
 
               <div class="section" id="section-1">
                 <fieldset>
-                  <p>Hello</p>
+                  
+                  <div class="help-block with-errors mandatory-error"></div>
+                  <h4>Select OS:</h4>
+                  <div class="form-group validopsys">
+                    <ul class="list-unstyled mgs-radio">
+                      <li>
+                        <input id="opsys1" name="opsys" type="radio" value="Android">
+                        <label for="opsys1">
+                          <img src="./Multistep HTML Form - Multi Step Multipurpose HTML Form_files/logo-android.jpg">
+                        </label>
+                      </li>
+                      <li>
+                        <input id="opsys2" name="opsys" type="radio" value="Apple">
+                        <label for="opsys2">
+                          <img src="./Multistep HTML Form - Multi Step Multipurpose HTML Form_files/logo-apple.jpg">
+                        </label>
+                      </li>
+                      <li>
+                        <input id="opsys3" name="opsys" type="radio" value="Windows">
+                        <label for="opsys3">
+                          <img src="./Multistep HTML Form - Multi Step Multipurpose HTML Form_files/logo-windows.jpg">
+                        </label>
+                      </li>
+                    </ul>
+                    <div class="help-block with-errors"></div>
+                  </div>
+
+                  <div id="android-services-box" style="display: none;">
+                      <h4>Select Android Service:</h4>
+                      <div class="form-group validandroidreqsevice">
+                        <select class="form-control" id="androidreqsevice" name="androidreqsevice">
+                          <option value="">--- Select a Sevice* ---</option>
+                          <option value="App Devlopment">App Devlopment</option>
+                          <option value="App Design">App Design</option>
+                          <option value="Add-ons">Add-ons</option>
+                          <option value="Game Devlopment">Game Devlopment</option>
+                        </select>
+                        <div class="input-group-icon"><i class="fa fa-cogs"></i>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <h4>Select Android Features:</h4>
+                      <div class="form-group validandroidreqfeatures">
+                        <select class="form-control" id="androidreqfeatures" name="androidreqfeatures[]" multiple="">
+                          <option value="Features Android1">Features Android1</option>
+                          <option value="Features Android2">Features Android2</option>
+                          <option value="Features Android3">Features Android3</option>
+                          <option value="Features Android4">Features Android4</option>
+                          <option value="Features Android5">Features Android5</option>
+                          <option value="Features Android6">Features Android6</option>
+                        </select>
+                        <div class="input-group-icon"><i class="fa fa-bars"></i>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                  </div>
+                  <div id="apple-services-box" style="display: none;">
+                    <h4>Select Apple Service:</h4>
+                    <div class="form-group validapplereqsevice">
+                      <select class="form-control" id="applereqsevice" name="applereqsevice">
+                        <option value="">--- Select a Sevice* ---</option>
+                        <option value="App Devlopment">App Devlopment</option>
+                        <option value="App Design">App Design</option>
+                        <option value="Add-ons">Add-ons</option>
+                        <option value="Game Devlopment">Game Devlopment</option>
+                      </select>
+                      <div class="input-group-icon"><i class="fa fa-cogs"></i>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <h4>Select Apple Features:</h4>
+                    <div class="form-group validapplereqfeatures">
+                      <select class="form-control" id="applereqfeatures" name="applereqfeatures[]" multiple="">
+                        <option value="Features Apple1">Features Apple1</option>
+                        <option value="Features Apple2">Features Apple2</option>
+                        <option value="Features Apple3">Features Apple3</option>
+                        <option value="Features Apple4">Features Apple4</option>
+                        <option value="Features Apple5">Features Apple5</option>
+                        <option value="Features Apple6">Features Apple6</option>
+                      </select>
+                      <div class="input-group-icon"><i class="fa fa-bars"></i>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div id="windows-services-box" style="display: none;">
+                    <h4>Select Windows Service:</h4>
+                    <div class="form-group validwindowsreqsevice">
+                      <select class="form-control" id="windowsreqsevice" name="windowsreqsevice">
+                        <option value="">--- Select a Sevice* ---</option>
+                        <option value="Web Devlopment">Web Devlopment</option>
+                        <option value="Web Design">Web Design</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="e-Commerce">e-Commerce</option>
+                      </select>
+                      <div class="input-group-icon"><i class="fa fa-cogs"></i>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <h4>Select Windows Features:</h4>
+                    <div class="form-group validwindowsreqfeatures">
+                      <select class="form-control" id="windowsreqfeatures" name="windowsreqfeatures[]" multiple="">
+                        <option value="Features 1">Features 1</option>
+                        <option value="Features 2">Features 2</option>
+                        <option value="Features 3">Features 3</option>
+                        <option value="Features 4">Features 4</option>
+                        <option value="Features 5">Features 5</option>
+                        <option value="Features 6">Features 6</option>
+                      </select>
+                      <div class="input-group-icon"><i class="fa fa-bars"></i>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+
                   <div class="form-group quoteForm-step-1">
                     <button class="btn btn-custom pull-right" type="button" onclick="nextStep2()">Next <span class="fa fa-arrow-right"></span>
                     </button>
                   </div>
+
                 </fieldset>
               </div>
 
