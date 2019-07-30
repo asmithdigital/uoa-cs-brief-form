@@ -142,8 +142,10 @@
                 </fieldset>
               </div>
               <div class="section slide-right" id="section-3">
+                <div class="help-block with-errors mandatory-error"></div>
                 <h2>Section 2</h2>
-                <div class="row">
+                <fieldset>
+                  <div class="row">
                     <div class="col-sm-3">
                       <h4>Enter value 1:</h4>
                       <p>Some words</p>
@@ -213,14 +215,14 @@
                     </div>
                   </div>
                   <div class="row">
-                      <div class="col-sm-3">
-                        <h4>TOTAL of Totals:</h4>
-                        <div class="form-group">
-                          <input id="testTotalofTTotal" class="" data-cell="E1" data-format="0[.]00" data-formula="SUM(D1:D2)">
-                        </div>
+                    <div class="col-sm-3">
+                      <h4>TOTAL of Totals:</h4>
+                      <div class="form-group">
+                        <input id="testTotalofTTotal" class="" data-cell="E1" data-format="0[.]00" data-formula="SUM(D1:D2)">
                       </div>
                     </div>
-
+                  </div>
+                </fieldset>
                 <div class="form-group quoteForm-step-3">
                   <button class="btn btn-custom" type="button" onclick="previousStep2()"><span class="fa fa-arrow-left"></span> Back</button>
                   <button class="btn btn-custom pull-right" type="button" onclick="nextStep4()" id="nextStepFour">Next <span class="fa fa-arrow-right"></span>

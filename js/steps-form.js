@@ -155,12 +155,32 @@ function previousStep2() {
 }
 
 function nextStep4() {
-    $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
-    $("#section-3 .help-block.with-errors.mandatory-error").html('');
-    $("#section-3").removeClass("open");
-    $("#section-3").addClass("slide-left");
-    $("#section-4").removeClass("slide-right");
-    $("#section-4").addClass("open");
+    var testValue4 = $('#test3').val();
+    var testValue5 = $('#test4').val();
+    var testValue6 = $('input[name=second]:checked').val();
+    if (testValue4) $(".validtest4 .help-block.with-errors").html('');
+    else
+        $(".validtest4 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
+    if (testValue5) $(".validtest5 .help-block.with-errors").html('');
+    else
+        $(".validtest5 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+    if (testValue6) $(".validtest6 .help-block.with-errors").html('');
+    else
+        $(".validtest6 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+    if (testValue4 && testValue5 && testValue6) {
+        $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
+        $("#section-3 .help-block.with-errors.mandatory-error").html('');
+        $("#section-3").removeClass("open");
+        $("#section-3").addClass("slide-left");
+        $("#section-4").removeClass("slide-right");
+        $("#section-4").addClass("open");
+    } else {
+        $("#section-3 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
+        $('html,body').animate({
+            scrollTop: $("#section-3 .help-block.with-errors.mandatory-error").offset().top - 80
+        }, 'slow');
+        sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
+    } 
 }
 
 function previousStep3() {
@@ -220,8 +240,8 @@ function nextStep5() {
     $("#section-5").addClass("open");
 
     // Hide fast scroll track button
-    $("#backto4").css('display', 'block');
-    $("#backto1").css('display', 'none');
+    $(".backto4").css('display', 'block');
+    $(".backto1").css('display', 'none');
 }
 
 function previousStep4() {
