@@ -67,9 +67,11 @@
 
 .help-block {
   color: #ce0606;
-  margin: 0;
+  /* margin: 0;
   position: absolute;
-  bottom: -2.5rem;
+  bottom: -3rem; */
+  width: 100%;
+  font-size: .9rem;
 }
 
 .validagree .help-block.with-errors {
@@ -83,22 +85,22 @@
   position: relative;
 }
 
-.form-group .help-block ul li {
+/* .form-group .help-block ul li {
   background-color: #ce0606;
   color: rgba(255, 255, 255, 0.99);
-  padding: 1px 5px;
+  padding: 3px 10px;
   border-radius: 2px;
   top: 5px;
   position: relative;
-  max-height: 24px;
-}
+  /* max-height: 24px; */
+} */
 
 .form-group .help-block ul li::after {
   content: "";
   position: absolute;
   height: 0;
   width: 0;
-  right: 50%;
+  left: 10%;
   top: -9px;
   border: 5px solid transparent;
   border-bottom: 5px solid #ce0606;
