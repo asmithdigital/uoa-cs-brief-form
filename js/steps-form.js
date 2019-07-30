@@ -103,6 +103,8 @@ $(function() {
 function nextStep2() {
     $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
     $('.mdc-linear-progress__primary-bar').css({'transform': 'scaleX(.25)'});
+    $('.mdc-linear-progress__buffer').css({'transform': 'scaleX(.5)'});
+    $('.mdc-linear-progress').find(".progress-bar-text").html('25%').css('left', '25%');
     $("#section-1 .help-block.with-errors").html('');
     $("#section-1").removeClass("open");
     $("#section-1").addClass("slide-left");
