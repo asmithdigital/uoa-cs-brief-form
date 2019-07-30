@@ -175,7 +175,7 @@ function nextStep5() {
 
     $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');;
 
-    var testTotal1 = $('#testTotal1').val();
+    var testTotalofTTotal = $('#testTotalofTTotal').val();
     var opsys = $('input[name=opsys]:checked').val();
     var androidreqsevice = $("#androidreqsevice").val();
     var androidreqfeatures = $("#androidreqfeatures").val();
@@ -198,7 +198,7 @@ function nextStep5() {
     var preferedcontact = $('input[name=preferedcontact]:checked').val();
 
     //  Print data to summary
-    $("#testData1").html('<strong>Test Total 1:</strong> ' + testTotal1);
+    $("#testData1").html('<strong>Test Total 1:</strong> ' + testTotalofTTotal);
     $("#probudgetData").html('<strong>Project Budget:</strong> ' + probudget);
     $("#priorityData").html('<strong>priority:</strong> ' + priority);
     $("#launchdateData").html('<strong>Estimated Launch Date:</strong> ' + launchdate);

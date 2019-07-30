@@ -64,8 +64,8 @@
               <div class="section slide-right" id="section-2">
                 <fieldset>
                   <div class="help-block with-errors mandatory-error"></div>
+                  <h2>Section 1</h2>
                   <div class="row">
-
                     <div class="col-sm-3">
                       <h4>Enter value 1:</h4>
                       <p>Some words</p>
@@ -79,7 +79,6 @@
                         </div>
                       </div>
                     </div>
-
                     <div class="col-sm-3">
                       <h4>Enter value 2:</h4>
                       <p>Some words</p>
@@ -93,18 +92,15 @@
                         </div>                      
                       </div>
                     </div>
-
                   </div>
-
                   <div class="row">
                     <div class="col-sm-3">
                       <h4>Subtotal:</h4>
                       <div class="form-group">
-                        <input class="form-control" data-cell="D1" data-format="0[.]00" data-formula="SUM(A1:A2)">
+                        <input class="form-control" data-cell="C1" data-format="0[.]00" data-formula="SUM(A1:A2)">
                       </div>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col-sm-3 form-group validtest3">
                       <div class="form-check form-check-inline">
@@ -122,26 +118,22 @@
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col-sm-3">
                       <h4>Subtotal:</h4>
                       <div class="form-group">
-                        <input class="" data-cell="D2" data-format="0[.]00" data-formula="SUM(B1:B3)">
+                        <input class="" data-cell="C2" data-format="0[.]00" data-formula="SUM(B1:B3)">
                       </div>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col-sm-3">
                       <h4>TOTAL:</h4>
                       <div class="form-group">
-                        <input id="testTotal1" class="" data-cell="E1" data-format="0[.]00" data-formula="SUM(D1:D2)">
+                        <input id="testTotal1" class="" data-cell="D1" data-format="0[.]00" data-formula="SUM(C1:C2)">
                       </div>
                     </div>
                   </div>
-                  
-
                   <div class="form-group quoteForm-step-2">
                     <button class="btn btn-custom" type="button" onclick="previousStep1()"><span class="fa fa-arrow-left"></span> Back</button>
                     <button class="btn btn-custom pull-right" type="button" onclick="nextStep3()">Next <span class="fa fa-arrow-right"></span>
@@ -150,6 +142,92 @@
                 </fieldset>
               </div>
               <div class="section slide-right" id="section-3">
+                <h2>Section 2</h2>
+                <div class="row">
+                    <div class="col-sm-3">
+                      <h4>Enter value 1:</h4>
+                      <p>Some words</p>
+                      <div class="form-group">
+                        <div class="input-group validtest4">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
+                          </div>
+                          <input type="number" id="test3" class="form-control" data-cell="A3" data-format="0[.]00" placeholder="value 1" required=""">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <h4>Enter value 2:</h4>
+                      <p>Some words</p>
+                      <div class="form-group">
+                        <div class="input-group validtest5">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
+                            </div>
+                            <input type="number" id="test4" class="form-control" data-cell="A4" data-format="0[.]00" placeholder="value 2" required=""">
+                            <div class="help-block with-errors"></div>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h4>Subtotal:</h4>
+                      <div class="form-group">
+                        <input class="form-control" data-cell="C3" data-format="0[.]00" data-formula="SUM(A3:A4)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3 form-group validtest6">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="first4" name="second" value="0" data-cell="B4">
+                        <label class="form-check-label" for="first4">0</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="first5" name="second" value="10" data-cell="B5">
+                        <label class="form-check-label" for="first5">10</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="first6" name="second" value="100" data-cell="B6">
+                        <label class="form-check-label" for="first6">100</label>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h4>Subtotal:</h4>
+                      <div class="form-group">
+                        <input class="" data-cell="C4" data-format="0[.]00" data-formula="SUM(B4:B6)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h4>TOTAL:</h4>
+                      <div class="form-group">
+                        <input id="testTotal2" class="" data-cell="D2" data-format="0[.]00" data-formula="SUM(C3:C4)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-3">
+                        <h4>TOTAL of Totals:</h4>
+                        <div class="form-group">
+                          <input id="testTotalofTTotal" class="" data-cell="E1" data-format="0[.]00" data-formula="SUM(D1:D2)">
+                        </div>
+                      </div>
+                    </div>
+
+                <div class="form-group quoteForm-step-3">
+                  <button class="btn btn-custom" type="button" onclick="previousStep2()"><span class="fa fa-arrow-left"></span> Back</button>
+                  <button class="btn btn-custom pull-right" type="button" onclick="nextStep4()" id="nextStepFour">Next <span class="fa fa-arrow-right"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="section slide-right" id="section-4">
                 <fieldset>
 
                   <h4>Project Budget:</h4>
@@ -233,14 +311,8 @@
                     </div>
                     <div class="help-block with-errors"></div>
                   </div>
-                  <div class="form-group quoteForm-step-3">
-                    <button class="btn btn-custom" type="button" onclick="previousStep2()"><span class="fa fa-arrow-left"></span> Back</button>
-                    <button class="btn btn-custom pull-right" type="button" onclick="nextStep4()" id="nextStepFour">Next <span class="fa fa-arrow-right"></span>
-                    </button>
-                  </div>
+                  
                 </fieldset>
-              </div>
-              <div class="section slide-right" id="section-4">
                 <fieldset>
                   <div class="help-block with-errors mandatory-error"></div>
                   <h4>Provide Requirement Details:</h4>
