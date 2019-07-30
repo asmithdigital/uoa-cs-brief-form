@@ -83,31 +83,69 @@
                   <div class="help-block with-errors mandatory-error"></div>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h4 data-cell="T1">Enter value 1:</h4>
+                      <h4>Enter value 1:</h4>
                       <p>Some words</p>
                       <div class="form-group validtest1">
-                        <input class="form-control" id="test1" data-cell="A1" data-format="0[.]00" placeholder="value 1">
+                        <input class="form-control" data-cell="A1" data-format="0[.]00" placeholder="value 1">
                         <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-sm-3">
-                      <h4 data-cell="T2">Enter value 2:</h4>
+                      <h4>Enter value 2:</h4>
                       <p>Some words</p>
                       <div class="form-group validtest2">
-                        <input class="form-control" id="test2" data-cell="A2" data-format="0[.]00" placeholder="value 2">
+                        <input class="form-control" data-cell="A2" data-format="0[.]00" placeholder="value 2">
                         <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
                         <div class="help-block with-errors"></div>
                       </div>                      
                     </div>
                   </div>
 
-                  <input id="result" class="hidden" data-cell="F1" data-format="0[.]00" data-formula="A1+A2">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h4>Subtotal:</h4>
+                      <div class="form-group">
+                        <input class="" data-cell="D1" data-format="0[.]00" data-formula="SUM(A1:A2)">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label class="radio-inline">
+                        <input name="first" data-cell="B1" type="radio" value="0">Low</label>
+                      <label class="radio-inline">
+                        <input name="first" data-cell="B2" type="radio" value="10">Medium</label>
+                      <label class="radio-inline">
+                        <input name="first" data-cell="B3" type="radio" value="100">Argent</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h4>Subtotal:</h4>
+                      <div class="form-group">
+                        <input class="" data-cell="D2" data-format="0[.]00" data-formula="SUM(B1:B3)">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h4>TOTAL:</h4>
+                      <div class="form-group">
+                        <input class="" data-cell="E1" data-format="0[.]00" data-formula="SUM(D1:D2)">
+                      </div>
+                    </div>
+                  </div>
                   
                   
                   <div class="row">
                     <div class="col-sm-4">
-                      <h2 data-cell="D2" data-formula="F1" data-format="0[.]00"></h2>
+                      <!-- <h2 data-cell="D2" data-formula="F1" data-format="0[.]00"></h2> -->
+                      <!-- <h2 data-cell="D2" data-formula="G1" data-format="0[.]00"></h2> -->
                     </div>
                   </div>
 
