@@ -237,6 +237,12 @@ function nextStep5Fast() {
     $("#section-1 .help-block.with-errors").html('');
     $("#section-1").removeClass("open");
     $("#section-1").addClass("slide-left");
+    $("#section-2").removeClass("slide-right");
+    $("#section-2").addClass("slide-left");
+    $("#section-3").removeClass("slide-right");
+    $("#section-3").addClass("slide-left");
+    $("#section-4").removeClass("slide-right");
+    $("#section-4").addClass("slide-left");
     $("#section-5").removeClass("slide-right");
     $("#section-5").addClass("open");
     $(".backto4").css('display', 'none');
@@ -247,6 +253,12 @@ function previousStep1Fast() {
     $("#progress").css('width', "0%").find(".progress-bar-text").html('0% Complete');
     $("#section-1").removeClass("slide-left");
     $("#section-1").addClass("open");
+    $("#section-2").removeClass("slide-left");
+    $("#section-2").addClass("slide-right");
+    $("#section-3").removeClass("slide-left");
+    $("#section-3").addClass("slide-right");
+    $("#section-4").removeClass("slide-left");
+    $("#section-4").addClass("slide-right");
     $("#section-5").removeClass("open");
     $("#section-5").addClass("slide-right");
 }
