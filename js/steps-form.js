@@ -10,7 +10,7 @@ document.addEventListener("touchstart", function() {}, false);
         $("#firstDigit").html('<input name="mathfirstnum" id="mathfirstnum" class="form-control" type="text" value="' + randNumber_1 + '" readonly>');
         $("#secondDigit").html('<input name="mathsecondnum" id="mathsecondnum" class="form-control" type="text" value="' + randNumber_2 + '" readonly>');
     }
-    $('#estimated-launch-date input').datepicker({
+    $('#launchdate').datepicker({
         format: "dd MM, yyyy",
         startDate: "0d",
         todayBtn: "linked",
@@ -101,13 +101,7 @@ $(function() {
 });
 
 function nextStep2() {
-
-    $('.mdc-linear-progress__primary-bar').css({'transform': 'scaleX(.25)'});
-    $('.mdc-linear-progress__buffer').css({'transform': 'scaleX(.5)'});
-    $('.mdc-linear-progress').find(".progress-bar-text").html('25%').css('left', '25%');
-    
     $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
-
     $("#section-1 .help-block.with-errors").html('');
     $("#section-1").removeClass("open");
     $("#section-1").addClass("slide-left");
@@ -137,9 +131,7 @@ function nextStep3() {
     else
         $(".validtest3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
     if (testValue1 && testValue2 && testValue3) {
-
         $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');
-
         $("#section-2 .help-block.with-errors.mandatory-error").html('');
         $("#section-2").removeClass("open");
         $("#section-2").addClass("slide-left");
@@ -155,9 +147,7 @@ function nextStep3() {
 }
 
 function previousStep2() {
-
     $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
-
     $("#section-2").removeClass("slide-left");
     $("#section-2").addClass("open");
     $("#section-3").removeClass("open");
@@ -165,9 +155,7 @@ function previousStep2() {
 }
 
 function nextStep4() {
-
     $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
-
     $("#section-3 .help-block.with-errors.mandatory-error").html('');
     $("#section-3").removeClass("open");
     $("#section-3").addClass("slide-left");
@@ -176,9 +164,7 @@ function nextStep4() {
 }
 
 function previousStep3() {
-
     $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
-
     $("#section-3").removeClass("slide-left");
     $("#section-3").addClass("open");
     $("#section-4").removeClass("open");
@@ -211,6 +197,7 @@ function nextStep5() {
     var additionalinfo = $("#additionalinfo").val();
     var preferedcontact = $('input[name=preferedcontact]:checked').val();
 
+    //  Print data to summary
     $("#testData1").html('<strong>Test Total 1:</strong> ' + testTotal1);
     $("#probudgetData").html('<strong>Project Budget:</strong> ' + probudget);
     $("#priorityData").html('<strong>priority:</strong> ' + priority);
@@ -224,21 +211,21 @@ function nextStep5() {
     $("#requirementdetailsData").html('<strong>Requirement Details:</strong> ' + requirementdetails);
     $("#additionalinfoData").html('<strong>Additional Info:</strong> ' + additionalinfo);
     $("#preferedcontactData").html('<strong>Prefered Contact Method:</strong> ' + preferedcontact);
-
+    
+    // Scroll
     $("#section-4 .help-block.with-errors.mandatory-error").html('');
     $("#section-4").removeClass("open");
     $("#section-4").addClass("slide-left");
     $("#section-5").removeClass("slide-right");
     $("#section-5").addClass("open");
 
+    // Hide fast scroll track button
     $("#backto4").css('display', 'block');
     $("#backto1").css('display', 'none');
 }
 
 function previousStep4() {
-
     $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
-
     $("#section-4").removeClass("slide-left");
     $("#section-4").addClass("open");
     $("#section-5").removeClass("open");
@@ -252,10 +239,8 @@ function nextStep5Fast() {
     $("#section-1").addClass("slide-left");
     $("#section-5").removeClass("slide-right");
     $("#section-5").addClass("open");
-
     $("#backto4").css('display', 'none');
     $("#backto1").css('display', 'block');
-
 }
 
 function previousStep1Fast() {
