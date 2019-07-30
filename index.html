@@ -9,10 +9,10 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/bootstrap-datepicker3.min.css" rel="stylesheet">
-    
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -20,6 +20,7 @@
     <link href="css/multi-step-html-form.css" rel="stylesheet">
   </head>
   <body>
+    
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -29,31 +30,10 @@
       <div class="row">
         <div class="col-lg-12">
           <form class="QuoteForm" data-toggle="validator" enctype="multipart/form-data" id="QuoteForm" name="QuoteForm" novalidate="true">
-            
-            <!-- Some calcs -->
-            <p><strong>1 * 2:</strong> <span data-cell="C1" data-format="0[.]00" data-formula="A1*A2"></span> 
-            <strong>1 / 2:</strong> <span data-cell="C2" data-format="0[.]00" data-formula="A1/A2"></span>
-            <strong>1 - 2:</strong> <span data-cell="C3" data-format="0[.]00" data-formula="A1-A2"></span>
-            <strong>1 + 2 * 6:</strong> <span data-cell="C4" data-format="0[.]00" data-formula="(A1+A2)*6"></span></p>
-            <!-- / Some calcs -->
 
             <!-- Progress bar -->
-
-            <div role="progressbar" class="mdc-linear-progress" style="margin: 0 0 50px; overflow: visible">
-                <div class="progress-bar-text" style="left: 0; transition: left 250ms 0ms cubic-bezier(0.4, 0, 0.6, 1);">0%</div>
-                <div class="mdc-linear-progress__buffering-dots"></div>
-                <div class="mdc-linear-progress__buffer"></div>
-                <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
-                  <span class="mdc-linear-progress__bar-inner"></span>
-                </div>
-                <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
-                  <span class="mdc-linear-progress__bar-inner"></span>
-                </div>
-              </div>
-
-
             <div class="progress">
-              <div class="progress-bar" id="progress"" style="width:0%">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress"" style="width:0%">
                 <div class="progress-bar-text">0% Complete</div>
               </div>
             </div>
@@ -63,37 +43,26 @@
 
               <div class="section" id="section-1">
                 <fieldset>
-
-                    <!-- <span class="foo-button mdc-button mdc-button--raised">Button</span> -->
-
                   <div class="help-block with-errors mandatory-error"></div>
                   <h4>Select OS:</h4>
-                  <div class="form-group validopsys">
-                    <ul class="list-unstyled mgs-radi4o">
-                      <li>
-                        <input id="opsys1" name="opsys" type="radio" value="Android">
-                        <label for="opsys1">Opt 1</label>
-                      </li>
-                      <li>
-                        <input id="opsys2" name="opsys" type="radio" value="Apple">
-                        <label for="opsys2">Opt 2</label>
-                      </li>
-                    </ul>
-                    <div class="help-block with-errors"></div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" id="preoption1" name="preoptions" type="checkbox" required>
+                      <label class="form-check-label" for="preoption1">Pre option 1</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="preoption2" name="preoptions" type="checkbox">
+                      <label class="form-check-label" for="preoption2">Pre option 2</label>
+                    </div>
                   </div>
-
-
-
                   <div class="form-group quoteForm-step-1-fast" id="stepOneFast" style="display: none;">
-                    <button class="pull-right foo-button mdc-button mdc-button--raised" type="button" onclick="nextStep5Fast()">Fast Next <span class="fa fa-arrow-right"></span>
+                    <button class="btn pull-right btn-custom" type="button" onclick="nextStep5Fast()">Fast Next <span class="fa fa-arrow-right"></span>
                     </button>
                   </div>
-
                   <div class="form-group quoteForm-step-1" id="stepOne" style="display: none;">
-                    <button class="pull-right foo-button mdc-button mdc-button--raised" type="button" onclick="nextStep2()">Next <span class="fa fa-arrow-right"></span>
+                    <button class="btn pull-right btn-custom" type="button" onclick="nextStep2()">Next <span class="fa fa-arrow-right"></span>
                     </button>
                   </div>
-
                 </fieldset>
               </div>
 
@@ -101,15 +70,19 @@
                 <fieldset>
                   <div class="help-block with-errors mandatory-error"></div>
                   <div class="row">
+
                     <div class="col-sm-3">
                       <h4>Enter value 1:</h4>
                       <p>Some words</p>
-                      <div class="form-group validtest1">
+                      <div class="input-group validtest1">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa fa-cogs"></i></span>
+                        </div>
                         <input id="test1" class="form-control" data-cell="A1" data-format="0[.]00" placeholder="value 1">
-                        <div class="input-group-icon"><i class="fa fa-cogs"></i></div>
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
+
                     <div class="col-sm-3">
                       <h4>Enter value 2:</h4>
                       <p>Some words</p>
@@ -119,6 +92,7 @@
                         <div class="help-block with-errors"></div>
                       </div>                      
                     </div>
+                    
                   </div>
 
                   <div class="row">
@@ -132,12 +106,18 @@
 
                   <div class="row">
                     <div class="col-sm-3 form-group validtest3">
-                      <label class="radio-inline">
-                        <input name="first" data-cell="B1" type="radio" value="0">Low</label>
-                      <label class="radio-inline">
-                        <input name="first" data-cell="B2" type="radio" value="10">Medium</label>
-                      <label class="radio-inline">
-                        <input name="first" data-cell="B3" type="radio" value="100">Argent</label>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="first1" name="first" value="0" data-cell="B1">
+                        <label class="form-check-label" for="first1">0</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="first2" name="first" value="10" data-cell="B2">
+                        <label class="form-check-label" for="first2">10</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="first3" name="first" value="100" data-cell="B3">
+                        <label class="form-check-label" for="first3">100</label>
+                      </div>
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -383,7 +363,9 @@
 
 
     <script src="js/jquery-calx-sample-2.2.8.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script src="js/bootstrap.js" type="text/javascript"></script> -->
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
     <script src="js/validator.min.js"></script>
@@ -392,14 +374,8 @@
 
     <script src="js/steps-form.js" type="text/javascript"></script>
 
-    <script>
-      // $('#dynamic').calx();
+    <script>    
       $('#QuoteForm').calx();
-
-      mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
-      mdc.linearProgress.MDCLinearProgress.attachTo(document.querySelector('.mdc-linear-progress'));
-      // var linearProgress = new MDCLinearProgress(document.querySelector('.mdc-linear-progress'));
-
     </script>
 
   </body>

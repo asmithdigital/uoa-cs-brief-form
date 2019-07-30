@@ -88,9 +88,9 @@ function isEmail(email) {
 $(function() {
     $("#stepOne").css('display', 'none');
     $("#stepOneFast").css('display', 'none');
-    $("input[name='opsys']").on("click", function() {
-        var opsys = $('input[name=opsys]:checked').val();
-        if (opsys == "Android") {
+    $("input[name='preoptions']").on("click", function() {
+        var opsys = $('input[name=preoptions]:checked').val();
+        if (opsys) {
             $("#stepOne").css('display', 'block');
             $("#stepOneFast").css('display', 'none');
         } else {
@@ -101,10 +101,13 @@ $(function() {
 });
 
 function nextStep2() {
-    $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
+
     $('.mdc-linear-progress__primary-bar').css({'transform': 'scaleX(.25)'});
     $('.mdc-linear-progress__buffer').css({'transform': 'scaleX(.5)'});
     $('.mdc-linear-progress').find(".progress-bar-text").html('25%').css('left', '25%');
+    
+    $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
+
     $("#section-1 .help-block.with-errors").html('');
     $("#section-1").removeClass("open");
     $("#section-1").addClass("slide-left");
