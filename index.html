@@ -50,7 +50,7 @@
                       <label class="form-check-label" for="preoption3"><strong>Do you select this thing?</strong><br>Capicola chicken cupim, pig ribeye tongue picanha pancetta. Ground round pastrami shank turkey chuck capicola kielbasa tongue chicken biltong rump short loin beef ribs meatball. Capicola pork belly ham rump cupim filet mignon kevin beef ribs tongue fatback alcatra. Ham leberkas short ribs boudin porchetta turducken hamburger. </label>
                     </div>
                   </div>
-                  <div class="form-group quoteForm-step-1-fast" id="stepOneFast" style="display: none;">
+                  <div class="form-group quoteForm-step-1-fast" id="stepOneFast">
                     <button class="btn pull-right btn-custom" type="button" onclick="nextStep5Fast()">Fast Next <span class="fa fa-arrow-right"></span>
                     </button>
                   </div>
@@ -279,46 +279,62 @@
               </div>
               <div class="section slide-right review-submit-section" id="section-5">
                 <fieldset>
-                  <h4>Your Inputed Data Summery:</h4>
-                  <div class="row">
-                    <div class="col-sm-12 col-md-6 column">
-                      <h5>Section One</h5>
-                      <div class="section-info-box">
-                        <p id="testData1"></p>
-                        <p id="osData"></p>
-                        <p id="androidserviceData"></p>
-                        <p id="androidreqfeaturesData"></p>
-                        <p id="appleserviceData"></p>
-                        <p id="applereqfeaturesData"></p>
-                        <p id="windowsserviceData"></p>
-                        <p id="windowsreqfeaturesData"></p>
-                      </div>
-                      <h5>Section Two</h5>
-                      <div class="section-info-box">
-                        <p id="probudgetData"></p>
-                        <p id="priorityData"></p>
-                        <p id="launchdateData"></p>
+                    <div class="backto1">
+                      <div class="col-sm-12 col-md-6">
+                        <h4>You didnt select a thing</h4>
+                        <p>When you dont select a thing, you go straight to this screen</p>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 column">
-                      <h5>Section Three</h5>
-                      <div class="section-info-box">
-                        <p id="firstNameData"></p>
-                        <p id="lastNameData"></p>
-                        <p id="genderData"></p>
-                        <p id="addressData"></p>
-                        <p id="emailaddressData"></p>
-                        <p id="phoneData"></p>
+                  <div class="backto4">
+                    <h4>Your Inputed Data Summery:</h4>
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <h5>Section One</h5>
+                        <div class="section-info-box">
+                          <p id="testData1"></p>
+                          <p id="osData"></p>
+                          <p id="androidserviceData"></p>
+                          <p id="androidreqfeaturesData"></p>
+                          <p id="appleserviceData"></p>
+                          <p id="applereqfeaturesData"></p>
+                          <p id="windowsserviceData"></p>
+                          <p id="windowsreqfeaturesData"></p>
+                        </div>
+                        <h5>Section Two</h5>
+                        <div class="section-info-box">
+                          <p id="probudgetData"></p>
+                          <p id="priorityData"></p>
+                          <p id="launchdateData"></p>
+                        </div>
                       </div>
-                      <h5>Section Four</h5>
-                      <div class="section-info-box">
-                        <p id="requirementdetailsData"></p>
-                        <p id="additionalinfoData"></p>
-                        <p id="preferedcontactData"></p>
+                      <div class="col-sm-12 col-md-6">
+                        <h5>Section Three</h5>
+                        <div class="section-info-box">
+                          <p id="firstNameData"></p>
+                          <p id="lastNameData"></p>
+                          <p id="genderData"></p>
+                          <p id="addressData"></p>
+                          <p id="emailaddressData"></p>
+                          <p id="phoneData"></p>
+                        </div>
+                        <h5>Section Four</h5>
+                        <div class="section-info-box">
+                          <p id="requirementdetailsData"></p>
+                          <p id="additionalinfoData"></p>
+                          <p id="preferedcontactData"></p>
+                        </div>
                       </div>
                     </div>
+                  </div>
                     <div class="col-sm-12">
-                      <div><strong>Would you like to provide requirements details as Attachment?</strong>
+                      <p><strong>Would you like to provide requirements details as Attachment?</strong></p>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                        </div>
                       </div>
                       <div class="form-group attachmentFile">
                         <label class="input-group-btn"><span class="btn">Browse… <input id="userfile" name="userfile" type="file"></span>
@@ -343,10 +359,10 @@
                       </p>
                       <div class="hidden" id="mgsContactSubmit"></div>
                       <div class="form-group quoteForm-step-5" id="final-step-buttons">
-                        <div id="backto4">
+                        <div class="backto4">
                           <button class="btn btn-custom" type="button" onclick="previousStep4()"><span class="fa fa-arrow-left"></span> Back 4</button>
                         </div>
-                        <div id="backto1">
+                        <div class="backto1">
                             <button class="btn btn-custom" type="button" onclick="previousStep1Fast()"><span class="fa fa-arrow-left"></span> Back 1</button>
                           </div>
                         <button class="btn btn-custom pull-right disabled" type="submit" id="Submit">Submit</button>

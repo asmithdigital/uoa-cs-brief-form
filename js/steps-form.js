@@ -87,7 +87,7 @@ function isEmail(email) {
 
 $(function() {
     $("#stepOne").css('display', 'none');
-    $("#stepOneFast").css('display', 'none');
+    // $("#stepOneFast").css('display', 'none');
     $("input[name='preoptions']").on("click", function() {
         var opsys = $('input[name=preoptions]:checked').val();
         if (opsys) {
@@ -239,8 +239,8 @@ function nextStep5Fast() {
     $("#section-1").addClass("slide-left");
     $("#section-5").removeClass("slide-right");
     $("#section-5").addClass("open");
-    $("#backto4").css('display', 'none');
-    $("#backto1").css('display', 'block');
+    $(".backto4").css('display', 'none');
+    $(".backto1").css('display', 'block');
 }
 
 function previousStep1Fast() {
