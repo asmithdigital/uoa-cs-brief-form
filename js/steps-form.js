@@ -102,6 +102,7 @@ $(function() {
 
 function nextStep2() {
     $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
+    $('.mdc-linear-progress__primary-bar').css({'transform': 'scaleX(.25)'});
     $("#section-1 .help-block.with-errors").html('');
     $("#section-1").removeClass("open");
     $("#section-1").addClass("slide-left");
@@ -132,7 +133,7 @@ function nextStep3() {
         $(".validtest3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
     if (testValue1 && testValue2 && testValue3) {
 
-        $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
+        $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');
 
         $("#section-2 .help-block.with-errors.mandatory-error").html('');
         $("#section-2").removeClass("open");
@@ -183,7 +184,7 @@ function nextStep5() {
 
     $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');;
 
-    var test = $('#result').val();
+    var testTotal1 = $('#testTotal1').val();
     var opsys = $('input[name=opsys]:checked').val();
     var androidreqsevice = $("#androidreqsevice").val();
     var androidreqfeatures = $("#androidreqfeatures").val();
@@ -205,7 +206,7 @@ function nextStep5() {
     var additionalinfo = $("#additionalinfo").val();
     var preferedcontact = $('input[name=preferedcontact]:checked').val();
 
-    $("#testData").html('<strong>Test:</strong> ' + test);
+    $("#testData1").html('<strong>Test Total 1:</strong> ' + testTotal1);
     $("#probudgetData").html('<strong>Project Budget:</strong> ' + probudget);
     $("#priorityData").html('<strong>priority:</strong> ' + priority);
     $("#launchdateData").html('<strong>Estimated Launch Date:</strong> ' + launchdate);
