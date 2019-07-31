@@ -10,21 +10,26 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/bubbly-dashboard/1-0/css/style.default.css" id="theme-stylesheet"> -->
+    
+    <link href="https://wrappixel.com/demos/admin-templates/admin-wrap/main/css/style.css" rel="stylesheet">
+    
     <link href="css/bootstrap-datepicker3.min.css" rel="stylesheet">
+
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/sweetalert.css" rel="stylesheet">
     <link href="css/multi-step-html-form.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="card-no-border">
 
-    <div id="page-wrapper" class="container" style="margin-top: 5rem;">
+    <div id="page-wrapper" class="container" style="padding-top: 5rem;">
       <div class="row">
         <div class="col-lg-12">
           <form class="" data-toggle="validator" enctype="multipart/form-data" id="QuoteForm" name="QuoteForm" novalidate="true">
 
             <!-- Progress bar -->
             <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress"" style="width:0%">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress" style="width:0%">
                 <div class="progress-bar-text">0% Complete</div>
               </div>
             </div>
@@ -33,475 +38,494 @@
             <div class="section-wrap">
 
               <div class="section" id="section-1">
-                <fieldset>
-                  <div class="help-block with-errors mandatory-error"></div>
-                  <h4>First stage pre-selections:</h4>
-                  
-                  <div class="form-group">
-                    <div class="form-check" style="margin-bottom: 1rem;">
-                      <input class="form-check-input" id="preoption1" name="preoptions" type="checkbox" required>
-                      <label class="form-check-label" for="preoption1"><strong>Do you select this thing?</strong><br>Bacon ipsum dolor amet shoulder pork loin pork belly beef. Tri-tip kevin boudin ground round chicken ham, beef ribs pastrami shoulder buffalo pork loin tail hamburger frankfurter capicola. Venison leberkas swine chicken, pork belly bacon short ribs. Frankfurter kielbasa shank chicken meatloaf. Pork pork belly tri-tip beef biltong. </label>
+                <fieldset>           
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="form-body">
+                            <h2 class="card-title">First stage pre-selections:</h2>
+                            <hr>
+                            <p class="card-subtitle">Lorem ipsum dolor sit amet consectetur.</p>
+                            <div class="form-group">
+                              <div class="form-check" style="margin-bottom: 1rem;">
+                                <input class="form-check-input" id="preoption1" name="preoptions" type="checkbox" required>
+                                <label class="form-check-label" for="preoption1"><strong>Do you select this thing?</strong><br>Bacon ipsum dolor amet shoulder pork loin pork belly beef. Tri-tip kevin boudin ground round chicken ham, beef ribs pastrami shoulder buffalo pork loin tail hamburger frankfurter capicola. Venison leberkas swine chicken, pork belly bacon short ribs. Frankfurter kielbasa shank chicken meatloaf. Pork pork belly tri-tip beef biltong. </label>
+                              </div>
+                              <div class="form-check" style="margin-bottom: 1rem;">
+                                <input class="form-check-input" id="preoption2" name="preoptions" type="checkbox">
+                                <label class="form-check-label" for="preoption2"><strong>Do you select this thing?</strong><br>Capicola chicken cupim, pig ribeye tongue picanha pancetta. Ground round pastrami shank turkey chuck capicola kielbasa tongue chicken biltong rump short loin beef ribs meatball. Capicola pork belly ham rump cupim filet mignon kevin beef ribs tongue fatback alcatra. Ham leberkas short ribs boudin porchetta turducken hamburger. </label>
+                              </div>
+                              <div class="form-check" style="margin-bottom: 1rem;">
+                                <input class="form-check-input" id="preoption3" name="preoptions" type="checkbox">
+                                <label class="form-check-label" for="preoption3"><strong>Do you select this thing?</strong><br>Capicola chicken cupim, pig ribeye tongue picanha pancetta. Ground round pastrami shank turkey chuck capicola kielbasa tongue chicken biltong rump short loin beef ribs meatball. Capicola pork belly ham rump cupim filet mignon kevin beef ribs tongue fatback alcatra. Ham leberkas short ribs boudin porchetta turducken hamburger. </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-actions">
+                            <div class="form-group quoteForm-step-1-fast" id="stepOneFast">
+                              <button class="btn btn-primary pull-right btn-custom" type="button" onclick="nextStep5Fast()">Fast Next <span class="fa fa-arrow-right"></span>
+                              </button>
+                            </div>
+                            <div class="form-group quoteForm-step-1" id="stepOne" style="display: none;">
+                              <button class="btn btn-primary pull-right btn-custom" type="button" onclick="nextStep2()">Next <span class="fa fa-arrow-right"></span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="form-check" style="margin-bottom: 1rem;">
-                      <input class="form-check-input" id="preoption2" name="preoptions" type="checkbox">
-                      <label class="form-check-label" for="preoption2"><strong>Do you select this thing?</strong><br>Capicola chicken cupim, pig ribeye tongue picanha pancetta. Ground round pastrami shank turkey chuck capicola kielbasa tongue chicken biltong rump short loin beef ribs meatball. Capicola pork belly ham rump cupim filet mignon kevin beef ribs tongue fatback alcatra. Ham leberkas short ribs boudin porchetta turducken hamburger. </label>
-                    </div>
-                    <div class="form-check" style="margin-bottom: 1rem;">
-                      <input class="form-check-input" id="preoption3" name="preoptions" type="checkbox">
-                      <label class="form-check-label" for="preoption3"><strong>Do you select this thing?</strong><br>Capicola chicken cupim, pig ribeye tongue picanha pancetta. Ground round pastrami shank turkey chuck capicola kielbasa tongue chicken biltong rump short loin beef ribs meatball. Capicola pork belly ham rump cupim filet mignon kevin beef ribs tongue fatback alcatra. Ham leberkas short ribs boudin porchetta turducken hamburger. </label>
-                    </div>
-                  </div>
-                  <div class="form-group quoteForm-step-1-fast" id="stepOneFast">
-                    <button class="btn pull-right btn-custom" type="button" onclick="nextStep5Fast()">Fast Next <span class="fa fa-arrow-right"></span>
-                    </button>
-                  </div>
-                  <div class="form-group quoteForm-step-1" id="stepOne" style="display: none;">
-                    <button class="btn pull-right btn-custom" type="button" onclick="nextStep2()">Next <span class="fa fa-arrow-right"></span>
-                    </button>
                   </div>
                 </fieldset>
-              </div>
+              </div>  <!-- / Section 1-->
 
               <div class="section slide-right" id="section-2">
                 <fieldset>
-                  <div class="help-block with-errors mandatory-error"></div>
-                  <h2>Section 1</h2>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h4>Enter value 1:</h4>
-                      <p>Some words</p>
-                      <div class="form-group">
-                        <div class="input-group validtest1">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
+                  <div class="card">
+                    <div class="card-header bg-info">
+                      <h4 class="m-b-0 text-white">Section 2</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="help-block with-errors mandatory-error"></div>
+                      <div class="form-body">
+                        <h4 class="card-title">Some values:</h4>
+                        <hr>
+                        <div class="row p-t-20">
+                          <div class="col-sm-6">    
+                            <div class="form-group">
+                              <label class="control-label">Some words</label>
+                              <div class="input-group validtest1">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
+                                </div>
+                                <input type="number" id="test1" class="form-control" data-cell="A1" data-format="0[.]00" placeholder="value 1" required="">
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
                           </div>
-                          <input type="number" id="test1" class="form-control" data-cell="A1" data-format="0[.]00" placeholder="value 1" required=""">
-                          <div class="help-block with-errors"></div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="control-label">Some words</label>
+                              <div class="input-group validtest2">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
+                                  </div>
+                                  <input type="number" id="test2" class="form-control" data-cell="A2" data-format="0[.]00" placeholder="value 2" required="">
+                                  <div class="help-block with-errors"></div>
+                              </div>                      
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <div class="form-group">
+                              <label class="control-label">Subtotal</label>
+                              <input class="form-control" data-cell="C1" data-format="0[.]00" data-formula="SUM(A1:A2)">
+                            </div>
+
+                            <div class="form-group validtest3">
+                              <label class="control-label">Pick one</label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="first1" name="first" value="0" data-cell="B1">
+                                <label class="form-check-label" for="first1">0</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="first2" name="first" value="10" data-cell="B2">
+                                <label class="form-check-label" for="first2">10</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="first3" name="first" value="100" data-cell="B3">
+                                <label class="form-check-label" for="first3">100</label>
+                              </div>
+                              <div class="help-block with-errors"></div>
+                            </div>
+
+                            <label class="control-label">Subtotal:</label>
+                            <div class="form-group">
+                              <input class="form-control" data-cell="C2" data-format="0[.]00" data-formula="SUM(B1:B3)">
+                            </div>
+                            <label class="control-label">TOTAL:</label>
+                            <div class="form-group">
+                              <input id="testTotal1" class="form-control" data-cell="D1" data-format="0[.]00" data-formula="SUM(C1:C2)">
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-sm-3">
-                      <h4>Enter value 2:</h4>
-                      <p>Some words</p>
-                      <div class="form-group">
-                        <div class="input-group validtest2">
-                          <div class="input-group-prepend">
-                              <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
-                            </div>
-                            <input type="number" id="test2" class="form-control" data-cell="A2" data-format="0[.]00" placeholder="value 2" required=""">
-                            <div class="help-block with-errors"></div>
-                        </div>                      
+                      <div class="form-actions quoteForm-step-2">
+                        <button class="btn btn-primary" type="button" onclick="previousStep1()"><span class="fa fa-arrow-left"></span> Back</button>
+                        <button class="btn btn-primary pull-right" type="button" onclick="nextStep3()">Next <span class="fa fa-arrow-right"></span>
+                        </button>
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h4>Subtotal:</h4>
-                      <div class="form-group">
-                        <input class="form-control" data-cell="C1" data-format="0[.]00" data-formula="SUM(A1:A2)">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-3 form-group validtest3">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="first1" name="first" value="0" data-cell="B1">
-                        <label class="form-check-label" for="first1">0</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="first2" name="first" value="10" data-cell="B2">
-                        <label class="form-check-label" for="first2">10</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="first3" name="first" value="100" data-cell="B3">
-                        <label class="form-check-label" for="first3">100</label>
-                      </div>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h4>Subtotal:</h4>
-                      <div class="form-group">
-                        <input class="" data-cell="C2" data-format="0[.]00" data-formula="SUM(B1:B3)">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h4>TOTAL:</h4>
-                      <div class="form-group">
-                        <input id="testTotal1" class="" data-cell="D1" data-format="0[.]00" data-formula="SUM(C1:C2)">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group quoteForm-step-2">
-                    <button class="btn btn-custom" type="button" onclick="previousStep1()"><span class="fa fa-arrow-left"></span> Back</button>
-                    <button class="btn btn-custom pull-right" type="button" onclick="nextStep3()">Next <span class="fa fa-arrow-right"></span>
-                    </button>
                   </div>
                 </fieldset>
-              </div>
+              </div> <!-- / Section 2-->
+
               <div class="section slide-right" id="section-3">
-                <div class="help-block with-errors mandatory-error"></div>
-                <h2>Section 2</h2>
                 <fieldset>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h4>Enter value 1:</h4>
-                      <p>Some words</p>
-                      <div class="form-group">
-                        <div class="input-group validtest4">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
+                  <div class="card">
+                    <div class="card-header bg-info">
+                      <h4 class="m-b-0 text-white">Section 3</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="help-block with-errors mandatory-error"></div>
+                      <div class="form-body">
+                        <h4 class="card-title">Some values:</h4>
+                        <hr>
+                        <div class="row p-t-20">
+                          <div class="col-sm-6">    
+                            <div class="form-group">
+                              <label class="control-label">Some words</label>
+                              <div class="input-group validtest4">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
+                                </div>
+                                <input type="number" id="test3" class="form-control" data-cell="A3" data-format="0[.]00" placeholder="value 1" required="">
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
                           </div>
-                          <input type="number" id="test3" class="form-control" data-cell="A3" data-format="0[.]00" placeholder="value 1" required=""">
-                          <div class="help-block with-errors"></div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="control-label">Some words</label>
+                              <div class="input-group validtest5">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
+                                  </div>
+                                  <input type="number" id="test4" class="form-control" data-cell="A4" data-format="0[.]00" placeholder="value 2" required="">
+                                  <div class="help-block with-errors"></div>
+                              </div>                      
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <div class="form-group">
+                              <label class="control-label">Subtotal</label>
+                              <input class="form-control" data-cell="C3" data-format="0[.]00" data-formula="SUM(A3:A4)">
+                            </div>
+
+                            <div class="form-group validtest6">
+                              <label class="control-label">Pick one</label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="first4" name="second" value="0" data-cell="B4">
+                                <label class="form-check-label" for="first4">0</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="first5" name="second" value="10" data-cell="B5">
+                                <label class="form-check-label" for="first5">10</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="first6" name="second" value="100" data-cell="B6">
+                                <label class="form-check-label" for="first6">100</label>
+                              </div>
+                              <div class="help-block with-errors"></div>
+                            </div>
+
+                            <label class="control-label">Subtotal:</label>
+                            <div class="form-group">
+                              <input class="" data-cell="C4" data-format="0[.]00" data-formula="SUM(B4:B6)">
+                            </div>
+                            
+                            <label class="control-label">TOTAL:</label>
+                            <div class="form-group">
+                              <input id="testTotal2" class="" data-cell="D2" data-format="0[.]00" data-formula="SUM(C3:C4)">
+                            </div>
+
+                            <label class="control-label">Total of TOTALS:</label>
+                            <div class="form-group">
+                              <input id="testTotalofTTotal" class="" data-cell="E1" data-format="0[.]00" data-formula="SUM(D1:D2)">
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-sm-3">
-                      <h4>Enter value 2:</h4>
-                      <p>Some words</p>
-                      <div class="form-group">
-                        <div class="input-group validtest5">
-                          <div class="input-group-prepend">
-                              <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
-                            </div>
-                            <input type="number" id="test4" class="form-control" data-cell="A4" data-format="0[.]00" placeholder="value 2" required=""">
-                            <div class="help-block with-errors"></div>
-                        </div>                      
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h4>Subtotal:</h4>
-                      <div class="form-group">
-                        <input class="form-control" data-cell="C3" data-format="0[.]00" data-formula="SUM(A3:A4)">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-3 form-group validtest6">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="first4" name="second" value="0" data-cell="B4">
-                        <label class="form-check-label" for="first4">0</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="first5" name="second" value="10" data-cell="B5">
-                        <label class="form-check-label" for="first5">10</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="first6" name="second" value="100" data-cell="B6">
-                        <label class="form-check-label" for="first6">100</label>
-                      </div>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h4>Subtotal:</h4>
-                      <div class="form-group">
-                        <input class="" data-cell="C4" data-format="0[.]00" data-formula="SUM(B4:B6)">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h4>TOTAL:</h4>
-                      <div class="form-group">
-                        <input id="testTotal2" class="" data-cell="D2" data-format="0[.]00" data-formula="SUM(C3:C4)">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h4>TOTAL of Totals:</h4>
-                      <div class="form-group">
-                        <input id="testTotalofTTotal" class="" data-cell="E1" data-format="0[.]00" data-formula="SUM(D1:D2)">
+                      <div class="form-actions quoteForm-step-2">
+                        <button class="btn btn-primary btn-custom" type="button" onclick="previousStep2()"><span class="fa fa-arrow-left"></span> Back</button>
+                        <button class="btn btn-primary btn-custom pull-right" type="button" onclick="nextStep4()" id="nextStepFour">Next <span class="fa fa-arrow-right"></span>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </fieldset>
-                <div class="form-group quoteForm-step-3">
-                  <button class="btn btn-custom" type="button" onclick="previousStep2()"><span class="fa fa-arrow-left"></span> Back</button>
-                  <button class="btn btn-custom pull-right" type="button" onclick="nextStep4()" id="nextStepFour">Next <span class="fa fa-arrow-right"></span>
-                  </button>
-                </div>
-              </div>
+              </div> <!-- / Section 3-->
+
               <div class="section slide-right" id="section-4">
-                <div class="row">
-                  <div class="col-md-6">
-                    <fieldset>
-
-                      <h4>Project Budget:</h4>
-                      <div class="help-block with-errors mandatory-error"></div>     
-                      <div class="form-group validprobudget">
-                        <div class="input-group validtest2">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-usd"></i></span>
-                          </div>
-                          <select class="custom-select" id="probudget" name="probudget" data-error="Please Select Budget">
-                            <option value="">--- Select Budget* ---</option>
-                            <option value="Around $500">Around $500</option>
-                            <option value="$500 - $1000">$500 - $1000</option>
-                            <option value="$1000 - $1500">$1000 - $1500</option>
-                            <option value="$1500 - $2000">$1500 - $2000</option>
-                            <option value="$2000 - $2500">$2000 - $2500</option>
-                            <option value="$2500 - $3000">$2500 - $3000</option>
-                            <option value="$3000 - $4000">$3000 - $4000</option>
-                            <option value="$4000 - $5000">$4000 - $5000</option>
-                            <option value="$5000+">$5000+</option>
-                          </select>
-                          <div class="help-block with-errors"></div>
-                        </div> 
-                      </div>
-
-                      <h4>Project Priority*:</h4>
-                      <div class="form-group validpriority">
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadioInline1">Low</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadioInline2">Medium</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadioInline3">High</label>
-                        </div>
-                        <div class="help-block with-errors"></div>
-                      </div>
-
-                      <h4>Estimated Launch Date*:</h4>
-                      <div class="form-group validlaunchdate">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-calendar"></i></span>
-                          </div>
-                          <input id="launchdate" name="launchdate" class="form-control" data-error="Please Select Launch Date" placeholder="dd MM, yyyy">
-                          <div class="help-block with-errors"></div>
-                        </div> 
-                      </div>
-
-                      <h4>Provide Your Identity:</h4>
-                      <div class="form-group validfname">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-user"></i></span>
-                          </div>
-                          <input id="fname" name="fname" class="form-control" data-error="Please enter First Name" placeholder="First Name">
-                          <div class="help-block with-errors"></div>
-                        </div> 
-                      </div>
-                      <div class="form-group validlname">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-user"></i></span>
-                          </div>
-                          <input id="lname" name="lname" class="form-control" data-error="Please enter Last Name" placeholder="Last Name">
-                          <div class="help-block with-errors"></div>
-                        </div> 
-                      </div>
-                      <div class="form-group validgender">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-mars"></i></span>
-                          </div>
-                          <select class="custom-select" id="gender" name="gender" data-error="Please Select Gender">
-                            <option value="">--- Select Your Gender* ---</option>
-                            <option value="Male">Male</option>
-                            <option value="Femal">Female</option>
-                          </select>
-                          <div class="help-block with-errors"></div>
-                        </div>
-                      </div>
-                      <div class="form-group validaddress">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-map-marker"></i></span>
-                          </div>
-                          <input id="address" name="address" class="form-control" data-error="Please enter address" placeholder="Address" autocomplete="off">
-                          <div class="help-block with-errors"></div>
-                        </div> 
-                      </div>
-                      <div class="form-group validemail">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-envelope"></i></span>
-                          </div>
-                          <input id="email" name="email" type="email" class="form-control" data-error="Please enter valid email" placeholder="Email">
-                          <div class="help-block with-errors"></div>
-                        </div>
-                      </div>
-                      <div class="form-group validphone">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-phone"></i></span>
-                          </div>
-                          <input id="phone" name="phone" class="form-control" data-error="Please enter valid phone" placeholder="Phone">
-                          <div class="help-block with-errors"></div>
-                        </div>
-                      </div>
-                      
-                    </fieldset>
+                <div class="card">
+                  <div class="card-header bg-info">
+                    <h4 class="m-b-0 text-white">Section 4</h4>
                   </div>
-                  <div class="col-md-6">
-                    <fieldset>
-
-                      <h4>Provide Requirement Details:</h4>
-                      <div class="form-group validreqdetails">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-info-circle"></i></span>
-                          </div>
-                          <textarea class="form-control" id="requirementdetails" name="requirementdetails" placeholder="Provide Requirement Details*" rows="3" data-error="Provide Requirement Details"></textarea>
-                          <div class="help-block with-errors"></div>
+                  <div class="card-body">
+                    <div class="help-block with-errors mandatory-error"></div>    
+                    <div class="form-body">
+                      <h4 class="card-title">Some values:</h4>
+                      <hr>
+                      <div class="row p-t-20">
+                        <div class="col-md-6">
+                          <fieldset>
+                            <h4>Project Budget:</h4> 
+                            <div class="form-group validprobudget">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-usd"></i></span>
+                                </div>
+                                <select class="custom-select" id="probudget" name="probudget" data-error="Please Select Budget">
+                                  <option value="">--- Select Budget* ---</option>
+                                  <option value="Around $500">Around $500</option>
+                                  <option value="$500 - $1000">$500 - $1000</option>
+                                  <option value="$1000 - $1500">$1000 - $1500</option>
+                                  <option value="$1500 - $2000">$1500 - $2000</option>
+                                  <option value="$2000 - $2500">$2000 - $2500</option>
+                                  <option value="$2500 - $3000">$2500 - $3000</option>
+                                  <option value="$3000 - $4000">$3000 - $4000</option>
+                                  <option value="$4000 - $5000">$4000 - $5000</option>
+                                  <option value="$5000+">$5000+</option>
+                                </select>
+                                <div class="help-block with-errors"></div>
+                              </div> 
+                            </div>
+                            <h4>Project Priority*:</h4>
+                            <div class="form-group validpriority">
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline1">Low</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline2">Medium</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline3">High</label>
+                              </div>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                            <h4>Estimated Launch Date*:</h4>
+                            <div class="form-group validlaunchdate">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-calendar"></i></span>
+                                </div>
+                                <input id="launchdate" name="launchdate" class="form-control" data-error="Please Select Launch Date" placeholder="dd MM, yyyy">
+                                <div class="help-block with-errors"></div>
+                              </div> 
+                            </div>
+                            <h4>Provide Your Identity:</h4>
+                            <div class="form-group validfname">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-user"></i></span>
+                                </div>
+                                <input id="fname" name="fname" class="form-control" data-error="Please enter First Name" placeholder="First Name">
+                                <div class="help-block with-errors"></div>
+                              </div> 
+                            </div>
+                            <div class="form-group validlname">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-user"></i></span>
+                                </div>
+                                <input id="lname" name="lname" class="form-control" data-error="Please enter Last Name" placeholder="Last Name">
+                                <div class="help-block with-errors"></div>
+                              </div> 
+                            </div>
+                            <div class="form-group validgender">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-mars"></i></span>
+                                </div>
+                                <select class="custom-select" id="gender" name="gender" data-error="Please Select Gender">
+                                  <option value="">--- Select Your Gender* ---</option>
+                                  <option value="Male">Male</option>
+                                  <option value="Femal">Female</option>
+                                </select>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                            <div class="form-group validaddress">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-map-marker"></i></span>
+                                </div>
+                                <input id="address" name="address" class="form-control" data-error="Please enter address" placeholder="Address" autocomplete="off">
+                                <div class="help-block with-errors"></div>
+                              </div> 
+                            </div>
+                            <div class="form-group validemail">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-envelope"></i></span>
+                                </div>
+                                <input id="email" name="email" type="email" class="form-control" data-error="Please enter valid email" placeholder="Email">
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                            <div class="form-group validphone">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-phone"></i></span>
+                                </div>
+                                <input id="phone" name="phone" class="form-control" data-error="Please enter valid phone" placeholder="Phone">
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                          <fieldset>
+                            <h4>Provide Requirement Details:</h4>
+                            <div class="form-group validreqdetails">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-info-circle"></i></span>
+                                </div>
+                                <textarea class="form-control" id="requirementdetails" name="requirementdetails" placeholder="Provide Requirement Details*" rows="3" data-error="Provide Requirement Details"></textarea>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id=""><i class="fa fa-info-circle"></i></span>
+                                </div>
+                                <textarea class="form-control" id="additionalinfo" name="additionalinfo" placeholder="Additional Info(optional)" rows="3"></textarea>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                            <h4>Prefered Contact Method*:</h4>
+                            <div class="form-group validpreferedcontact">
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="preferedcontact1" name="preferedcontact" class="custom-control-input" value="email">
+                                <label class="custom-control-label" for="preferedcontact1">Email</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="preferedcontact2" name="preferedcontact" class="custom-control-input" value="Phone">
+                                <label class="custom-control-label" for="preferedcontact2">Phone</label>
+                              </div>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group validagree">
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="aggre" name="aggre" >
+                                <label class="custom-control-label" for="aggre">Aggre with terms &amp; conditions</label>
+                              </div>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </fieldset>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id=""><i class="fa fa-info-circle"></i></span>
-                          </div>
-                          <textarea class="form-control" id="additionalinfo" name="additionalinfo" placeholder="Additional Info(optional)" rows="3"></textarea>
-                          <div class="help-block with-errors"></div>
-                        </div>
-                      </div>
-
-                      <h4>Prefered Contact Method*:</h4>
-                      <div class="form-group validpreferedcontact">
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" id="preferedcontact1" name="preferedcontact" class="custom-control-input" value="email">
-                          <label class="custom-control-label" for="preferedcontact1">Email</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" id="preferedcontact2" name="preferedcontact" class="custom-control-input" value="Phone">
-                          <label class="custom-control-label" for="preferedcontact2">Phone</label>
-                        </div>
-                        <div class="help-block with-errors"></div>
-                      </div>
-
-                      <div class="form-group validagree">
-                        <div class="custom-control custom-radio custom-control-inline">
-                          <input type="checkbox" class="custom-control-input" id="aggre" name="aggre" >
-                          <label class="custom-control-label" for="aggre">Aggre with terms &amp; conditions</label>
-                        </div>
-                        <div class="help-block with-errors"></div>
-                      </div>
-
-                    </fieldset>
+                    </div>
+                    <div class="form-actions quoteForm-step-4">
+                      <button class="btn btn-primary btn-custom" type="button" onclick="previousStep3()"><span class="fa fa-arrow-left"></span> Back</button>
+                      <button class="btn btn-primary btn-custom pull-right" type="button" onclick="nextStep5()">Next <span class="fa fa-arrow-right"></span>
+                      </button>
+                    </div>
                   </div>
                 </div>
-
-                <div class="form-group quoteForm-step-4">
-                  <button class="btn btn-custom" type="button" onclick="previousStep3()"><span class="fa fa-arrow-left"></span> Back</button>
-                  <button class="btn btn-custom pull-right" type="button" onclick="nextStep5()">Next <span class="fa fa-arrow-right"></span>
-                  </button>
-                </div>
-              </div>
+              </div> <!-- / Section 4-->
 
               <div class="section slide-right review-submit-section" id="section-5">
                 <fieldset>
-                    <div class="backto1Content">
-                      <div class="row">
-                        <div class="col-sm-12 col-md-6">
-                          <h4>You didnt select a thing</h4>
-                          <p>When you dont select a thing, you go straight to this screen</p>
-                        </div>
+                  <div class="card">
+                      <div class="card-header bg-info">
+                        <h4 class="m-b-0 text-white">Section 5</h4>
                       </div>
-                    </div>
-                  <div class="backto4Content">
-                    <h4>Your Inputed Data Summery:</h4>
-                    <div class="row">
-                      <div class="col-sm-12 col-md-6">
-                        <h5>Section One</h5>
-                        <div class="section-info-box">
-                          <p id="testData1"></p>
-                          <p id="osData"></p>
-                          <p id="androidserviceData"></p>
-                          <p id="androidreqfeaturesData"></p>
-                          <p id="appleserviceData"></p>
-                          <p id="applereqfeaturesData"></p>
-                          <p id="windowsserviceData"></p>
-                          <p id="windowsreqfeaturesData"></p>
-                        </div>
-                        <h5>Section Two</h5>
-                        <div class="section-info-box">
-                          <p id="probudgetData"></p>
-                          <p id="priorityData"></p>
-                          <p id="launchdateData"></p>
-                        </div>
-                      </div>
-                      <div class="col-sm-12 col-md-6">
-                        <h5>Section Three</h5>
-                        <div class="section-info-box">
-                          <p id="firstNameData"></p>
-                          <p id="lastNameData"></p>
-                          <p id="genderData"></p>
-                          <p id="addressData"></p>
-                          <p id="emailaddressData"></p>
-                          <p id="phoneData"></p>
-                        </div>
-                        <h5>Section Four</h5>
-                        <div class="section-info-box">
-                          <p id="requirementdetailsData"></p>
-                          <p id="additionalinfoData"></p>
-                          <p id="preferedcontactData"></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              
-                  <p><strong>Would you like to provide requirements details as Attachment?</strong></p>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <div class="input-group">
-
-                          <div class="form-group">
-                            <label for="exampleFormControlFile1">Example file input</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                      <div class="card-body">
+                        <div class="form-body">
+                          <div class="backto1Content">
+                            <div class="row">
+                              <div class="col-sm-12 col-md-6">
+                                <h4>You didnt select a thing</h4>
+                                <p>When you dont select a thing, you go straight to this screen</p>
+                              </div>
+                            </div>
                           </div>
-                          
-                          <label class="input-group-prepend input-group-btn">
-                            <span class="input-group-text btn" id="attachFile">Browse… <input id="userfile" name="userfile" type="file"></span>
-                          </label>
-                          <input id="attachedFile" type="text" class="form-control" placeholder="Browse to select file" aria-label="Username" aria-describedby="attachFile" readonly="">
+                          <div class="backto4Content">
+                            <h4>Your Inputed Data Summery:</h4>
+                            <div class="row">
+                              <div class="col-sm-12 col-md-6">
+                                <h5>Section One</h5>
+                                <div class="section-info-box">
+                                  <p id="testData1"></p>
+                                  <p id="osData"></p>
+                                  <p id="androidserviceData"></p>
+                                  <p id="androidreqfeaturesData"></p>
+                                  <p id="appleserviceData"></p>
+                                  <p id="applereqfeaturesData"></p>
+                                  <p id="windowsserviceData"></p>
+                                  <p id="windowsreqfeaturesData"></p>
+                                </div>
+                                <h5>Section Two</h5>
+                                <div class="section-info-box">
+                                  <p id="probudgetData"></p>
+                                  <p id="priorityData"></p>
+                                  <p id="launchdateData"></p>
+                                </div>
+                              </div>
+                              <div class="col-sm-12 col-md-6">
+                                <h5>Section Three</h5>
+                                <div class="section-info-box">
+                                  <p id="firstNameData"></p>
+                                  <p id="lastNameData"></p>
+                                  <p id="genderData"></p>
+                                  <p id="addressData"></p>
+                                  <p id="emailaddressData"></p>
+                                  <p id="phoneData"></p>
+                                </div>
+                                <h5>Section Four</h5>
+                                <div class="section-info-box">
+                                  <p id="requirementdetailsData"></p>
+                                  <p id="additionalinfoData"></p>
+                                  <p id="preferedcontactData"></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <p><strong>Would you like to provide requirements details as Attachment?</strong></p>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <div class="input-group">
+
+                                  <div class="form-group">
+                                    <label for="exampleFormControlFile1">Example file input</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                  </div>
+                                  
+                                  <label class="input-group-prepend input-group-btn">
+                                    <span class="input-group-text btn" id="attachFile">Browse… <input id="userfile" name="userfile" type="file"></span>
+                                  </label>
+                                  <input id="attachedFile" type="text" class="form-control" placeholder="Browse to select file" aria-label="Username" aria-describedby="attachFile" readonly="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div id="humanCheckCaptchaBox">Solve The Math</div>
+                            <div id="firstDigit">
+                              <input name="mathfirstnum" id="mathfirstnum" class="form-control" type="text" value="7" readonly="">
+                            </div>+
+                            <div id="secondDigit">
+                              <input name="mathsecondnum" id="mathsecondnum" class="form-control" type="text" value="4" readonly="">
+                            </div>=
+                            <input id="humanCheckCaptchaInput" name="humanCheckCaptchaInput" class="form-control" data-error="Please solve Captcha" placeholder="" required="" maxlength="3">
+                            <div class="help-block with-errors"></div>
+                          </div>
+                          <p id="AggreData"><strong>Aggre with terms &amp; conditions:</strong> 
+                            <input id="aggre2" name="aggre2" type="checkbox" value="1" checked="" disabled="">
+                          </p>
+                          <div class="hidden" id="mgsContactSubmit"></div>
+                        </div>
+                        <div class="form-actions quoteForm-step-5" id="final-step-buttons">
+                          <div class="backto4">
+                            <button class="btn btn-primary btn-custom" type="button" onclick="previousStep4()"><span class="fa fa-arrow-left"></span> Back 4</button>
+                          </div>
+                          <div class="backto1">
+                            <button class="btn btn-primary btn-custom" type="button" onclick="previousStep1Fast()"><span class="fa fa-arrow-left"></span> Back 1</button>
+                          </div>
+                          <button class="btn btn-primary btn-custom pull-right disabled" type="submit" id="Submit">Submit</button>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div class="form-group">
-                    <div id="humanCheckCaptchaBox">Solve The Math</div>
-                    <div id="firstDigit">
-                      <input name="mathfirstnum" id="mathfirstnum" class="form-control" type="text" value="7" readonly="">
-                    </div>+
-                    <div id="secondDigit">
-                      <input name="mathsecondnum" id="mathsecondnum" class="form-control" type="text" value="4" readonly="">
-                    </div>=
-                    <input id="humanCheckCaptchaInput" name="humanCheckCaptchaInput" class="form-control" data-error="Please solve Captcha" placeholder="" required="" maxlength="3">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  
-                    <p id="AggreData"><strong>Aggre with terms &amp; conditions:</strong> 
-                      <input id="aggre2" name="aggre2" type="checkbox" value="1" checked="" disabled="">
-                    </p>
-                    <div class="hidden" id="mgsContactSubmit"></div>
-
-                    <div class="form-group quoteForm-step-5" id="final-step-buttons">
-                      <div class="backto4">
-                        <button class="btn btn-custom" type="button" onclick="previousStep4()"><span class="fa fa-arrow-left"></span> Back 4</button>
-                      </div>
-                      <div class="backto1">
-                        <button class="btn btn-custom" type="button" onclick="previousStep1Fast()"><span class="fa fa-arrow-left"></span> Back 1</button>
-                      </div>
-                      <button class="btn btn-custom pull-right disabled" type="submit" id="Submit">Submit</button>
-                    </div>
-
                   </div>
                 </fieldset>
               </div>

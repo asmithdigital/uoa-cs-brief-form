@@ -1,3 +1,11 @@
+html {
+  background: #f6f9fa;
+}
+
+body {
+  background: transparent;
+}
+
 /*  Stop submit click until enabled with JS */
 .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
   pointer-events: none;
@@ -97,7 +105,7 @@
   position: relative;
 }
 
-/* .form-group .help-block ul li {
+.form-group .help-block ul li {
   background-color: #ce0606;
   color: rgba(255, 255, 255, 0.99);
   padding: 3px 10px;
@@ -105,7 +113,7 @@
   top: 5px;
   position: relative;
   /* max-height: 24px; */
-} */
+}
 
 .form-group .help-block ul li::after {
   content: "";
