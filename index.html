@@ -375,11 +375,11 @@
                       <div class="form-group validpreferedcontact">
                         <div class="custom-control custom-radio custom-control-inline">
                           <input type="radio" id="preferedcontact1" name="preferedcontact" class="custom-control-input" value="email">
-                          <label class="custom-control-label" for="customRadioInline1">Email</label>
+                          <label class="custom-control-label" for="preferedcontact1">Email</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
                           <input type="radio" id="preferedcontact2" name="preferedcontact" class="custom-control-input" value="Phone">
-                          <label class="custom-control-label" for="customRadioInline1">Phone</label>
+                          <label class="custom-control-label" for="preferedcontact2">Phone</label>
                         </div>
                         <div class="help-block with-errors"></div>
                       </div>
@@ -402,16 +402,18 @@
                   </button>
                 </div>
               </div>
-              
+
               <div class="section slide-right review-submit-section" id="section-5">
                 <fieldset>
-                    <div class="backto1">
-                      <div class="col-sm-12 col-md-6">
-                        <h4>You didnt select a thing</h4>
-                        <p>When you dont select a thing, you go straight to this screen</p>
+                    <div class="backto1Content">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                          <h4>You didnt select a thing</h4>
+                          <p>When you dont select a thing, you go straight to this screen</p>
+                        </div>
                       </div>
                     </div>
-                  <div class="backto4">
+                  <div class="backto4Content">
                     <h4>Your Inputed Data Summery:</h4>
                     <div class="row">
                       <div class="col-sm-12 col-md-6">
@@ -452,53 +454,54 @@
                       </div>
                     </div>
                   </div>
-                    <div class="col-sm-12">
-                      <p><strong>Would you like to provide requirements details as Attachment?</strong></p>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <div class="form-group">
-                            <div class="input-group">
+              
+                  <p><strong>Would you like to provide requirements details as Attachment?</strong></p>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <div class="input-group">
 
-                              <div class="form-group">
-                                <label for="exampleFormControlFile1">Example file input</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                              </div>
-                              
-                              <label class="input-group-prepend input-group-btn">
-                                <span class="input-group-text btn" id="attachFile">Browse… <input id="userfile" name="userfile" type="file"></span>
-                              </label>
-                              <input id="attachedFile" type="text" class="form-control" placeholder="Browse to select file" aria-label="Username" aria-describedby="attachFile" readonly="">
-                            </div>
+                          <div class="form-group">
+                            <label for="exampleFormControlFile1">Example file input</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
                           </div>
+                          
+                          <label class="input-group-prepend input-group-btn">
+                            <span class="input-group-text btn" id="attachFile">Browse… <input id="userfile" name="userfile" type="file"></span>
+                          </label>
+                          <input id="attachedFile" type="text" class="form-control" placeholder="Browse to select file" aria-label="Username" aria-describedby="attachFile" readonly="">
                         </div>
                       </div>
                     </div>
-                    <div class="form-group col-sm-12">
-                      <div id="humanCheckCaptchaBox">Solve The Math</div>
-                      <div id="firstDigit">
-                        <input name="mathfirstnum" id="mathfirstnum" class="form-control" type="text" value="7" readonly="">
-                      </div>+
-                      <div id="secondDigit">
-                        <input name="mathsecondnum" id="mathsecondnum" class="form-control" type="text" value="4" readonly="">
-                      </div>=
-                      <input id="humanCheckCaptchaInput" name="humanCheckCaptchaInput" class="form-control" data-error="Please solve Captcha" placeholder="" required="" maxlength="3">
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-sm-12">
-                      <p id="AggreData"><strong>Aggre with terms &amp; conditions:</strong> 
-                        <input id="aggre2" name="aggre2" type="checkbox" value="1" checked="" disabled="">
-                      </p>
-                      <div class="hidden" id="mgsContactSubmit"></div>
-                      <div class="form-group quoteForm-step-5" id="final-step-buttons">
-                        <div class="backto4">
-                          <button class="btn btn-custom" type="button" onclick="previousStep4()"><span class="fa fa-arrow-left"></span> Back 4</button>
-                        </div>
-                        <div class="backto1">
-                            <button class="btn btn-custom" type="button" onclick="previousStep1Fast()"><span class="fa fa-arrow-left"></span> Back 1</button>
-                          </div>
-                        <button class="btn btn-custom pull-right disabled" type="submit" id="Submit">Submit</button>
+                  </div>
+                  
+                  <div class="form-group">
+                    <div id="humanCheckCaptchaBox">Solve The Math</div>
+                    <div id="firstDigit">
+                      <input name="mathfirstnum" id="mathfirstnum" class="form-control" type="text" value="7" readonly="">
+                    </div>+
+                    <div id="secondDigit">
+                      <input name="mathsecondnum" id="mathsecondnum" class="form-control" type="text" value="4" readonly="">
+                    </div>=
+                    <input id="humanCheckCaptchaInput" name="humanCheckCaptchaInput" class="form-control" data-error="Please solve Captcha" placeholder="" required="" maxlength="3">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  
+                    <p id="AggreData"><strong>Aggre with terms &amp; conditions:</strong> 
+                      <input id="aggre2" name="aggre2" type="checkbox" value="1" checked="" disabled="">
+                    </p>
+                    <div class="hidden" id="mgsContactSubmit"></div>
+
+                    <div class="form-group quoteForm-step-5" id="final-step-buttons">
+                      <div class="backto4">
+                        <button class="btn btn-custom" type="button" onclick="previousStep4()"><span class="fa fa-arrow-left"></span> Back 4</button>
                       </div>
+                      <div class="backto1">
+                        <button class="btn btn-custom" type="button" onclick="previousStep1Fast()"><span class="fa fa-arrow-left"></span> Back 1</button>
+                      </div>
+                      <button class="btn btn-custom pull-right disabled" type="submit" id="Submit">Submit</button>
                     </div>
+
                   </div>
                 </fieldset>
               </div>

@@ -241,7 +241,8 @@ function nextStep5() {
 
     // Hide fast scroll track button
     $(".backto4").css('display', 'inline-block');
-    $(".backto1").css('display', 'none');
+    $(".backto4Content").css('display', 'block');
+    $(".backto1, .backto1Content").css('display', 'none');
 }
 
 function previousStep4() {
@@ -265,8 +266,9 @@ function nextStep5Fast() {
     $("#section-4").addClass("slide-left");
     $("#section-5").removeClass("slide-right");
     $("#section-5").addClass("open");
-    $(".backto4").css('display', 'none');
+    $(".backto4, .backto4Content").css('display', 'none');
     $(".backto1").css('display', 'inline-block');
+    $(".backto1Content").css('display', 'block');
 }
 
 function previousStep1Fast() {
