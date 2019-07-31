@@ -36,6 +36,7 @@
                 <fieldset>
                   <div class="help-block with-errors mandatory-error"></div>
                   <h4>First stage pre-selections:</h4>
+                  
                   <div class="form-group">
                     <div class="form-check" style="margin-bottom: 1rem;">
                       <input class="form-check-input" id="preoption1" name="preoptions" type="checkbox" required>
@@ -230,127 +231,178 @@
                 </div>
               </div>
               <div class="section slide-right" id="section-4">
-                <fieldset>
+                <div class="row">
+                  <div class="col-md-6">
+                    <fieldset>
 
-                  <h4>Project Budget:</h4>
-                  <div class="help-block with-errors mandatory-error"></div>
-                  <div class="form-group validprobudget">
-                    <select class="form-control" id="probudget" name="probudget" data-error="Please Select Budget">
-                      <option value="">--- Select Budget* ---</option>
-                      <option value="Around $500">Around $500</option>
-                      <option value="$500 - $1000">$500 - $1000</option>
-                      <option value="$1000 - $1500">$1000 - $1500</option>
-                      <option value="$1500 - $2000">$1500 - $2000</option>
-                      <option value="$2000 - $2500">$2000 - $2500</option>
-                      <option value="$2500 - $3000">$2500 - $3000</option>
-                      <option value="$3000 - $4000">$3000 - $4000</option>
-                      <option value="$4000 - $5000">$4000 - $5000</option>
-                      <option value="$5000+">$5000+</option>
-                    </select>
-                    <div class="input-group-icon"><i class="fa fa-usd"></i>
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  <h4>Project Priority*:</h4>
-                  <div class="form-group validpriority">
-                    <label class="radio-inline">
-                      <input id="priority1" name="priority" type="radio" value="Low">Low</label>
-                    <label class="radio-inline">
-                      <input id="priority2" name="priority" type="radio" value="Medium">Medium</label>
-                    <label class="radio-inline">
-                      <input id="priority3" name="priority" type="radio" value="Argent">Argent</label>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  <h4>Estimated Launch Date*:</h4>
-                  <div class="form-group validlaunchdate" id="estimated-launch-date">
-                    <input id="launchdate" name="launchdate" class="form-control" data-error="Please Select Launch Date" placeholder="dd MM, yyyy">
-                    <div class="input-group-icon"><i class="fa fa-calendar"></i>
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </fieldset>
-                <fieldset>
+                      <h4>Project Budget:</h4>
+                      <div class="help-block with-errors mandatory-error"></div>     
+                      <div class="form-group validprobudget">
+                        <div class="input-group validtest2">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-usd"></i></span>
+                          </div>
+                          <select class="custom-select" id="probudget" name="probudget" data-error="Please Select Budget">
+                            <option value="">--- Select Budget* ---</option>
+                            <option value="Around $500">Around $500</option>
+                            <option value="$500 - $1000">$500 - $1000</option>
+                            <option value="$1000 - $1500">$1000 - $1500</option>
+                            <option value="$1500 - $2000">$1500 - $2000</option>
+                            <option value="$2000 - $2500">$2000 - $2500</option>
+                            <option value="$2500 - $3000">$2500 - $3000</option>
+                            <option value="$3000 - $4000">$3000 - $4000</option>
+                            <option value="$4000 - $5000">$4000 - $5000</option>
+                            <option value="$5000+">$5000+</option>
+                          </select>
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                      </div>
 
-                  <h4>Provide Your Identity:</h4>
-                  <div class="help-block with-errors mandatory-error"></div>
-                  <div class="form-group validfname">
-                    <input id="fname" name="fname" class="form-control" data-error="Please enter First Name" placeholder="First Name*" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
-                    <div class="input-group-icon"><i class="fa fa-user"></i>
-                    </div>
-                    <div class="help-block with-errors"></div>
+                      <h4>Project Priority*:</h4>
+                      <div class="form-group validpriority">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadioInline1">Low</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadioInline2">Medium</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadioInline3">High</label>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                      </div>
+
+                      <h4>Estimated Launch Date*:</h4>
+                      <div class="form-group validlaunchdate">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-calendar"></i></span>
+                          </div>
+                          <input id="launchdate" name="launchdate" class="form-control" data-error="Please Select Launch Date" placeholder="dd MM, yyyy">
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                      </div>
+
+                      <h4>Provide Your Identity:</h4>
+                      <div class="form-group validfname">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-user"></i></span>
+                          </div>
+                          <input id="fname" name="fname" class="form-control" data-error="Please enter First Name" placeholder="First Name">
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                      </div>
+                      <div class="form-group validlname">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-user"></i></span>
+                          </div>
+                          <input id="lname" name="lname" class="form-control" data-error="Please enter Last Name" placeholder="Last Name">
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                      </div>
+                      <div class="form-group validgender">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-mars"></i></span>
+                          </div>
+                          <select class="custom-select" id="gender" name="gender" data-error="Please Select Gender">
+                            <option value="">--- Select Your Gender* ---</option>
+                            <option value="Male">Male</option>
+                            <option value="Femal">Female</option>
+                          </select>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="form-group validaddress">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-map-marker"></i></span>
+                          </div>
+                          <input id="address" name="address" class="form-control" data-error="Please enter address" placeholder="Address" autocomplete="off">
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                      </div>
+                      <div class="form-group validemail">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-envelope"></i></span>
+                          </div>
+                          <input id="email" name="email" type="email" class="form-control" data-error="Please enter valid email" placeholder="Email">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="form-group validphone">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-phone"></i></span>
+                          </div>
+                          <input id="phone" name="phone" class="form-control" data-error="Please enter valid phone" placeholder="Phone">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      
+                    </fieldset>
                   </div>
-                  <div class="form-group validlname">
-                    <input id="lname" name="lname" class="form-control" data-error="Please enter Last Name" placeholder="Last Name*">
-                    <div class="input-group-icon"><i class="fa fa-user"></i>
-                    </div>
-                    <div class="help-block with-errors"></div>
+                  <div class="col-md-6">
+                    <fieldset>
+
+                      <h4>Provide Requirement Details:</h4>
+                      <div class="form-group validreqdetails">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-info-circle"></i></span>
+                          </div>
+                          <textarea class="form-control" id="requirementdetails" name="requirementdetails" placeholder="Provide Requirement Details*" rows="3" data-error="Provide Requirement Details"></textarea>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id=""><i class="fa fa-info-circle"></i></span>
+                          </div>
+                          <textarea class="form-control" id="additionalinfo" name="additionalinfo" placeholder="Additional Info(optional)" rows="3"></textarea>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+
+                      <h4>Prefered Contact Method*:</h4>
+                      <div class="form-group validpreferedcontact">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="preferedcontact1" name="preferedcontact" class="custom-control-input" value="email">
+                          <label class="custom-control-label" for="customRadioInline1">Email</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="preferedcontact2" name="preferedcontact" class="custom-control-input" value="Phone">
+                          <label class="custom-control-label" for="customRadioInline1">Phone</label>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                      </div>
+
+                      <div class="form-group validagree">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="checkbox" class="custom-control-input" id="aggre" name="aggre" >
+                          <label class="custom-control-label" for="aggre">Aggre with terms &amp; conditions</label>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                      </div>
+
+                    </fieldset>
                   </div>
-                  <div class="form-group validgender">
-                    <select class="form-control" id="gender" name="gender" data-error="Please Select Gender">
-                      <option value="">--- Select Your Gender* ---</option>
-                      <option value="Male">Male</option>
-                      <option value="Femal">Female</option>
-                    </select>
-                    <div class="input-group-icon"><i class="fa fa-mars"></i>
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  <div class="form-group validaddress">
-                    <input id="address" name="address" class="form-control" data-error="Please enter address" placeholder="Address*" autocomplete="off">
-                    <div class="input-group-icon"><i class="fa fa-map-marker"></i>
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  <div class="form-group validemail">
-                    <input id="email" name="email" type="email" class="form-control" data-error="Please enter valid email" placeholder="Email*">
-                    <div class="input-group-icon"><i class="fa fa-envelope"></i>
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  <div class="form-group validphone">
-                    <input id="phone" name="phone" class="form-control" data-error="Please enter valid phone" placeholder="Phone*">
-                    <div class="input-group-icon"><i class="fa fa-phone"></i>
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  
-                </fieldset>
-                <fieldset>
-                  <div class="help-block with-errors mandatory-error"></div>
-                  <h4>Provide Requirement Details:</h4>
-                  <div class="form-group validreqdetails">
-                    <textarea class="form-control" id="requirementdetails" name="requirementdetails" placeholder="Provide Requirement Details*" rows="3" data-error="Provide Requirement Details"></textarea>
-                    <div class="input-group-icon"><i class="fa fa-info-circle"></i>
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" id="additionalinfo" name="additionalinfo" placeholder="Additional Info(optional)" rows="3"></textarea>
-                    <div class="input-group-icon"><i class="fa fa-info-circle"></i>
-                    </div>
-                  </div>
-                  <div class="form-group validpreferedcontact">
-                    <h4>Prefered Contact Method*:</h4>
-                    <label class="radio-inline">
-                      <input id="preferedcontact1" name="preferedcontact" type="radio" value="email">email</label>
-                    <label class="radio-inline">
-                      <input id="preferedcontact2" name="preferedcontact" type="radio" value="Phone">Phone</label>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  <div class="form-group validagree">
-                    <div class="checkbox">
-                      <label>
-                        <input id="aggre" name="aggre" type="checkbox" value="1">Aggre with terms &amp; conditions</label>
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                  <div class="form-group quoteForm-step-4">
-                    <button class="btn btn-custom" type="button" onclick="previousStep3()"><span class="fa fa-arrow-left"></span> Back</button>
-                    <button class="btn btn-custom pull-right" type="button" onclick="nextStep5()">Next <span class="fa fa-arrow-right"></span>
-                    </button>
-                  </div>
-                </fieldset>
+                </div>
+
+                <div class="form-group quoteForm-step-4">
+                  <button class="btn btn-custom" type="button" onclick="previousStep3()"><span class="fa fa-arrow-left"></span> Back</button>
+                  <button class="btn btn-custom pull-right" type="button" onclick="nextStep5()">Next <span class="fa fa-arrow-right"></span>
+                  </button>
+                </div>
               </div>
+              
               <div class="section slide-right review-submit-section" id="section-5">
                 <fieldset>
                     <div class="backto1">
@@ -405,7 +457,13 @@
                       <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
-                            <div class="input-group  mb-3">
+                            <div class="input-group">
+
+                              <div class="form-group">
+                                <label for="exampleFormControlFile1">Example file input</label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                              </div>
+                              
                               <label class="input-group-prepend input-group-btn">
                                 <span class="input-group-text btn" id="attachFile">Browse… <input id="userfile" name="userfile" type="file"></span>
                               </label>
