@@ -404,16 +404,15 @@
                       <p><strong>Would you like to provide requirements details as Attachment?</strong></p>
                       <div class="row">
                         <div class="col-md-4">
-                          <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          <div class="form-group">
+                            <div class="input-group  mb-3">
+                              <label class="input-group-prepend input-group-btn">
+                                <span class="input-group-text btn" id="attachFile">Browse… <input id="userfile" name="userfile" type="file"></span>
+                              </label>
+                              <input id="attachedFile" type="text" class="form-control" placeholder="Browse to select file" aria-label="Username" aria-describedby="attachFile" readonly="">
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="form-group attachmentFile">
-                        <label class="input-group-btn"><span class="btn">Browse… <input id="userfile" name="userfile" type="file"></span>
-                        </label>
-                        <input id="attachedFile" class="form-control" placeholder="Browse to select file" readonly="">
                       </div>
                     </div>
                     <div class="form-group col-sm-12">

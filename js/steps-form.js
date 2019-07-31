@@ -240,7 +240,7 @@ function nextStep5() {
     $("#section-5").addClass("open");
 
     // Hide fast scroll track button
-    $(".backto4").css('display', 'block');
+    $(".backto4").css('display', 'inline-block');
     $(".backto1").css('display', 'none');
 }
 
@@ -266,7 +266,7 @@ function nextStep5Fast() {
     $("#section-5").removeClass("slide-right");
     $("#section-5").addClass("open");
     $(".backto4").css('display', 'none');
-    $(".backto1").css('display', 'block');
+    $(".backto1").css('display', 'inline-block');
 }
 
 function previousStep1Fast() {

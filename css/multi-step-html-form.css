@@ -1,3 +1,14 @@
+/*  Stop submit click until enabled with JS */
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Sections and slide left/right transitions */
 .section-wrap {
   overflow: hidden;
   position: relative;
@@ -43,6 +54,7 @@
 }
 
 
+/* Error state styles */
 #QuoteForm .has-error .form-control {
   border-color: #ce0606;
 }
@@ -111,6 +123,7 @@
   font-size: 20px;
 }
 
+/* Progress bar */
 .progress {
   background-color: rgba(62, 62, 62, 0.3);
   margin: 0 0 50px;
@@ -132,6 +145,7 @@
   position: absolute;
 }
 
+/* File attachment custom styles */
 .section .form-group.attachmentFile {
   display: table;
   margin: 15px 0 40px;
@@ -146,7 +160,7 @@
   display: none;
 }
 
-
+/* Human check layout styles */
 #humanCheckCaptchaBox {
   font-weight: bold;
 }
@@ -169,12 +183,18 @@
 }
 
 #firstDigit #mathfirstnum,
-#secondDigit #mathsecondnum {
+#secondDigit #mathsecondnum,
+#attachedFile {
   border: none;
   box-shadow: none;
+  pointer-events: none;
+  background: none;
+}
+
+#firstDigit #mathfirstnum,
+#secondDigit #mathsecondnum {
   width: 30px;
   height: 30px;
   padding: 0;
-  pointer-events: none;
   text-align: center;
 }
