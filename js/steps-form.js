@@ -107,6 +107,11 @@ function nextStep2() {
     $("#section-1").addClass("slide-left");
     $("#section-2").removeClass("slide-right");
     $("#section-2").addClass("open");
+
+    // Scroll to top of next stage
+    $('html,body').animate({
+        scrollTop: $("#QuoteForm").offset().top - 80
+    }, 'slow');
 }
 
 function previousStep1() {
@@ -115,6 +120,11 @@ function previousStep1() {
     $("#section-1").addClass("open");
     $("#section-2").removeClass("open");
     $("#section-2").addClass("slide-right");
+
+    // Scroll to top of previous stage
+    $('html,body').animate({
+        scrollTop: $("#QuoteForm").offset().top - 80
+    }, 'slow');
 }
 
 function nextStep3() {
@@ -137,6 +147,12 @@ function nextStep3() {
         $("#section-2").addClass("slide-left");
         $("#section-3").removeClass("slide-right");
         $("#section-3").addClass("open");
+
+        // Scroll to top of next stage
+        $('html,body').animate({
+            scrollTop: $("#QuoteForm").offset().top - 80
+        }, 'slow');
+
     } else {
         $("#section-2 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
         $('html,body').animate({
@@ -152,6 +168,11 @@ function previousStep2() {
     $("#section-2").addClass("open");
     $("#section-3").removeClass("open");
     $("#section-3").addClass("slide-right");
+
+    // Scroll to top of previous stage
+    $('html,body').animate({
+        scrollTop: $("#section-2 .help-block.with-errors.mandatory-error").offset().top - 80
+    }, 'slow');
 }
 
 function nextStep4() {
@@ -174,6 +195,11 @@ function nextStep4() {
         $("#section-3").addClass("slide-left");
         $("#section-4").removeClass("slide-right");
         $("#section-4").addClass("open");
+
+        // Scroll to top of next stage
+        $('html,body').animate({
+            scrollTop: $("#QuoteForm").offset().top - 80
+        }, 'slow');
     } else {
         $("#section-3 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
         $('html,body').animate({
@@ -189,6 +215,11 @@ function previousStep3() {
     $("#section-3").addClass("open");
     $("#section-4").removeClass("open");
     $("#section-4").addClass("slide-right");
+
+    // Scroll to top of previous stage
+    $('html,body').animate({
+        scrollTop: $("#QuoteForm").offset().top - 80
+    }, 'slow');
 }
 
 function nextStep5() {
@@ -239,6 +270,11 @@ function nextStep5() {
     $("#section-5").removeClass("slide-right");
     $("#section-5").addClass("open");
 
+    // Scroll to top of next stage
+    $('html,body').animate({
+        scrollTop: $("#QuoteForm").offset().top - 80
+    }, 'slow');
+
     // Hide fast scroll track button
     $(".backto4").css('display', 'inline-block');
     $(".backto4Content").css('display', 'block');
@@ -251,6 +287,11 @@ function previousStep4() {
     $("#section-4").addClass("open");
     $("#section-5").removeClass("open");
     $("#section-5").addClass("slide-right");
+
+    // Scroll to top of previous stage
+    $('html,body').animate({
+        scrollTop: $("#QuoteForm").offset().top - 80
+    }, 'slow');
 }
 
 function nextStep5Fast() {
@@ -269,6 +310,11 @@ function nextStep5Fast() {
     $(".backto4, .backto4Content").css('display', 'none');
     $(".backto1").css('display', 'inline-block');
     $(".backto1Content").css('display', 'block');
+
+    // Scroll to top of previous stage
+    $('html,body').animate({
+        scrollTop: $("#QuoteForm").offset().top - 80
+    }, 'slow');
 }
 
 function previousStep1Fast() {
@@ -283,4 +329,9 @@ function previousStep1Fast() {
     $("#section-4").addClass("slide-right");
     $("#section-5").removeClass("open");
     $("#section-5").addClass("slide-right");
+
+    // Scroll to top of next stage
+    $('html,body').animate({
+        scrollTop: $("#QuoteForm").offset().top - 80
+    }, 'slow');
 }
