@@ -1,9 +1,14 @@
 html {
-  background: #f6f9fa;
+  /* background: #f6f9fa; */
+  background: #2F3543;
 }
 
 body {
   background: transparent;
+}
+
+.bg-info {
+  border-radius: 0 !important;
 }
 
 /*  Stop submit click until enabled with JS */
