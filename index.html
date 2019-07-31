@@ -224,17 +224,17 @@
 
                             <label class="control-label">Subtotal:</label>
                             <div class="form-group">
-                              <input class="" data-cell="C4" data-format="0[.]00" data-formula="SUM(B4:B6)">
+                              <input class="form-control" data-cell="C4" data-format="0[.]00" data-formula="SUM(B4:B6)">
                             </div>
                             
                             <label class="control-label">TOTAL:</label>
                             <div class="form-group">
-                              <input id="testTotal2" class="" data-cell="D2" data-format="0[.]00" data-formula="SUM(C3:C4)">
+                              <input id="testTotal2" class="form-control" data-cell="D2" data-format="0[.]00" data-formula="SUM(C3:C4)">
                             </div>
 
                             <label class="control-label">Total of TOTALS:</label>
                             <div class="form-group">
-                              <input id="testTotalofTTotal" class="" data-cell="E1" data-format="0[.]00" data-formula="SUM(D1:D2)">
+                              <input id="testTotalofTTotal" class="form-control" data-cell="E1" data-format="0[.]00" data-formula="SUM(D1:D2)">
                             </div>
                           </div>
                         </div>
@@ -492,7 +492,7 @@
                                     <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                   </div> -->                              
                                   <label class="input-group-prepend input-group-btn">
-                                    <span class="input-group-text btn" id="attachFile">Browse… <input id="userfile" name="userfile" type="file"></span>
+                                    <span class="input-group-text btn" id="attachFile">Browse… <input id="userfile" name="userfile" type="file" multiple></span>
                                   </label>
                                   <input id="attachedFile" type="text" class="form-control" placeholder="Browse to select file" aria-label="Username" aria-describedby="attachFile" readonly="">
                                 </div>
