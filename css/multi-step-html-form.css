@@ -1,3 +1,11 @@
+.card-body {
+  padding: 3rem;
+}
+
+.card-header {
+  padding: 1.5rem 3rem;
+}
+
 html {
   /* background: #f6f9fa; */
   background: #2F3543;

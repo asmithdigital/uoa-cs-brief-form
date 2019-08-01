@@ -110,12 +110,16 @@ function isEmail(email) {
     return regex.test(email);
 }
 
+// Toggle the fast track next button
 $(function() {
     $("#stepOne").css('display', 'none');
-    // $("#stepOneFast").css('display', 'none');
     $("input[name='preoptions']").on("click", function() {
-        var opsys = $('input[name=preoptions]:checked').val();
-        if (opsys) {
+        var total = 0;
+        $('input[name=preoptions]:checked').each(function () {
+            total += +this.value;
+        });
+
+        if (total == 3) {
             $("#stepOne").css('display', 'block');
             $("#stepOneFast").css('display', 'none');
         } else {
