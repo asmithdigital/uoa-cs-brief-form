@@ -44,9 +44,12 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="card">
+                        <div class="card-header bg-info">
+                          <h4 class="m-b-0 text-white">Evaluation Filter</h4>
+                        </div>
                         <div class="card-body">
                           <div class="form-body">
-                            <h2 class="card-title">First stage pre-selections:</h2>
+                            <h2 class="card-title">If no to all = Type 3</h2>
                             <hr>
 
                             <!-- <div class="g-recaptcha" data-sitekey="6LdDg6UUAAAAAKTxUQIpAOMm2Vpj5lQKhwym7-UY"></div> -->
@@ -56,7 +59,7 @@
                             <p class="card-subtitle">Lorem ipsum dolor sit amet consectetur.</p>
                             <div class="form-group">
                               <div class="form-check" style="margin-bottom: 1rem;">
-                                <input class="form-check-input" id="preoption1" name="preoptions" type="checkbox" required>
+                                <input class="form-check-input" id="preoption1" name="preoptions" type="checkbox">
                                 <label class="form-check-label" for="preoption1">Is the idea of measurable value and aligned to the UoA &/or business unit marketing strategy?</label>
                               </div>
                               <div class="form-check" style="margin-bottom: 1rem;">
@@ -90,71 +93,137 @@
                 <fieldset>
                   <div class="card">
                     <div class="card-header bg-info">
-                      <h4 class="m-b-0 text-white">Section 2</h4>
+                      <h4 class="m-b-0 text-white">Reach</h4>
                     </div>
                     <div class="card-body">
                       <div class="help-block with-errors mandatory-error"></div>
                       <div class="form-body">
-                        <h4 class="card-title">Some values:</h4>
+                        <h4 class="card-title">How large is it?</h4>
                         <hr>
                         <div class="row p-t-20">
                           <div class="col-sm-6">    
                             <div class="form-group">
-                              <label class="control-label">Some words</label>
-                              <div class="input-group validtest1">
-                                <div class="input-group-prepend">
+                              <label class="control-label">Size of audience reached</label>
+                              <div class="input-group validreach1">
+                                <select class="custom-select" id="reachAudience" name="test1" data-error="Please Select Reach" data-cell="RA1" data-format="0[.]00" required="">
+                                  <option value="">Please select</option>
+                                  <option value="0"> &gt;= 1000</option>
+                                  <option value="1">1001 – 2000</option>
+                                  <option value="2">2001 – 3000</option>
+                                  <option value="3">3001 – 4000</option>
+                                  <option value="4">4001 – 5000</option>
+                                  <option value="5">5001 – 6000</option>
+                                  <option value="6">6001 – 7000</option>
+                                  <option value="7">7001 – 8000</option>
+                                  <option value="8">8001 – 9000</option>
+                                  <option value="9">9001 – 10,000</option>
+                                  <option value="10">10,001 +</option>
+                                </select>
+                                
+                                <!-- <div class="input-group-prepend">
                                   <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
                                 </div>
-                                <input type="number" id="test1" class="form-control" data-cell="A1" data-format="0[.]00" placeholder="value 1" required="">
+                                <input type="number" id="test1" class="form-control" data-cell="A1" data-format="0[.]00" placeholder="value 1" required=""> -->
+
                                 <div class="help-block with-errors"></div>
+
                               </div>
                             </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="control-label">Some words</label>
-                              <div class="input-group validtest2">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
-                                  </div>
-                                  <input type="number" id="test2" class="form-control" data-cell="A2" data-format="0[.]00" placeholder="value 2" required="">
-                                  <div class="help-block with-errors"></div>
-                              </div>                      
+    
+                            <div class="form-group validreach2">                                
+                              <label class="control-label">Extent to which the idea can be leveraged across UoA disciplines
+                                </label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="reach-disciplines1" name="reach-disciplines" value="1" data-cell="RA2">
+                                <label class="form-check-label" for="reach-disciplines1">1 faculty, discipline, or school </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="reach-disciplines2" name="reach-disciplines" value="2" data-cell="RA3">
+                                <label class="form-check-label" for="reach-disciplines2">2 faculties </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="reach-disciplines3" name="reach-disciplines" value="3" data-cell="RA4">
+                                <label class="form-check-label" for="reach-disciplines3">3 faculties </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="reach-disciplines4" name="reach-disciplines" value="4" data-cell="RA5">
+                                <label class="form-check-label" for="reach-disciplines4">4 faculties </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="reach-disciplines5" name="reach-disciplines" value="5" data-cell="RA6">
+                                <label class="form-check-label" for="reach-disciplines5">All 5 faculties </label>
+                              </div>
+
+                              <!-- <div class="input-group-prepend">
+                                <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
+                              </div>
+                              <input type="number" id="test2" class="form-control" data-cell="A2" data-format="0[.]00" placeholder="value 2" required=""> -->
+
+                              <div class="help-block with-errors"></div>
+                                 
                             </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-sm-3">
+  
                             <div class="form-group">
                               <label class="control-label">Subtotal</label>
-                              <input class="form-control" data-cell="C1" data-format="0[.]00" data-formula="SUM(A1:A2)">
+                              <input class="form-control" data-cell="RB1" data-format="0[.]00" data-formula="SUM(RA1:RA26)">
                             </div>
 
-                            <div class="form-group validtest3">
-                              <label class="control-label">Pick one</label>
+                            <div class="form-group validreach3">
+
+                              <label class="control-label">How important and valuable is the target audience?</label>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="first1" name="first" value="0" data-cell="B1">
-                                <label class="form-check-label" for="first1">0</label>
+                                <input class="form-check-input" type="radio" id="reach-valuable1" name="reach-valuable" value="1" data-cell="RA7">
+                                <label class="form-check-label" for="reach-valuable1">Low or mid value audiences </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="first2" name="first" value="10" data-cell="B2">
-                                <label class="form-check-label" for="first2">10</label>
+                                <input class="form-check-input" type="radio" id="reach-valuable2" name="reach-valuable" value="5" data-cell="RA8">
+                                <label class="form-check-label" for="reach-valuable2">If the audience is deemed valuable, yet no measure can be assigned </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="first3" name="first" value="100" data-cell="B3">
-                                <label class="form-check-label" for="first3">100</label>
+                                <input class="form-check-input" type="radio" id="reach-valuable3" name="reach-valuable" value="10" data-cell="RA9">
+                                <label class="form-check-label" for="reach-valuable3">If the audience can be defined, quantified, and assigned a strategic value (potential future value, current value, or strategic importance. e.g. prospective students)</label>
                               </div>
                               <div class="help-block with-errors"></div>
                             </div>
 
-                            <label class="control-label">Subtotal:</label>
+                            <div class="form-group validreach4">
+
+                                <label class="control-label">Is there paid media spend?</label>
+                                <div class="input-group">
+                                  <select class="custom-select" id="reachMediaSpend" name="reach-media-spend" data-error="Please Select" data-cell="RA10" data-format="0[.]00" required="">
+                                    <option value="">Please select</option>
+                                    <option value="0"> &gt;= 1000</option>
+                                    <option value="1">1001 – 2000</option>
+                                    <option value="2">2001 – 3000</option>
+                                    <option value="3">3001 – 4000</option>
+                                    <option value="4">4001 – 5000</option>
+                                    <option value="5">5001 – 6000</option>
+                                    <option value="6">6001 – 7000</option>
+                                    <option value="7">7001 – 8000</option>
+                                    <option value="8">8001 – 9000</option>
+                                    <option value="9">9001 – 10,000</option>
+                                    <option value="10">10,001 +</option>
+                                  </select>
+                                </div>
+                                
+                                <!-- <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="reach-media-spend1" name="reach-media-spend" value="1" data-cell="RA7">
+                                  <label class="form-check-label" for="reach-media-spend1">Low or mid value audiences</label>
+                                </div> -->
+                                <div class="help-block with-errors"></div>
+                              </div>
+
+
                             <div class="form-group">
-                              <input class="form-control" data-cell="C2" data-format="0[.]00" data-formula="SUM(B1:B3)">
+                              <label class="control-label">Subtotal:</label>
+                              <input class="form-control" data-cell="RB2" data-format="0[.]00" data-formula="SUM(RA7:RA10)">
                             </div>
-                            <label class="control-label">TOTAL:</label>
+
                             <div class="form-group">
-                              <input id="testTotal1" class="form-control" data-cell="D1" data-format="0[.]00" data-formula="SUM(C1:C2)">
+                              <label class="control-label">TOTAL:</label>
+                              <input id="testTotal1" class="form-control" data-cell="RC1" data-format="0[.]00" data-formula="SUM(RB1:RB2)">
                             </div>
+
                           </div>
                         </div>
                       </div>
@@ -275,7 +344,7 @@
                                 <div class="input-group-prepend">
                                   <span class="input-group-text" id=""><i class="fa fa-usd"></i></span>
                                 </div>
-                                <select class="custom-select" id="probudget" name="probudget" data-error="Please Select Budget">
+                                <select class="custom-select" id="probudget" name="probudget" data-error="Please Select Budget" required>
                                   <option value="">--- Select Budget* ---</option>
                                   <option value="Around $500">Around $500</option>
                                   <option value="$500 - $1000">$500 - $1000</option>

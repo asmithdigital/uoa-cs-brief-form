@@ -153,19 +153,23 @@ function previousStep1() {
 }
 
 function nextStep3() {
-    var testValue1 = $('#test1').val();
-    var testValue2 = $('#test2').val();
-    var testValue3 = $('input[name=first]:checked').val();
-    if (testValue1) $(".validtest1 .help-block.with-errors").html('');
+    var validreach1 = $('#reachAudience').val();
+    var validreach2 = $('input[name=reach-disciplines]:checked').val();
+    var validreach3 = $('input[name=reach-valuable]:checked').val();
+    var validreach4 = $('#reachMediaSpend').val();
+    if (validreach1) $(".validreach1 .help-block.with-errors").html('');
     else
-        $(".validtest1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
-    if (testValue2) $(".validtest2 .help-block.with-errors").html('');
+        $(".validreach1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter Reach</li></ul>');
+    if (validreach2) $(".validreach2 .help-block.with-errors").html('');
     else
-        $(".validtest2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
-    if (testValue3) $(".validtest3 .help-block.with-errors").html('');
+        $(".validreach2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+    if (validreach3) $(".validreach3 .help-block.with-errors").html('');
     else
-        $(".validtest3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
-    if (testValue1 && testValue2 && testValue3) {
+        $(".validreach3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+    if (validreach4) $(".validreach4 .help-block.with-errors").html('');
+    else
+        $(".validreach4 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+    if (validreach1 && validreach2 && validreach3 && validreach4) {
         $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');
         $("#section-2 .help-block.with-errors.mandatory-error").html('');
         $("#section-2").removeClass("open");
