@@ -38,36 +38,36 @@ document.addEventListener("touchstart", function() {}, false);
         }
     });
 
-    // function submitForm() {
-    //     $("#mgsContactSubmit").html('');
-    //     $("#final-step-buttons").html('<div class="h3 text-center text-success"> You have finished all steps of this html form successfully!!! </div>');
-    //     swal("Good job!", "You have finished all steps of this html form successfully!!!", "success");
-    // }
     function submitForm() {
-        var form_data = new FormData($("#QuoteForm")[0]);
-        form_data.append('file', form_data);
-        $('#loading-image').show();
-        $('#final-step-buttons').hide();
-        $.ajax({
-            type: "POST",
-            url: "https://mgsdemo.mgscoder.com/mgscode/multi-step-form/quote-cond-multifile-attached.php",
-            data: form_data,
-            processData: false,
-            contentType: false,
-            success: function(text) {
-                if (text === "success") {
-                    formSuccess();
-                } else {
-                    formError();
-                    submitMSG(false, text);
-                }
-            },
-            complete: function() {
-                $('#loading-image').hide();
-                $('#final-step-buttons').show();
-            }
-        });
+        $("#mgsContactSubmit").html('');
+        $("#final-step-buttons").html('<div class="h3 text-center text-success"> You have finished all steps of this html form successfully!!! </div>');
+        swal("Good job!", "You have finished all steps of this html form successfully!!!", "success");
     }
+    // function submitForm() {
+    //     var form_data = new FormData($("#QuoteForm")[0]);
+    //     form_data.append('file', form_data);
+    //     $('#loading-image').show();
+    //     $('#final-step-buttons').hide();
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "https://mgsdemo.mgscoder.com/mgscode/multi-step-form/quote-cond-multifile-attached.php",
+    //         data: form_data,
+    //         processData: false,
+    //         contentType: false,
+    //         success: function(text) {
+    //             if (text === "success") {
+    //                 formSuccess();
+    //             } else {
+    //                 formError();
+    //                 submitMSG(false, text);
+    //             }
+    //         },
+    //         complete: function() {
+    //             $('#loading-image').hide();
+    //             $('#final-step-buttons').show();
+    //         }
+    //     });
+    // }
     $(document).on('change', ':file', function() {
         var input = $(this),
             numFiles = input.get(0).files ? input.get(0).files.length : 1,
@@ -205,19 +205,19 @@ function previousStep2() {
 }
 
 function nextStep4() {
-    var testValue4 = $('#test3').val();
-    var testValue5 = $('#test4').val();
-    var testValue6 = $('input[name=second]:checked').val();
-    if (testValue4) $(".validtest4 .help-block.with-errors").html('');
+    var validreturn1 = $('input[name=return-size-result]:checked').val();
+    var validreturn2 = $('input[name=return-measure]:checked').val();
+    var validreturn3 = $('input[name=return-size-investment]:checked').val();
+    if (validreturn1) $(".validreturn1 .help-block.with-errors").html('');
     else
-        $(".validtest4 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 1</li></ul>');
-    if (testValue5) $(".validtest5 .help-block.with-errors").html('');
+        $(".validreturn1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter value</li></ul>');
+    if (validreturn2) $(".validreturn2 .help-block.with-errors").html('');
     else
-        $(".validtest5 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
-    if (testValue6) $(".validtest6 .help-block.with-errors").html('');
+        $(".validreturn2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+    if (validreturn3) $(".validreturn3 .help-block.with-errors").html('');
     else
-        $(".validtest6 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
-    if (testValue4 && testValue5 && testValue6) {
+        $(".validreturn3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+    if (validreturn1 && validreturn2 && validreturn3) {
         $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
         $("#section-3 .help-block.with-errors.mandatory-error").html('');
         $("#section-3").removeClass("open");
@@ -252,6 +252,53 @@ function previousStep3() {
 }
 
 function nextStep5() {
+    // var validreturn1 = $('input[name=return-size-result]:checked').val();
+    // var validreturn2 = $('input[name=return-measure]:checked').val();
+    // var validreturn3 = $('input[name=return-size-investment]:checked').val();
+    // if (validreturn1) $(".validreturn1 .help-block.with-errors").html('');
+    // else
+    //     $(".validreturn1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter value</li></ul>');
+    // if (validreturn2) $(".validreturn2 .help-block.with-errors").html('');
+    // else
+    //     $(".validreturn2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+    // if (validreturn3) $(".validreturn3 .help-block.with-errors").html('');
+    // else
+    //     $(".validreturn3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+    // if (validreturn1 && validreturn2 && validreturn3) {
+        $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
+        $("#section-4 .help-block.with-errors.mandatory-error").html('');
+        $("#section-4").removeClass("open");
+        $("#section-4").addClass("slide-left");
+        $("#section-5").removeClass("slide-right");
+        $("#section-5").addClass("open");
+
+        // Scroll to top of next stage
+        $('html,body').animate({
+            scrollTop: $("#QuoteForm").offset().top - 80
+        }, 'slow');
+    // } else {
+    //     $("#section-4 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
+    //     $('html,body').animate({
+    //         scrollTop: $("#section-3 .help-block.with-errors.mandatory-error").offset().top - 80
+    //     }, 'slow');
+    //     sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
+    // } 
+}
+
+function previousStep4() {
+    $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
+    $("#section-4").removeClass("slide-left");
+    $("#section-4").addClass("open");
+    $("#section-5").removeClass("open");
+    $("#section-5").addClass("slide-right");
+
+    // Scroll to top of previous stage
+    $('html,body').animate({
+        scrollTop: $("#QuoteForm").offset().top - 80
+    }, 'slow');
+}
+
+function nextStep6() {
 
     $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');;
 
@@ -293,11 +340,11 @@ function nextStep5() {
     $("#preferedcontactData").html('<strong>Prefered Contact Method:</strong> ' + preferedcontact);
     
     // Scroll
-    $("#section-4 .help-block.with-errors.mandatory-error").html('');
-    $("#section-4").removeClass("open");
-    $("#section-4").addClass("slide-left");
-    $("#section-5").removeClass("slide-right");
-    $("#section-5").addClass("open");
+    $("#section-5 .help-block.with-errors.mandatory-error").html('');
+    $("#section-5").removeClass("open");
+    $("#section-5").addClass("slide-left");
+    $("#section-6").removeClass("slide-right");
+    $("#section-6").addClass("open");
 
     // Scroll to top of next stage
     $('html,body').animate({
@@ -305,17 +352,17 @@ function nextStep5() {
     }, 'slow');
 
     // Hide fast scroll track button
-    $(".backto4").css('display', 'inline-block');
-    $(".backto4Content").css('display', 'block');
+    $(".backto5").css('display', 'inline-block');
+    $(".backto5Content").css('display', 'block');
     $(".backto1, .backto1Content").css('display', 'none');
 }
 
-function previousStep4() {
+function previousStep5() {
     $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
-    $("#section-4").removeClass("slide-left");
-    $("#section-4").addClass("open");
-    $("#section-5").removeClass("open");
-    $("#section-5").addClass("slide-right");
+    $("#section-5").removeClass("slide-left");
+    $("#section-5").addClass("open");
+    $("#section-6").removeClass("open");
+    $("#section-6").addClass("slide-right");
 
     // Scroll to top of previous stage
     $('html,body').animate({
@@ -323,7 +370,7 @@ function previousStep4() {
     }, 'slow');
 }
 
-function nextStep5Fast() {
+function nextStep6Fast() {
     $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');
     $("#section-1 .help-block.with-errors").html('');
     $("#section-1").removeClass("open");
@@ -335,7 +382,9 @@ function nextStep5Fast() {
     $("#section-4").removeClass("slide-right");
     $("#section-4").addClass("slide-left");
     $("#section-5").removeClass("slide-right");
-    $("#section-5").addClass("open");
+    $("#section-5").addClass("slide-left");
+    $("#section-6").removeClass("slide-right");
+    $("#section-6").addClass("open");
     $(".backto4, .backto4Content").css('display', 'none');
     $(".backto1").css('display', 'inline-block');
     $(".backto1Content").css('display', 'block');
@@ -356,8 +405,10 @@ function previousStep1Fast() {
     $("#section-3").addClass("slide-right");
     $("#section-4").removeClass("slide-left");
     $("#section-4").addClass("slide-right");
-    $("#section-5").removeClass("open");
+    $("#section-5").removeClass("slide-left");
     $("#section-5").addClass("slide-right");
+    $("#section-6").removeClass("open");
+    $("#section-6").addClass("slide-right");
 
     // Scroll to top of next stage
     $('html,body').animate({

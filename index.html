@@ -74,7 +74,7 @@
                           </div>
                           <div class="form-actions">
                             <div class="form-group quoteForm-step-1-fast" id="stepOneFast">
-                              <button class="btn btn-primary pull-right btn-custom" type="button" onclick="nextStep5Fast()">Fast Next <span class="fa fa-arrow-right"></span>
+                              <button class="btn btn-primary pull-right btn-custom" type="button" onclick="nextStep6Fast()">Fast Next <span class="fa fa-arrow-right"></span>
                               </button>
                             </div>
                             <div class="form-group quoteForm-step-1" id="stepOne" style="display: none;">
@@ -105,9 +105,9 @@
                             <div class="form-group">
                               <label class="control-label">Size of audience reached</label>
                               <div class="input-group validreach1">
-                                <select class="custom-select" id="reachAudience" name="test1" data-error="Please Select Reach" data-cell="RA1" data-format="0[.]00" required="">
+                                <select class="custom-select" id="reachAudience" name="test1" data-error="Please Select Reach" data-cell="AA1" data-format="0[.]00" required="">
                                   <option value="">Please select</option>
-                                  <option value="0"> &gt;= 1000</option>
+                                  <option value="0"> &lt;= 1000</option>
                                   <option value="1">1001 – 2000</option>
                                   <option value="2">2001 – 3000</option>
                                   <option value="3">3001 – 4000</option>
@@ -134,23 +134,23 @@
                               <label class="control-label">Extent to which the idea can be leveraged across UoA disciplines
                                 </label>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="reach-disciplines1" name="reach-disciplines" value="1" data-cell="RA2">
+                                <input class="form-check-input" type="radio" id="reach-disciplines1" name="reach-disciplines" value="1" data-format="0[.]00" data-cell="AA2">
                                 <label class="form-check-label" for="reach-disciplines1">1 faculty, discipline, or school </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="reach-disciplines2" name="reach-disciplines" value="2" data-cell="RA3">
+                                <input class="form-check-input" type="radio" id="reach-disciplines2" name="reach-disciplines" value="2" data-format="0[.]00" data-cell="AA3">
                                 <label class="form-check-label" for="reach-disciplines2">2 faculties </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="reach-disciplines3" name="reach-disciplines" value="3" data-cell="RA4">
+                                <input class="form-check-input" type="radio" id="reach-disciplines3" name="reach-disciplines" value="3" data-format="0[.]00" data-cell="AA4">
                                 <label class="form-check-label" for="reach-disciplines3">3 faculties </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="reach-disciplines4" name="reach-disciplines" value="4" data-cell="RA5">
+                                <input class="form-check-input" type="radio" id="reach-disciplines4" name="reach-disciplines" value="4" data-format="0[.]00" data-cell="AA5">
                                 <label class="form-check-label" for="reach-disciplines4">4 faculties </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="reach-disciplines5" name="reach-disciplines" value="5" data-cell="RA6">
+                                <input class="form-check-input" type="radio" id="reach-disciplines5" name="reach-disciplines" value="5" data-format="0[.]00" data-cell="AA6">
                                 <label class="form-check-label" for="reach-disciplines5">All 5 faculties </label>
                               </div>
 
@@ -165,22 +165,22 @@
   
                             <div class="form-group">
                               <label class="control-label">Subtotal</label>
-                              <input class="form-control" data-cell="RB1" data-format="0[.]00" data-formula="SUM(RA1:RA26)">
+                              <input class="form-control" data-cell="AB1" data-format="0[.]00" data-formula="SUM(AA1:AA6)">
                             </div>
 
                             <div class="form-group validreach3">
 
                               <label class="control-label">How important and valuable is the target audience?</label>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="reach-valuable1" name="reach-valuable" value="1" data-cell="RA7">
+                                <input class="form-check-input" type="radio" id="reach-valuable1" name="reach-valuable" value="1" data-format="0[.]00" data-cell="AA7">
                                 <label class="form-check-label" for="reach-valuable1">Low or mid value audiences </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="reach-valuable2" name="reach-valuable" value="5" data-cell="RA8">
+                                <input class="form-check-input" type="radio" id="reach-valuable2" name="reach-valuable" value="5" data-format="0[.]00" data-cell="AA8">
                                 <label class="form-check-label" for="reach-valuable2">If the audience is deemed valuable, yet no measure can be assigned </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" id="reach-valuable3" name="reach-valuable" value="10" data-cell="RA9">
+                                <input class="form-check-input" type="radio" id="reach-valuable3" name="reach-valuable" value="10" data-format="0[.]00" data-cell="AA9">
                                 <label class="form-check-label" for="reach-valuable3">If the audience can be defined, quantified, and assigned a strategic value (potential future value, current value, or strategic importance. e.g. prospective students)</label>
                               </div>
                               <div class="help-block with-errors"></div>
@@ -190,9 +190,9 @@
 
                                 <label class="control-label">Is there paid media spend?</label>
                                 <div class="input-group">
-                                  <select class="custom-select" id="reachMediaSpend" name="reach-media-spend" data-error="Please Select" data-cell="RA10" data-format="0[.]00" required="">
+                                  <select class="custom-select" id="reachMediaSpend" name="reach-media-spend" data-error="Please Select" data-cell="AA10" data-format="0[.]00" required="">
                                     <option value="">Please select</option>
-                                    <option value="0"> &gt;= 1000</option>
+                                    <option value="0"> &lt;= 1000</option>
                                     <option value="1">1001 – 2000</option>
                                     <option value="2">2001 – 3000</option>
                                     <option value="3">3001 – 4000</option>
@@ -216,12 +216,12 @@
 
                             <div class="form-group">
                               <label class="control-label">Subtotal:</label>
-                              <input class="form-control" data-cell="RB2" data-format="0[.]00" data-formula="SUM(RA7:RA10)">
+                              <input class="form-control" data-cell="AB2" data-format="0[.]00" data-formula="SUM(AA7:AA10)">
                             </div>
 
                             <div class="form-group">
                               <label class="control-label">TOTAL:</label>
-                              <input id="testTotal1" class="form-control" data-cell="RC1" data-format="0[.]00" data-formula="SUM(RB1:RB2)">
+                              <input id="testTotal1" class="form-control" data-cell="T1" data-format="0[.]00" data-formula="SUM(AB1:AB2)">
                             </div>
 
                           </div>
@@ -241,48 +241,99 @@
                 <fieldset>
                   <div class="card">
                     <div class="card-header bg-info">
-                      <h4 class="m-b-0 text-white">Section 3</h4>
+                      <h4 class="m-b-0 text-white">Return</h4>
                     </div>
                     <div class="card-body">
                       <div class="help-block with-errors mandatory-error"></div>
                       <div class="form-body">
-                        <h4 class="card-title">Some values:</h4>
+                        <h4 class="card-title">Is it worth doing?</h4>
                         <hr>
                         <div class="row p-t-20">
-                          <div class="col-sm-6">    
-                            <div class="form-group">
-                              <label class="control-label">Some words</label>
-                              <div class="input-group validtest4">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
+                          <div class="col-sm-12">  
+                            <div class="form-group validreturn1">                              
+
+                                <label class="control-label">How large is the desired result (financial,  strategic, or engagement)?</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="return-size-result1" name="return-size-result" value="1" data-format="0[.]00" data-cell="BA1">
+                                  <label class="form-check-label" for="return-size-result1">If the project aims to deliver &lt; 5% of your annual desired result for this objective </label>
                                 </div>
-                                <input type="number" id="test3" class="form-control" data-cell="A3" data-format="0[.]00" placeholder="value 1" required="">
-                                <div class="help-block with-errors"></div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="return-size-result2" name="return-size-result" value="5" data-format="0[.]00" data-cell="BA2">
+                                  <label class="form-check-label" for="return-size-result2">If the project aims to deliver 5% - 24% of your annual desired result for this objective</label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="return-size-result3" name="return-size-result" value="10" data-format="0[.]00" data-cell="BA3">
+                                  <label class="form-check-label" for="return-size-result3">If the project aims to deliver 25% - 49% of your annual desired result for this objective</label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="return-size-result3" name="return-size-result" value="15" data-format="0[.]00" data-cell="BA4">
+                                  <label class="form-check-label" for="return-size-result3">If the project aims to deliver 50%+ of your annual desired result for this objective</label>
+                                </div>
+
+                              <!-- <div class="input-group-prepend">
+                                <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
                               </div>
+                              <input type="number" id="test3" class="form-control" data-cell="A3" data-format="0[.]00" placeholder="value 1" required=""> -->
+
+                              <div class="help-block with-errors"></div>
+                              
                             </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="control-label">Some words</label>
+  
+                            <div class="form-group validreturn2">
+
+                              <label class="control-label">Can it be easily measured by market-focused measures?</label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="return-measure1" name="return-measure" value="1" data-format="0[.]00" data-cell="BA5">
+                                <label class="form-check-label" for="return-measure1">General measures not mapping to KPIs</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="return-measure2" name="return-measure" value="5" data-format="0[.]00" data-cell="BA6">
+                                <label class="form-check-label" for="return-measure2">Measures reinforcing marketing plan KPIs, yet not directly attributable (engagement, advocacy)</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="return-measure3" name="return-measure" value="10" data-format="0[.]00" data-cell="BA7">
+                                <label class="form-check-label" for="return-measure3">Evidence based, market-focused metrics (KPIs) as defined in marketing plans (including ranking, reputation, recruitment, research funding, retention, job applications)</label>
+                              </div>
+                              
+                              <!-- <label class="control-label">Some words</label>
                               <div class="input-group validtest5">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id=""><i class="fa fa-cogs"></i></span>
                                   </div>
                                   <input type="number" id="test4" class="form-control" data-cell="A4" data-format="0[.]00" placeholder="value 2" required="">
-                                  <div class="help-block with-errors"></div>
-                              </div>                      
+                              </div>
+                               -->
+                              <div class="help-block with-errors"></div>
                             </div>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-sm-3">
+                          <div class="col-sm-6">
                             <div class="form-group">
                               <label class="control-label">Subtotal</label>
-                              <input class="form-control" data-cell="C3" data-format="0[.]00" data-formula="SUM(A3:A4)">
+                              <input class="form-control" data-cell="BB1" data-format="0[.]00" data-formula="SUM(BA1:BA7)">
                             </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="form-group validreturn3">
 
-                            <div class="form-group validtest6">
-                              <label class="control-label">Pick one</label>
+                              <label class="control-label">Size of investment (budget and resource time allocations)</label>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="return-size-investment1" name="return-size-investment" value="1" data-format="0[.]00" data-cell="BA8">
+                                <label class="form-check-label" for="return-size-investment1">&lt;5% of business unit’s overall marketing budget and/or &lt;80 hours of resource cost </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="return-size-investment2" name="return-size-investment" value="5" data-format="0[.]00" data-cell="BA9">
+                                <label class="form-check-label" for="return-size-investment2">5% - 19% of business unit’s overall marketing budget and/or 80 – 160 hours of resource cost</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="return-size-investment3" name="return-size-investment" value="10" data-format="0[.]00" data-cell="BA10">
+                                <label class="form-check-label" for="return-size-investment3">&gt;20% of the business unit’s overall marketing budget and/or 160+hours of resource cost required</label>
+                              </div>
+
+                              <!-- <label class="control-label">Pick one</label>
                               <div class="form-check">
                                 <input class="form-check-input" type="radio" id="first4" name="second" value="0" data-cell="B4">
                                 <label class="form-check-label" for="first4">0</label>
@@ -294,23 +345,28 @@
                               <div class="form-check">
                                 <input class="form-check-input" type="radio" id="first6" name="second" value="100" data-cell="B6">
                                 <label class="form-check-label" for="first6">100</label>
-                              </div>
+                              </div> -->
+
                               <div class="help-block with-errors"></div>
                             </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-6">
 
                             <label class="control-label">Subtotal:</label>
                             <div class="form-group">
-                              <input class="form-control" data-cell="C4" data-format="0[.]00" data-formula="SUM(B4:B6)">
+                              <input class="form-control" data-cell="BB2" data-format="0[.]00" data-formula="SUM(BA8:BA10)">
                             </div>
                             
                             <label class="control-label">TOTAL:</label>
                             <div class="form-group">
-                              <input id="testTotal2" class="form-control" data-cell="D2" data-format="0[.]00" data-formula="SUM(C3:C4)">
+                              <input id="testTotal2" class="form-control" data-cell="T2" data-format="0[.]00" data-formula="SUM(BB1:BB2)">
                             </div>
 
                             <label class="control-label">Total of TOTALS:</label>
                             <div class="form-group">
-                              <input id="testTotalofTTotal" class="form-control" data-cell="E1" data-format="0[.]00" data-formula="SUM(D1:D2)">
+                              <input id="testTotalofTTotal" class="form-control" data-cell="TT1" data-format="0[.]00" data-formula="SUM(T1:T2)">
                             </div>
                           </div>
                         </div>
@@ -326,14 +382,131 @@
               </div> <!-- / Section 3-->
 
               <div class="section slide-right" id="section-4">
+                  <fieldset>
+                    <div class="card">
+                      <div class="card-header bg-info">
+                        <h4 class="m-b-0 text-white">Return</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="help-block with-errors mandatory-error"></div>
+                        <div class="form-body">
+                          <h4 class="card-title">Is it worth doing?</h4>
+                          <hr>
+                          <div class="row p-t-20">
+                            <div class="col-sm-12">  
+                              <div class="form-group validreturn1">                              
+  
+                                  <label class="control-label">How large is the desired result (financial,  strategic, or engagement)?</label>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="return-size-result1" name="reaturn-size-result" value="1" data-format="0[.]00" data-cell="BaA1">
+                                    <label class="form-check-label" for="return-size-result1">If the project aims to deliver &lt; 5% of your annual desired result for this objective </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="return-size-result2" name="reaturn-size-result" value="5" data-format="0[.]00" data-cell="BaA2">
+                                    <label class="form-check-label" for="return-size-result2">If the project aims to deliver 5% - 24% of your annual desired result for this objective</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="return-size-result3" name="retuarn-size-result" value="10" data-format="0[.]00" data-cell="BaA3">
+                                    <label class="form-check-label" for="return-size-result3">If the project aims to deliver 25% - 49% of your annual desired result for this objective</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="return-size-result3" name="retaurn-size-result" value="15" data-format="0[.]00" data-cell="BAa4">
+                                    <label class="form-check-label" for="return-size-result3">If the project aims to deliver 50%+ of your annual desired result for this objective</label>
+                                  </div>
+  
+                                <div class="help-block with-errors"></div>
+                                
+                              </div>
+    
+                              <div class="form-group validreturn2">
+  
+                                <label class="control-label">Can it be easily measured by market-focused measures?</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="return-measure1" name="retuarn-measure" value="1" data-format="0[.]00" data-cell="BaA5">
+                                  <label class="form-check-label" for="return-measure1">General measures not mapping to KPIs</label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="return-measure2" name="retuarn-measure" value="5" data-format="0[.]00" data-cell="BaA6">
+                                  <label class="form-check-label" for="return-measure2">Measures reinforcing marketing plan KPIs, yet not directly attributable (engagement, advocacy)</label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="return-measure3" name="retuarn-measure" value="10" data-format="0[.]00" data-cell="BaA7">
+                                  <label class="form-check-label" for="return-measure3">Evidence based, market-focused metrics (KPIs) as defined in marketing plans (including ranking, reputation, recruitment, research funding, retention, job applications)</label>
+                                </div>
+
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label class="control-label">Subtotal</label>
+                                <input class="form-control" data-cell="BaB1" data-format="0[.]00" data-formula="SUM(BaA1:BaA7)">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="form-group validreturn3">
+  
+                                <label class="control-label">Size of investment (budget and resource time allocations)</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="return-size-investment1" name="retuarn-size-investment" value="1" data-format="0[.]00" data-cell="BaA8">
+                                  <label class="form-check-label" for="return-size-investment1">&lt;5% of business unit’s overall marketing budget and/or &lt;80 hours of resource cost </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="return-size-investment2" name="retaurn-size-investment" value="5" data-format="0[.]00" data-cell="BaA9">
+                                  <label class="form-check-label" for="return-size-investment2">5% - 19% of business unit’s overall marketing budget and/or 80 – 160 hours of resource cost</label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="return-size-investment3" name="returan-size-investment" value="10" data-format="0[.]00" data-cell="BaA10">
+                                  <label class="form-check-label" for="return-size-investment3">&gt;20% of the business unit’s overall marketing budget and/or 160+hours of resource cost required</label>
+                                </div>
+  
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+  
+                              <label class="control-label">Subtotal:</label>
+                              <div class="form-group">
+                                <input class="form-control" data-cell="BaB2" data-format="0[.]00" data-formula="SUM(BaA8:BAa10)">
+                              </div>
+                              
+                              <label class="control-label">TOTAL:</label>
+                              <div class="form-group">
+                                <input id="testTotal2" class="form-control" data-cell="Ta2" data-format="0[.]00" data-formula="SUM(BaB1:BaB2)">
+                              </div>
+  
+                              <label class="control-label">Total of TOTALS:</label>
+                              <div class="form-group">
+                                <input id="testTotalofTTotal" class="form-control" data-cell="TaT1" data-format="0[.]00" data-formula="SUM(T1a:Ta2)">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-actions quoteForm-step-2">
+                          <button class="btn btn-primary btn-custom" type="button" onclick="previousStep3()"><span class="fa fa-arrow-left"></span> Back</button>
+                          <button class="btn btn-primary btn-custom pull-right" type="button" onclick="nextStep5()" id="nextStepFour">Next <span class="fa fa-arrow-right"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div> <!-- / Section 4-->
+
+              <div class="section slide-right" id="section-5">
                 <div class="card">
                   <div class="card-header bg-info">
-                    <h4 class="m-b-0 text-white">Section 4</h4>
+                    <h4 class="m-b-0 text-white">Delivery</h4>
                   </div>
                   <div class="card-body">
                     <div class="help-block with-errors mandatory-error"></div>    
                     <div class="form-body">
-                      <h4 class="card-title">Some values:</h4>
+                      <h4 class="card-title">Can we pull it off?</h4>
                       <hr>
                       <div class="row p-t-20">
                         <div class="col-md-6">
@@ -491,15 +664,15 @@
                       </div>
                     </div>
                     <div class="form-actions quoteForm-step-4">
-                      <button class="btn btn-primary btn-custom" type="button" onclick="previousStep3()"><span class="fa fa-arrow-left"></span> Back</button>
-                      <button class="btn btn-primary btn-custom pull-right" type="button" onclick="nextStep5()">Next <span class="fa fa-arrow-right"></span>
+                      <button class="btn btn-primary btn-custom" type="button" onclick="previousStep4()"><span class="fa fa-arrow-left"></span> Back</button>
+                      <button class="btn btn-primary btn-custom pull-right" type="button" onclick="nextStep6()">Next <span class="fa fa-arrow-right"></span>
                       </button>
                     </div>
                   </div>
                 </div>
-              </div> <!-- / Section 4-->
+              </div> <!-- / Section 6-->
 
-              <div class="section slide-right review-submit-section" id="section-5">
+              <div class="section slide-right review-submit-section" id="section-6">
                 <fieldset>
                   <div class="card">
                       <div class="card-header bg-info">
@@ -516,7 +689,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="backto4Content">
+                          <div class="backto5Content">
                             <h4 class="card-title">Your Inputed Data Summery</h4>
                             <hr>
                             <div class="row p-b-20">
@@ -595,8 +768,8 @@
                           <img src="https://mgsdemo.mgscoder.com/mgscode/multi-step-form/images/loading-image.gif" alt="Processing" />
                         </div>
                         <div class="form-actions quoteForm-step-5" id="final-step-buttons">
-                          <div class="backto4">
-                            <button class="btn btn-primary btn-custom" type="button" onclick="previousStep4()"><span class="fa fa-arrow-left"></span> Back 4</button>
+                          <div class="backto5">
+                            <button class="btn btn-primary btn-custom" type="button" onclick="previousStep5()"><span class="fa fa-arrow-left"></span> Back</button>
                           </div>
                           <div class="backto1">
                             <button class="btn btn-primary btn-custom" type="button" onclick="previousStep1Fast()"><span class="fa fa-arrow-left"></span> Back 1</button>
