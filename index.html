@@ -19,19 +19,13 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/sweetalert.css" rel="stylesheet">
     <link href="css/multi-step-html-form.css" rel="stylesheet">
+
   </head>
   <body class="card-no-border">
 
     <div id="page-wrapper" class="container p-t-40">
       <div class="row">
         <div class="col-lg-12">
-
-        <form action="https://usebasin.com/f/6214820fd0a3" method="POST">
-          <label for="email-address">Email Address</label>
-          <input type="email" id="email" name="email" required>
-          <button type="submit">Submit</button>
-        </form>
-
 
           <form class="" data-toggle="validator" enctype="multipart/form-data" id="QuoteForm" name="QuoteForm" novalidate="true">
 
@@ -54,6 +48,11 @@
                           <div class="form-body">
                             <h2 class="card-title">First stage pre-selections:</h2>
                             <hr>
+
+                            <div class="g-recaptcha" data-sitekey="6LdDg6UUAAAAAKTxUQIpAOMm2Vpj5lQKhwym7-UY"></div>
+                            
+                            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                            
                             <p class="card-subtitle">Lorem ipsum dolor sit amet consectetur.</p>
                             <div class="form-group">
                               <div class="form-check" style="margin-bottom: 1rem;">
@@ -522,6 +521,9 @@
                             <input id="aggre2" name="aggre2" type="checkbox" value="1" checked="" disabled="">
                           </p>
                           <div class="hidden" id="mgsContactSubmit"></div>
+                        </div>
+                        <div id="loading-image" style="display:none;">
+                          <img src="https://mgsdemo.mgscoder.com/mgscode/multi-step-form/images/loading-image.gif" alt="Processing" />
                         </div>
                         <div class="form-actions quoteForm-step-5" id="final-step-buttons">
                           <div class="backto4">

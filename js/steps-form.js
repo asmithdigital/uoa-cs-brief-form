@@ -38,10 +38,35 @@ document.addEventListener("touchstart", function() {}, false);
         }
     });
 
+    // function submitForm() {
+    //     $("#mgsContactSubmit").html('');
+    //     $("#final-step-buttons").html('<div class="h3 text-center text-success"> You have finished all steps of this html form successfully!!! </div>');
+    //     swal("Good job!", "You have finished all steps of this html form successfully!!!", "success");
+    // }
     function submitForm() {
-        $("#mgsContactSubmit").html('');
-        $("#final-step-buttons").html('<div class="h3 text-center text-success"> You have finished all steps of this html form successfully!!! </div>');
-        swal("Good job!", "You have finished all steps of this html form successfully!!!", "success");
+        var form_data = new FormData($("#QuoteForm")[0]);
+        form_data.append('file', form_data);
+        $('#loading-image').show();
+        $('#final-step-buttons').hide();
+        $.ajax({
+            type: "POST",
+            url: "https://mgsdemo.mgscoder.com/mgscode/multi-step-form/quote-cond-multifile-attached.php",
+            data: form_data,
+            processData: false,
+            contentType: false,
+            success: function(text) {
+                if (text === "success") {
+                    formSuccess();
+                } else {
+                    formError();
+                    submitMSG(false, text);
+                }
+            },
+            complete: function() {
+                $('#loading-image').hide();
+                $('#final-step-buttons').show();
+            }
+        });
     }
     $(document).on('change', ':file', function() {
         var input = $(this),
