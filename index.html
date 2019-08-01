@@ -366,7 +366,7 @@
 
                             <label class="control-label">Total of TOTALS:</label>
                             <div class="form-group">
-                              <input id="testTotalofTTotal" class="form-control" data-cell="TT1" data-format="0[.]00" data-formula="SUM(T1:T2)">
+                              <input class="form-control" data-cell="TT1" data-format="0[.]00" data-formula="SUM(T1:T2)">
                             </div>
                           </div>
                         </div>
@@ -385,87 +385,127 @@
                   <fieldset>
                     <div class="card">
                       <div class="card-header bg-info">
-                        <h4 class="m-b-0 text-white">Return</h4>
+                        <h4 class="m-b-0 text-white">Delivery</h4>
                       </div>
                       <div class="card-body">
                         <div class="help-block with-errors mandatory-error"></div>
                         <div class="form-body">
-                          <h4 class="card-title">Is it worth doing?</h4>
+                          <h4 class="card-title">Can we pull it off?</h4>
                           <hr>
                           <div class="row p-t-20">
                             <div class="col-sm-12">  
-                              <div class="form-group validreturn1">                              
+                              <div class="form-group validdelivery1">                              
   
-                                  <label class="control-label">How large is the desired result (financial,  strategic, or engagement)?</label>
+                                  <label class="control-label">Level of innovation involved</label>
                                   <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="return-size-result1" name="reaturn-size-result" value="1" data-format="0[.]00" data-cell="BaA1">
-                                    <label class="form-check-label" for="return-size-result1">If the project aims to deliver &lt; 5% of your annual desired result for this objective </label>
+                                    <input class="form-check-input" type="radio" id="delivery-innovate1" name="delivery-innovate" value="1" data-format="0[.]00" data-cell="CA1">
+                                    <label class="form-check-label" for="delivery-innovate1">The project has been delivered many times before</label>
                                   </div>
                                   <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="return-size-result2" name="reaturn-size-result" value="5" data-format="0[.]00" data-cell="BaA2">
-                                    <label class="form-check-label" for="return-size-result2">If the project aims to deliver 5% - 24% of your annual desired result for this objective</label>
+                                    <input class="form-check-input" type="radio" id="delivery-innovate2" name="delivery-innovate" value="5" data-format="0[.]00" data-cell="CA2">
+                                    <label class="form-check-label" for="delivery-innovate2">The project is a new way of working or an innovation on a pre-existing UoA project</label>
                                   </div>
                                   <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="return-size-result3" name="retuarn-size-result" value="10" data-format="0[.]00" data-cell="BaA3">
-                                    <label class="form-check-label" for="return-size-result3">If the project aims to deliver 25% - 49% of your annual desired result for this objective</label>
+                                    <input class="form-check-input" type="radio" id="delivery-innovate3" name="delivery-innovate" value="10" data-format="0[.]00" data-cell="CA3">
+                                    <label class="form-check-label" for="delivery-innovate3">A new way of achieving a significant business objective, new for UoA, but has been done by others before</label>
                                   </div>
                                   <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="return-size-result3" name="retaurn-size-result" value="15" data-format="0[.]00" data-cell="BAa4">
-                                    <label class="form-check-label" for="return-size-result3">If the project aims to deliver 50%+ of your annual desired result for this objective</label>
+                                    <input class="form-check-input" type="radio" id="delivery-innovate4" name="delivery-innovate" value="15" data-format="0[.]00" data-cell="CA4">
+                                    <label class="form-check-label" for="delivery-innovate4">Is the project pushing the innovation boundaries, paving a new way, a first for the UoA to implement, or amongst the first in the higher education sector locally or globally to respond to the market</label>
                                   </div>
   
                                 <div class="help-block with-errors"></div>
                                 
                               </div>
     
-                              <div class="form-group validreturn2">
-  
-                                <label class="control-label">Can it be easily measured by market-focused measures?</label>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" id="return-measure1" name="retuarn-measure" value="1" data-format="0[.]00" data-cell="BaA5">
-                                  <label class="form-check-label" for="return-measure1">General measures not mapping to KPIs</label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" id="return-measure2" name="retuarn-measure" value="5" data-format="0[.]00" data-cell="BaA6">
-                                  <label class="form-check-label" for="return-measure2">Measures reinforcing marketing plan KPIs, yet not directly attributable (engagement, advocacy)</label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" id="return-measure3" name="retuarn-measure" value="10" data-format="0[.]00" data-cell="BaA7">
-                                  <label class="form-check-label" for="return-measure3">Evidence based, market-focused metrics (KPIs) as defined in marketing plans (including ranking, reputation, recruitment, research funding, retention, job applications)</label>
-                                </div>
 
+                              <div class="validdelivery2">
+                                <label class="control-label">Level of complexity of delivery, and length of time involved</h4>
+                                <label class="control-label">Does the project require specific resources to be freed up from BAU activity and isolated on the project?</label>
+                                <div class="form-group">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="delivery-complex1" name="delivery-complex" value="5" data-format="0[.]00" data-cell="CA5">
+                                    <label class="form-check-label" for="delivery-complex1">yes</label>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label class="control-label">Does the project require specific resources to continue with BAU activity and manage delivery of the project?</label>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="delivery-complex2" name="delivery-complex" value="0" data-format="0[.]00" data-cell="CA6">
+                                    <label class="form-check-label" for="delivery-complex2">&lt; 1 week</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="delivery-complex3" name="delivery-complex" value="1" data-format="0[.]00" data-cell="CA7">
+                                    <label class="form-check-label" for="delivery-complex3">1 - 2 weeks</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="delivery-complex4" name="delivery-complex" value="2" data-format="0[.]00" data-cell="CA8">
+                                    <label class="form-check-label" for="delivery-complex4">2 - 3 weeks</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="delivery-complex5" name="delivery-complex" value="3" data-format="0[.]00" data-cell="CA9">
+                                    <label class="form-check-label" for="delivery-complex5">3 - 4 weeks</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="delivery-complex6" name="delivery-complex" value="4" data-format="0[.]00" data-cell="CA10">
+                                    <label class="form-check-label" for="delivery-complex6">&gt; 4 weeks</label>
+                                  </div>
+                                </div>
                                 <div class="help-block with-errors"></div>
                               </div>
+
                             </div>
                           </div>
                           <div class="row">
                             <div class="col-sm-6">
                               <div class="form-group">
                                 <label class="control-label">Subtotal</label>
-                                <input class="form-control" data-cell="BaB1" data-format="0[.]00" data-formula="SUM(BaA1:BaA7)">
+                                <input class="form-control" data-cell="CB1" data-format="0[.]00" data-formula="SUM(CA1:CA10)">
                               </div>
                             </div>
                           </div>
                           <div class="row">
                             <div class="col-sm-12">
-                              <div class="form-group validreturn3">
+                              <div class="form-group validdelivery3">
   
-                                <label class="control-label">Size of investment (budget and resource time allocations)</label>
+                                <label class="control-label">Number of external partners & suppliers required to deliver</label>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="radio" id="return-size-investment1" name="retuarn-size-investment" value="1" data-format="0[.]00" data-cell="BaA8">
-                                  <label class="form-check-label" for="return-size-investment1">&lt;5% of business unit’s overall marketing budget and/or &lt;80 hours of resource cost </label>
+                                  <input class="form-check-input" type="radio" id="delivery-external1" name="delivery-external" value="0" data-format="0[.]00" data-cell="CA11">
+                                  <label class="form-check-label" for="delivery-external1">0 </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="radio" id="return-size-investment2" name="retaurn-size-investment" value="5" data-format="0[.]00" data-cell="BaA9">
-                                  <label class="form-check-label" for="return-size-investment2">5% - 19% of business unit’s overall marketing budget and/or 80 – 160 hours of resource cost</label>
+                                  <input class="form-check-input" type="radio" id="delivery-external2" name="delivery-external" value="1" data-format="0[.]00" data-cell="CA12">
+                                  <label class="form-check-label" for="delivery-external2">Require 1 agency / supplier / external partners to implement </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="radio" id="return-size-investment3" name="returan-size-investment" value="10" data-format="0[.]00" data-cell="BaA10">
-                                  <label class="form-check-label" for="return-size-investment3">&gt;20% of the business unit’s overall marketing budget and/or 160+hours of resource cost required</label>
+                                  <input class="form-check-input" type="radio" id="delivery-external3" name="delivery-external" value="3" data-format="0[.]00" data-cell="CA13">
+                                  <label class="form-check-label" for="delivery-external3">Require 2 agency / supplier / external partners to collaborate and implement </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="delivery-external4" name="delivery-external" value="5" data-format="0[.]00" data-cell="CA14">
+                                  <label class="form-check-label" for="delivery-external4">Require 3 or more agency / supplier / external partners to collaborate and implement </label>
                                 </div>
   
                                 <div class="help-block with-errors"></div>
                               </div>
+
+                              <div class="form-group validdelivery4">
+                                <label class="control-label">Longevity of activity in market</label>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" id="delivery-longevity1" name="delivery-longevity" value="1" data-format="0[.]00" data-cell="CA15">
+                                  <label class="form-check-label" for="delivery-longevity1">Hours/Days</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" id="delivery-longevity2" name="delivery-longevity" value="3" data-format="0[.]00" data-cell="CA16">
+                                  <label class="form-check-label" for="delivery-longevity2">Weeks</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" id="delivery-longevity3" name="delivery-longevity" value="5" data-format="0[.]00" data-cell="CA17">
+                                  <label class="form-check-label" for="delivery-longevity3">Month+</label>
+                                </div>
+                                <div class="help-block with-errors"></div>
+                              </div>
+
                             </div>
                           </div>
                           <div class="row">
@@ -473,17 +513,17 @@
   
                               <label class="control-label">Subtotal:</label>
                               <div class="form-group">
-                                <input class="form-control" data-cell="BaB2" data-format="0[.]00" data-formula="SUM(BaA8:BAa10)">
+                                <input class="form-control" data-cell="CB2" data-format="0[.]00" data-formula="SUM(CA11:CA17)">
                               </div>
                               
                               <label class="control-label">TOTAL:</label>
                               <div class="form-group">
-                                <input id="testTotal2" class="form-control" data-cell="Ta2" data-format="0[.]00" data-formula="SUM(BaB1:BaB2)">
+                                <input id="testTotal2" class="form-control" data-cell="T3" data-format="0[.]00" data-formula="SUM(CB1:CB2)">
                               </div>
   
                               <label class="control-label">Total of TOTALS:</label>
                               <div class="form-group">
-                                <input id="testTotalofTTotal" class="form-control" data-cell="TaT1" data-format="0[.]00" data-formula="SUM(T1a:Ta2)">
+                                <input id="testTotalofTTotal" class="form-control" data-cell="TT2" data-format="0[.]00" data-formula="SUM(T1:T3)">
                               </div>
                             </div>
                           </div>
@@ -501,12 +541,12 @@
               <div class="section slide-right" id="section-5">
                 <div class="card">
                   <div class="card-header bg-info">
-                    <h4 class="m-b-0 text-white">Delivery</h4>
+                    <h4 class="m-b-0 text-white">Last screen</h4>
                   </div>
                   <div class="card-body">
                     <div class="help-block with-errors mandatory-error"></div>    
                     <div class="form-body">
-                      <h4 class="card-title">Can we pull it off?</h4>
+                      <h4 class="card-title">Personal details</h4>
                       <hr>
                       <div class="row p-t-20">
                         <div class="col-md-6">

@@ -252,19 +252,23 @@ function previousStep3() {
 }
 
 function nextStep5() {
-    // var validreturn1 = $('input[name=return-size-result]:checked').val();
-    // var validreturn2 = $('input[name=return-measure]:checked').val();
-    // var validreturn3 = $('input[name=return-size-investment]:checked').val();
-    // if (validreturn1) $(".validreturn1 .help-block.with-errors").html('');
-    // else
-    //     $(".validreturn1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter value</li></ul>');
-    // if (validreturn2) $(".validreturn2 .help-block.with-errors").html('');
-    // else
-    //     $(".validreturn2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
-    // if (validreturn3) $(".validreturn3 .help-block.with-errors").html('');
-    // else
-    //     $(".validreturn3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
-    // if (validreturn1 && validreturn2 && validreturn3) {
+    var validdelivery1 = $('input[name=delivery-innovate]:checked').val();
+    var validdelivery2 = $('input[name=delivery-complex]:checked').val();
+    var validdelivery3 = $('input[name=delivery-external]:checked').val();
+    var validdelivery4 = $('input[name=delivery-longevity]:checked').val();
+    if (validdelivery1) $(".validdelivery1 .help-block.with-errors").html('');
+    else
+        $(".validdelivery1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter value</li></ul>');
+    if (validdelivery2) $(".validdelivery2 .help-block.with-errors").html('');
+    else
+        $(".validdelivery2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+    if (validdelivery3) $(".validdelivery3 .help-block.with-errors").html('');
+    else
+        $(".validdelivery3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+    if (validdelivery4) $(".validdelivery4 .help-block.with-errors").html('');
+    else
+        $(".validdelivery4 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+    if (validdelivery1 && validdelivery2 && validdelivery3 && validdelivery4) {
         $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
         $("#section-4 .help-block.with-errors.mandatory-error").html('');
         $("#section-4").removeClass("open");
@@ -276,13 +280,13 @@ function nextStep5() {
         $('html,body').animate({
             scrollTop: $("#QuoteForm").offset().top - 80
         }, 'slow');
-    // } else {
-    //     $("#section-4 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
-    //     $('html,body').animate({
-    //         scrollTop: $("#section-3 .help-block.with-errors.mandatory-error").offset().top - 80
-    //     }, 'slow');
-    //     sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
-    // } 
+    } else {
+        $("#section-4 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
+        $('html,body').animate({
+            scrollTop: $("#section-3 .help-block.with-errors.mandatory-error").offset().top - 80
+        }, 'slow');
+        sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
+    } 
 }
 
 function previousStep4() {
@@ -385,7 +389,7 @@ function nextStep6Fast() {
     $("#section-5").addClass("slide-left");
     $("#section-6").removeClass("slide-right");
     $("#section-6").addClass("open");
-    $(".backto4, .backto4Content").css('display', 'none');
+    $(".backto5, .backto5Content").css('display', 'none');
     $(".backto1").css('display', 'inline-block');
     $(".backto1Content").css('display', 'block');
 
