@@ -121,17 +121,26 @@ $(function() {
 
         if (total == 3) {
             $('#introexistingCreativeContainer').css('display', 'block');
+            $('#stepOneFast button').addClass('disabled');
         }
         else {
             $('#introexistingCreativeContainer').css('display', 'none');
             $('#summaryFastTrack3').css('display', 'block');
             $('#summaryFastTrack2').css('display', 'none');
+            $("#stepOne").css('display', 'none');
+            $("#stepOneFast").css('display', 'block');
+            $('#stepOneFast button').removeClass('disabled');
+
+            $('input[name=introexistingCreative]').prop('checked', false);
         }
     });
 
     $('input[name=introexistingCreative]').on('click', function() {
         var introexistingCreative = $('input[name=introexistingCreative]:checked').val();
         if (introexistingCreative == 1) {
+            $("#stepOne").css('display', 'none');
+            $("#stepOneFast").css('display', 'block');
+            $('#stepOneFast button').removeClass('disabled');
             $('#summaryFastTrack3').css('display', 'none');
             $('#summaryFastTrack2').css('display', 'block');
         }
