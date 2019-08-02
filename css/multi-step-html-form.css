@@ -2,6 +2,10 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   font-family: "Open Sans", sans-serif !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600 !important;
+}
+
 @media (min-width: 768px) {
   .card-body {
     padding: 3rem;
@@ -10,6 +14,10 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   .card-header {
     padding: 1.5rem 3rem;
   }
+}
+
+b, strong {
+  font-weight: 500;
 }
 
 .control-label {

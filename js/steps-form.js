@@ -296,7 +296,7 @@ function nextStep5() {
     else
         $(".validdelivery4 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
     if (validdelivery1 && validdelivery2 && validdelivery3 && validdelivery4) {
-        $("#progress").css('width', "60%").find(".progress-bar-text").html('60% Complete');;
+        $("#progress").css('width', "80%").find(".progress-bar-text").html('80% Complete');;
         $("#section-4 .help-block.with-errors.mandatory-error").html('');
         $("#section-4").removeClass("open");
         $("#section-4").addClass("slide-left");
@@ -317,7 +317,7 @@ function nextStep5() {
 }
 
 function previousStep4() {
-    $("#progress").css('width', "40%").find(".progress-bar-text").html('40% Complete');;
+    $("#progress").css('width', "60%").find(".progress-bar-text").html('60% Complete');;
     $("#section-4").removeClass("slide-left");
     $("#section-4").addClass("open");
     $("#section-5").removeClass("open");
