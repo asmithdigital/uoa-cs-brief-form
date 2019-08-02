@@ -40,7 +40,7 @@ document.addEventListener("touchstart", function() {}, false);
 
     function submitForm() {
         $("#mgsContactSubmit").html('').css('display', 'none');
-        $("#final-step-buttons").html('<div class="alert alert-success"> You have finished all steps of this html form successfully!!! </div>');
+        $("#final-step-buttons").html('<div class="alert alert-success h3">You have finished all steps of this html form successfully!!!</div>');
         swal("Good job!", "You have finished all steps of this html form successfully!!!", "success");
     }
     // function submitForm() {
@@ -96,10 +96,10 @@ document.addEventListener("touchstart", function() {}, false);
 
     function submitMSG(valid, msg) {
         if (valid) {
-            var msgClasses = "alert alert-success";
-            $("#final-step-buttons").html('<div class="alert alert-success"><h3>Thank you for your concern Quote Request. We will get back to you soon!</h3></div>');
+            var msgClasses = "alert alert-success h3";
+            $("#final-step-buttons").html('<div class="alert alert-success h3">Thank you for your concern Quote Request. We will get back to you soon!</div>');
         } else {
-            var msgClasses = "alert alert-danger";
+            var msgClasses = "alert alert-danger h3";
         }
         $("#mgsContactSubmit").removeClass().addClass(msgClasses).text(msg);
     }
@@ -380,7 +380,7 @@ function nextStep6() {
 
     // Hide fast scroll track button
     $(".backto5").css('display', 'inline-block');
-    $(".backto5Content").css('display', 'block');
+    $(".backto5Content").css('display', 'inline-block');
     $(".backto1, .backto1Content").css('display', 'none');
 
     // Toggle the Summary type
