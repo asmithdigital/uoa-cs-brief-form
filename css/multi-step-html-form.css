@@ -6,6 +6,10 @@
   padding: 1.5rem 3rem;
 }
 
+.control-label {
+  font-weight: 600;
+}
+ 
 html {
   /* background: #f6f9fa; */
   background: #2F3543;

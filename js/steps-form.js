@@ -130,7 +130,7 @@ $(function() {
 });
 
 function nextStep2() {
-    $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
+    $("#progress").css('width', "15%").find(".progress-bar-text").html('Step 2 of 6');
     $("#section-1 .help-block.with-errors").html('');
     $("#section-1").removeClass("open");
     $("#section-1").addClass("slide-left");
@@ -311,13 +311,8 @@ function nextStep6() {
     $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');;
 
     var testTotalofTTotal = $('#testTotalofTTotal').val();
-    var opsys = $('input[name=opsys]:checked').val();
-    var androidreqsevice = $("#androidreqsevice").val();
-    var androidreqfeatures = $("#androidreqfeatures").val();
-    var applereqsevice = $("#applereqsevice").val();
-    var applereqfeatures = $("#applereqfeatures").val();
-    var windowsreqsevice = $("#windowsreqsevice").val();
-    var windowsreqfeatures = $("#windowsreqfeatures").val();
+    
+    // Personal details data
     var probudget = $("#probudget").val();
     var priority = $('input[name=priority]:checked').val();
     var launchdate = $("#launchdate").val();
@@ -333,7 +328,9 @@ function nextStep6() {
     var preferedcontact = $('input[name=preferedcontact]:checked').val();
 
     //  Print data to summary
-    $("#testData1").html('<strong>Test Total 1:</strong> ' + testTotalofTTotal);
+    $("#testData1").html('<h1>Total: ' + testTotalofTTotal + '</h1>');
+
+    // Personal details
     $("#probudgetData").html('<strong>Project Budget:</strong> ' + probudget);
     $("#priorityData").html('<strong>priority:</strong> ' + priority);
     $("#launchdateData").html('<strong>Estimated Launch Date:</strong> ' + launchdate);

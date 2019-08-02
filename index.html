@@ -57,6 +57,7 @@
                             <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
                             
                             <p class="card-subtitle">Lorem ipsum dolor sit amet consectetur.</p>
+
                             <div class="form-group p-t-20">
                               <div class="form-check" style="margin-bottom: 1rem;">
                                 <input class="form-check-input" id="preoption1" name="preoptions" type="checkbox" value="1" data-format="0[.]00" data-cell="PA1">
@@ -71,6 +72,18 @@
                                 <label class="form-check-label" for="preoption3">Will the idea reach a high value audience (as defined in a marketing plan) for a period of time?</label>
                               </div>
                             </div>
+                            <label class="control-label" id="labelIntroexistingCreative">Is there an existing creative concept that can be leveraged</label>
+                            <div class="form-group">
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="introexistingCreative1" name="introexistingCreative" class="custom-control-input">
+                                <label class="custom-control-label" for="introexistingCreative1">Yes</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="introexistingCreative2" name="introexistingCreative" class="custom-control-input">
+                                <label class="custom-control-label" for="introexistingCreative2">No</label>
+                              </div>
+                            </div>
+                            
                           </div>
                           <div class="form-actions">
                             <div class="form-group quoteForm-step-1-fast" id="stepOneFast">
@@ -103,7 +116,7 @@
                         <div class="row p-t-20">
                           <div class="col-sm-6">    
                             <div class="form-group">
-                              <label class="control-label">Size of audience reached</label>
+                              <label class="control-label" id="labelReachAudience">Size of audience reached</label>
                               <div class="input-group validreach1">
                                 <select class="custom-select" id="reachAudience" name="test1" data-error="Please Select Reach" data-cell="AA1" data-format="0[.]00" required="">
                                   <option value="">Please select</option>
@@ -131,7 +144,7 @@
                             </div>
     
                             <div class="form-group validreach2">                                
-                              <label class="control-label">Extent to which the idea can be leveraged across UoA disciplines
+                              <label class="control-label" id="labelReachDisciplines">Extent to which the idea can be leveraged across UoA disciplines
                                 </label>
                               <div class="form-check">
                                 <input class="form-check-input" type="radio" id="reach-disciplines1" name="reach-disciplines" value="1" data-format="0[.]00" data-cell="AA2">
@@ -168,6 +181,9 @@
                               <input class="form-control" data-cell="AB1" data-format="0[.]00" data-formula="SUM(AA1:AA6)">
                             </div>
 
+                          </div>
+                          <div class="col-sm-6">
+
                             <div class="form-group validreach3">
 
                               <label class="control-label">How important and valuable is the target audience?</label>
@@ -192,17 +208,17 @@
                                 <div class="input-group">
                                   <select class="custom-select" id="reachMediaSpend" name="reach-media-spend" data-error="Please Select" data-cell="AA10" data-format="0[.]00" required="">
                                     <option value="">Please select</option>
-                                    <option value="0"> &lt;= 1000</option>
-                                    <option value="1">1001 – 2000</option>
-                                    <option value="2">2001 – 3000</option>
-                                    <option value="3">3001 – 4000</option>
-                                    <option value="4">4001 – 5000</option>
-                                    <option value="5">5001 – 6000</option>
-                                    <option value="6">6001 – 7000</option>
-                                    <option value="7">7001 – 8000</option>
-                                    <option value="8">8001 – 9000</option>
-                                    <option value="9">9001 – 10,000</option>
-                                    <option value="10">10,001 +</option>
+                                    <option value="0"> &lt;= $1000</option>
+                                    <option value="1">$1001 – $2000</option>
+                                    <option value="2">$2001 – $3000</option>
+                                    <option value="3">$3001 – $4000</option>
+                                    <option value="4">$4001 – $5000</option>
+                                    <option value="5">$5001 – $6000</option>
+                                    <option value="6">$6001 – $7000</option>
+                                    <option value="7">$7001 – $8000</option>
+                                    <option value="8">$8001 – $9000</option>
+                                    <option value="9">$9001 – $10,000</option>
+                                    <option value="10">$10,001 +</option>
                                   </select>
                                 </div>
                                 
@@ -218,6 +234,8 @@
                               <label class="control-label">Subtotal:</label>
                               <input class="form-control" data-cell="AB2" data-format="0[.]00" data-formula="SUM(AA7:AA10)">
                             </div>
+                          </div>
+                          <div class="col-sm-3">
 
                             <div class="form-group">
                               <label class="control-label">TOTAL:</label>
@@ -489,8 +507,8 @@
                                 <div class="help-block with-errors"></div>
                               </div>
 
+                              <label class="control-label">Longevity of activity in market</label>
                               <div class="form-group validdelivery4">
-                                <label class="control-label">Longevity of activity in market</label>
                                 <div class="form-check form-check-inline">
                                   <input class="form-check-input" type="radio" id="delivery-longevity1" name="delivery-longevity" value="1" data-format="0[.]00" data-cell="CA15">
                                   <label class="form-check-label" for="delivery-longevity1">Hours/Days</label>
@@ -723,55 +741,66 @@
                           <div class="backto1Content">
                             <h3 class="card-title">You didnt select a thing</h3>
                             <hr>
-                            <div class="row p-t-20">
+                            <div class="row p-t-20 m-b-40">
                               <div class="col-sm-12 col-md-6">
-                                <p>When you dont select a thing, you go straight to this screen</p>
+                                <p>When you dont select a thing, you go straight to this screen.</p>
+                                <div class="alert alert-warning">
+                                  <h3 class="text-warning"><i class="fa fa-check-circle"></i> Type 3</h3> Rapid creation & direct model
+                                </div>
+                                <div class="alert alert-info">
+                                  <h3 class="text-info"><i class="fa fa-check-circle"></i> Type 2</h3> Tactical (In-house Creative Studio)
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div class="backto5Content">
+                          <div class="backto5Contenst">
                             <h3 class="card-title">Your Summary</h3>
                             <hr>
                             <div class="row p-b-20">
                               <div class="col-sm-12 col-md-6">
-                                <h5 class="card-title m-t-20">Section One</h5>
+                                <h5 class="card-title m-t-20">Result</h5>
                                 <div class="section-info-box">
                                   <p id="testData1"></p>
-                                  <p id="osData"></p>
-                                  <p id="androidserviceData"></p>
-                                  <p id="androidreqfeaturesData"></p>
-                                  <p id="appleserviceData"></p>
-                                  <p id="applereqfeaturesData"></p>
-                                  <p id="windowsserviceData"></p>
-                                  <p id="windowsreqfeaturesData"></p>
+                                  <div class="alert alert-success">
+                                    <h3 class="text-success"><i class="fa fa-check-circle"></i> Type 1</h3> Strategic brand (Nation or specialist)
+                                  </div>
+                                  <div class="alert alert-info">
+                                    <h3 class="text-info"><i class="fa fa-check-circle"></i> Type 2</h3> Tactical (In-house Creative Studio)                                                                        
+                                  </div>
+                                  <div class="alert alert-warning">
+                                    <h3 class="text-warning"><i class="fa fa-check-circle"></i> Type 3</h3> Rapid creation & direct model
+                                  </div>
                                 </div>
-                                <h5 class="card-title m-t-20">Section Two</h5>
+                                <h5 class="card-title m-t-20">Wild Card</h5>
                                 <div class="section-info-box">
-                                  <p id="probudgetData"></p>
-                                  <p id="priorityData"></p>
-                                  <p id="launchdateData"></p>
+                                  <div class="form-group">
+                                      <label>Is there a significant force in play (internal or external to UoA)</label>
+                                      <textarea class="form-control" rows="5"></textarea>
+                                  </div>
                                 </div>
                               </div>
                               <div class="col-sm-12 col-md-6">
-                                <h5 class="card-title m-t-20">Section Three</h5>
+                                <h5 class="card-title m-t-20">Personal details</h5>
                                 <div class="section-info-box">
-                                  <p id="firstNameData"></p>
-                                  <p id="lastNameData"></p>
-                                  <p id="genderData"></p>
-                                  <p id="addressData"></p>
-                                  <p id="emailaddressData"></p>
-                                  <p id="phoneData"></p>
-                                </div>
-                                <h5 class="card-title m-t-20">Section Four</h5>
-                                <div class="section-info-box">
-                                  <p id="requirementdetailsData"></p>
-                                  <p id="additionalinfoData"></p>
-                                  <p id="preferedcontactData"></p>
+                                  <ul class="list-group">
+                                    <li class="list-group-item"><span id="probudgetData"></span></li>
+                                    <li class="list-group-item"><span id="priorityData"></span></li>
+                                    <li class="list-group-item"><span id="launchdateData"></span></li>
+                                    <li class="list-group-item"><span id="firstNameData"></span></li>
+                                    <li class="list-group-item"><span id="lastNameData"></span></li>
+                                    <li class="list-group-item"><span id="genderData"></span></li>
+                                    <li class="list-group-item"><span id="addressData"></span></li>
+                                    <li class="list-group-item"><span id="emailaddressData"></span></li>
+                                    <li class="list-group-item"><span id="phoneData"></span></li>
+                                    <li class="list-group-item"><span id="requirementdetailsData"></span></li>
+                                    <li class="list-group-item"><span id="additionalinfoData"></span></li>
+                                    <li class="list-group-item"><span id="preferedcontactData"></span></li>
+                                  </ul>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="backto5Content">
+                          <div class="backto5Contsent">
                             <p>Would you like to provide requirements details as Attachment?</p>
                             <div class="row">
                               <div class="col-md-4">
