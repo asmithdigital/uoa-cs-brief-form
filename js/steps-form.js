@@ -39,8 +39,8 @@ document.addEventListener("touchstart", function() {}, false);
     });
 
     function submitForm() {
-        $("#mgsContactSubmit").html('');
-        $("#final-step-buttons").html('<div class="h3 text-center text-success"> You have finished all steps of this html form successfully!!! </div>');
+        $("#mgsContactSubmit").html('').css('display', 'none');
+        $("#final-step-buttons").html('<div class="alert alert-success"> You have finished all steps of this html form successfully!!! </div>');
         swal("Good job!", "You have finished all steps of this html form successfully!!!", "success");
     }
     // function submitForm() {
@@ -96,10 +96,10 @@ document.addEventListener("touchstart", function() {}, false);
 
     function submitMSG(valid, msg) {
         if (valid) {
-            var msgClasses = "h3 text-center text-success";
-            $("#final-step-buttons").html('<div class="h3 text-center text-success"> Tahnk you for your concern Quote Request. We will get back to you soon!</div>');
+            var msgClasses = "alert alert-success";
+            $("#final-step-buttons").html('<div class="alert alert-success"><h3>Thank you for your concern Quote Request. We will get back to you soon!</h3></div>');
         } else {
-            var msgClasses = "h3 text-center text-danger";
+            var msgClasses = "alert alert-danger";
         }
         $("#mgsContactSubmit").removeClass().addClass(msgClasses).text(msg);
     }
