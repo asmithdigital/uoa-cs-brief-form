@@ -380,7 +380,7 @@ function nextStep6() {
 
     // Hide fast scroll track button
     $(".backto5").css('display', 'inline-block');
-    $(".backto5Content").css('display', 'inline-block');
+    $(".backto5Content").css('display', 'block');
     $(".backto1, .backto1Content").css('display', 'none');
 
     // Toggle the Summary type

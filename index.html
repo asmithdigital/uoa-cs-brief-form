@@ -19,6 +19,8 @@
     <link href="css/sweetalert.css" rel="stylesheet">
     <link href="css/multi-step-html-form.css" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
   </head>
   <body class="card-no-border">
 
@@ -107,7 +109,7 @@
                     </div>
                     <div class="card-body">
                       <div class="help-block with-errors mandatory-error"></div>
-                      <div class="form-body">
+                      <div class="form-body m-b-20">
                         <h3 class="card-title">How large is it?</h3>
                         <hr>
                         <p class="card-subtitle">This stage determines the reach of your project.</p>
@@ -164,7 +166,7 @@
                                  
                             </div>
   
-                            <div class="form-group">
+                            <div class="form-group d-none">
                               <label class="control-label">Subtotal</label>
                               <input class="form-control" data-cell="AB1" data-format="0[.]00" data-formula="SUM(AA1:AA6)">
                             </div>
@@ -214,12 +216,12 @@
                               </div>
 
 
-                            <div class="form-group">
+                            <div class="form-group d-none">
                               <label class="control-label">Subtotal:</label>
                               <input class="form-control" data-cell="AB2" data-format="0[.]00" data-formula="SUM(AA7:AA10)">
                             </div>
                           </div>
-                          <div class="col-sm-3">
+                          <div class="col-sm-3 d-none">
 
                             <div class="form-group">
                               <label class="control-label">TOTAL:</label>
@@ -247,7 +249,7 @@
                     </div>
                     <div class="card-body">
                       <div class="help-block with-errors mandatory-error"></div>
-                      <div class="form-body">
+                      <div class="form-body m-b-20">
                         <h3 class="card-title">Is it worth doing?</h3>
                         <hr>
                         <p class="card-subtitle">This stage determines the return of your project.</p>
@@ -297,7 +299,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="row">
+                        <div class="row d-none">
                           <div class="col-sm-6">
                             <div class="form-group">
                               <label class="control-label">Subtotal</label>
@@ -327,7 +329,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="row">
+                        <div class="row d-none">
                           <div class="col-sm-6">
 
                             <label class="control-label">Subtotal:</label>
@@ -365,7 +367,7 @@
                       </div>
                       <div class="card-body">
                         <div class="help-block with-errors mandatory-error"></div>
-                        <div class="form-body">
+                        <div class="form-body m-b-20">
                           <h3 class="card-title">Can we pull it off?</h3>
                           <hr>
                           <p class="card-subtitle">This stage determines the delivery of your project.</p>
@@ -405,7 +407,7 @@
                                     <label class="form-check-label" for="delivery-complex1">yes</label>
                                   </div>
                                 </div>
-                                <div class="form-group">
+                                <div>
                                   <label class="control-label">Does the project require specific resources to continue with BAU activity and manage delivery of the project?</label>
                                   <div class="form-check">
                                     <input class="form-check-input" type="radio" id="delivery-complex2" name="delivery-complex" value="0" data-format="0[.]00" data-cell="CA6">
@@ -433,7 +435,7 @@
 
                             </div>
                           </div>
-                          <div class="row">
+                          <div class="row d-none">
                             <div class="col-sm-6">
                               <div class="form-group">
                                 <label class="control-label">Subtotal</label>
@@ -485,7 +487,7 @@
 
                             </div>
                           </div>
-                          <div class="row">
+                          <div class="row d-none">
                             <div class="col-sm-6">
   
                               <label class="control-label">Subtotal:</label>
@@ -522,7 +524,7 @@
                   </div>
                   <div class="card-body">
                     <div class="help-block with-errors mandatory-error"></div>    
-                    <div class="form-body">
+                    <div class="form-body m-b-20">
                       <h3 class="card-title">Personal details</h3>
                       <hr>
                       <p class="card-subtitle">This stage determines your project personal details.</p>
@@ -697,18 +699,29 @@
                         <h2 class="m-b-0 text-white">Summary</h2>
                       </div>
                       <div class="card-body">
-                        <div class="form-body">
+                        <div class="form-body m-b-20">
                           <div class="backto1Content">
                             <h3 class="card-title">Your Summary</h3>
                             <hr>
                             <p class="card-subtitle">This is the final stage in this process.</p>
-                            <div class="row p-t-20 m-b-40">
+                            <div class="row p-t-20">
                               <div class="col-sm-12 col-md-6">
                                 <div id="summaryFastTrack3">
                                   <p>When you dont select a thing, you go straight to this screen.</p>
                                   <p><strong>Didnt select all 3</strong></p>
                                   <div class="alert alert-warning">
-                                    <h3 class="text-warning"><i class="fa fa-check-circle"></i> Type 3</h3> Rapid creation & direct model
+                                    <h3 class="text-warning"><i class="fa fa-check-circle"></i> Type 3</h3>
+                                    <p>Rapid creation & direct model</p>
+                                    <h4>Attributes:</h4>
+                                    <ul>
+                                      <li>Rapid turnaround, tactical projects</li>
+                                      <li>Refreshing or updating existing material</li>
+                                      <li>Small audiences and budget</li>
+                                      <li>Template driven recurring activity</li>
+                                      <li>Single platform or channel execution</li>
+                                      <li>Limited stakeholder involvement (empowered decision making)</li>
+                                      <li>Should not be used for extension of Type 1 initiatives. Extension of Type 2 is ok.</li>
+                                    </ul>
                                   </div>
                                 </div>
                                 <div id="summaryFastTrack2" style="display: none;">
@@ -718,6 +731,9 @@
                                     <h3 class="text-info"><i class="fa fa-check-circle"></i> Type 2</h3> Tactical (In-house Creative Studio)
                                   </div>
                                 </div>
+                              </div>
+                              <div class="col-sm-12 col-md-6">
+                                <h4>Some content</h4>
                               </div>
                             </div>
                           </div>
@@ -732,12 +748,35 @@
                                   <p id="testData1"></p>
                                   <div id="summaryTrack1" style="display: none;">
                                     <div class="alert alert-success">
-                                      <h3 class="text-success"><i class="fa fa-check-circle"></i> Type 1</h3> Strategic brand (Nation or specialist)
+                                      <h3 class="text-success"><i class="fa fa-check-circle"></i> Type 1</h3> 
+                                      <p>Strategic brand (Nation or specialist)</p>
+                                      <h4>Attributes:</h4>
+                                      <ol>
+                                        <li>Strategic value (e.g. brand building) and needs strategic or conceptual thinking</li>
+                                        <li>High importance campaigns</li>
+                                        <li>Measurable and major impact on business and marketing objectives</li>
+                                      </ol>
+                                      <h4>Usually / typically</h4>
+                                      <ul>
+                                        <li>Larger budgets with mass media component</li>
+                                        <li>Multi-channel solutions with high reach against a valuable target audience</li>
+                                        <li>High stakeholder involvement (internal and external)</li>
+                                      </ul>
                                     </div>
                                   </div>
                                   <div id="summaryTrack2" style="display: none;">
                                     <div class="alert alert-info">
-                                      <h3 class="text-info"><i class="fa fa-check-circle"></i> Type 2</h3> Tactical (In-house Creative Studio)                                                                        
+                                      <h3 class="text-info"><i class="fa fa-check-circle"></i> Type 2</h3>
+                                      <p>Tactical (In-house Creative Studio)</p>
+                                      <h4>Attributes:</h4>
+                                      <ul>
+                                        <li>Projects aimed at achieving specific response outcomes mapping to the core business and marketing objectives</li>
+                                        <li>Could be smaller, more tightly defined audience of high value</li>
+                                        <li>Extension of a Type 1 initiative</li>
+                                        <li>May still have paid media component</li>
+                                        <li>Smaller budgets</li>
+                                        <li>Any/all brand asset management, logo or VI  changes/additions, new visual devices for UoA</li>
+                                      </ul>
                                     </div>
                                   </div>
                                 </div>
@@ -771,15 +810,15 @@
                             </div>
                           </div>
                           <div class="backto5Content">
-                            <p>Would you like to provide requirements details as Attachment?</p>
                             <div class="row">
-                              <div class="col-md-4">
+                              <div class="col-md-6">
+                                <p>Would you like to provide requirements details as Attachment?</p>
                                 <div class="form-group">
                                   <div class="input-group">
                                     <!-- <div class="form-group">
                                       <label for="exampleFormControlFile1">Example file input</label>
                                       <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    </div> -->                              
+                                    </div> -->
                                     <label class="input-group-prepend input-group-btn">
                                       <span class="input-group-text btn" id="attachFile">Browse… <input id="userfile" name="userfile" type="file" multiple></span>
                                     </label>
@@ -787,21 +826,23 @@
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                              <div class="form-group">
-                                <div id="humanCheckCaptchaBox">Solve The Math</div>
-                                <div id="firstDigit">
-                                  <input name="mathfirstnum" id="mathfirstnum" class="form-control" type="text" value="7" readonly="">
-                                </div>+
-                                <div id="secondDigit">
-                                  <input name="mathsecondnum" id="mathsecondnum" class="form-control" type="text" value="4" readonly="">
-                                </div>=
-                                <input id="humanCheckCaptchaInput" name="humanCheckCaptchaInput" class="form-control" data-error="Please solve Captcha" placeholder="" required="" maxlength="3">
-                                <div class="help-block with-errors"></div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <div id="humanCheckCaptchaBox">Solve The Math</div>
+                                  <div id="firstDigit">
+                                    <input name="mathfirstnum" id="mathfirstnum" class="form-control" type="text" value="7" readonly="">
+                                  </div>+
+                                  <div id="secondDigit">
+                                    <input name="mathsecondnum" id="mathsecondnum" class="form-control" type="text" value="4" readonly="">
+                                  </div>=
+                                  <input id="humanCheckCaptchaInput" name="humanCheckCaptchaInput" class="form-control" data-error="Please solve Captcha" placeholder="" required="" maxlength="3">
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                                <p id="AggreData"><strong>Agree with terms &amp; conditions</strong> 
+                                  <input id="aggre2" name="aggre2" type="checkbox" value="1" checked="" disabled="">
+                                </p>
                               </div>
-                              <p id="AggreData"><strong>Agree with terms &amp; conditions</strong> 
-                                <input id="aggre2" name="aggre2" type="checkbox" value="1" checked="" disabled="">
-                              </p>
+                            </div>
                             <div class="hidden" id="mgsContactSubmit"></div>
                           </div>
                         </div>
