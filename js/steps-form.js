@@ -130,7 +130,7 @@ $(function() {
 });
 
 function nextStep2() {
-    $("#progress").css('width', "15%").find(".progress-bar-text").html('Step 2 of 6');
+    $("#progress").css('width', "20%").find(".progress-bar-text").html('20% Complete');
     $("#section-1 .help-block.with-errors").html('');
     $("#section-1").removeClass("open");
     $("#section-1").addClass("slide-left");
@@ -174,7 +174,7 @@ function nextStep3() {
     else
         $(".validreach4 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
     if (validreach1 && validreach2 && validreach3 && validreach4) {
-        $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');
+        $("#progress").css('width', "40%").find(".progress-bar-text").html('40% Complete');
         $("#section-2 .help-block.with-errors.mandatory-error").html('');
         $("#section-2").removeClass("open");
         $("#section-2").addClass("slide-left");
@@ -196,7 +196,7 @@ function nextStep3() {
 }
 
 function previousStep2() {
-    $("#progress").css('width', "25%").find(".progress-bar-text").html('25% Complete');
+    $("#progress").css('width', "20%").find(".progress-bar-text").html('20% Complete');
     $("#section-2").removeClass("slide-left");
     $("#section-2").addClass("open");
     $("#section-3").removeClass("open");
@@ -222,7 +222,7 @@ function nextStep4() {
     else
         $(".validreturn3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
     if (validreturn1 && validreturn2 && validreturn3) {
-        $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
+        $("#progress").css('width', "60%").find(".progress-bar-text").html('60% Complete');;
         $("#section-3 .help-block.with-errors.mandatory-error").html('');
         $("#section-3").removeClass("open");
         $("#section-3").addClass("slide-left");
@@ -243,7 +243,7 @@ function nextStep4() {
 }
 
 function previousStep3() {
-    $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
+    $("#progress").css('width', "40%").find(".progress-bar-text").html('40% Complete');;
     $("#section-3").removeClass("slide-left");
     $("#section-3").addClass("open");
     $("#section-4").removeClass("open");
@@ -273,7 +273,7 @@ function nextStep5() {
     else
         $(".validdelivery4 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
     if (validdelivery1 && validdelivery2 && validdelivery3 && validdelivery4) {
-        $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
+        $("#progress").css('width', "60%").find(".progress-bar-text").html('60% Complete');;
         $("#section-4 .help-block.with-errors.mandatory-error").html('');
         $("#section-4").removeClass("open");
         $("#section-4").addClass("slide-left");
@@ -294,7 +294,7 @@ function nextStep5() {
 }
 
 function previousStep4() {
-    $("#progress").css('width', "50%").find(".progress-bar-text").html('50% Complete');;
+    $("#progress").css('width', "40%").find(".progress-bar-text").html('40% Complete');;
     $("#section-4").removeClass("slide-left");
     $("#section-4").addClass("open");
     $("#section-5").removeClass("open");
@@ -308,7 +308,7 @@ function previousStep4() {
 
 function nextStep6() {
 
-    $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');;
+    $("#progress").css('width', "99%").find(".progress-bar-text").html('99% Complete');;
 
     var testTotalofTTotal = $('#testTotalofTTotal').val();
     
@@ -363,7 +363,7 @@ function nextStep6() {
 }
 
 function previousStep5() {
-    $("#progress").css('width', "75%").find(".progress-bar-text").html('75% Complete');;
+    $("#progress").css('width', "80%").find(".progress-bar-text").html('80% Complete');;
     $("#section-5").removeClass("slide-left");
     $("#section-5").addClass("open");
     $("#section-6").removeClass("open");
