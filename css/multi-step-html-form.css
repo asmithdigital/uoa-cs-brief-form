@@ -2,12 +2,14 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   font-family: "Open Sans", sans-serif !important;
 }
 
-.card-body {
-  padding: 3rem;
-}
+@media (min-width: 768px) {
+  .card-body {
+    padding: 3rem;
+  }
 
-.card-header {
-  padding: 1.5rem 3rem;
+  .card-header {
+    padding: 1.5rem 3rem;
+  }
 }
 
 .control-label {
