@@ -112,19 +112,32 @@ function isEmail(email) {
 
 // Toggle the fast track next button
 $(function() {
-    $("#stepOne").css('display', 'none');
     $("input[name='preoptions']").on("click", function() {
         var total = 0;
+
         $('input[name=preoptions]:checked').each(function () {
             total += +this.value;
         });
 
         if (total == 3) {
+            $('#introexistingCreativeContainer').css('display', 'block');
+        }
+        else {
+            $('#introexistingCreativeContainer').css('display', 'none');
+            $('#summaryFastTrack3').css('display', 'block');
+            $('#summaryFastTrack2').css('display', 'none');
+        }
+    });
+
+    $('input[name=introexistingCreative]').on('click', function() {
+        var introexistingCreative = $('input[name=introexistingCreative]:checked').val();
+        if (introexistingCreative == 1) {
+            $('#summaryFastTrack3').css('display', 'none');
+            $('#summaryFastTrack2').css('display', 'block');
+        }
+        else {
             $("#stepOne").css('display', 'block');
             $("#stepOneFast").css('display', 'none');
-        } else {
-            $("#stepOneFast").css('display', 'block');
-            $("#stepOne").css('display', 'none');
         }
     });
 });
@@ -360,6 +373,16 @@ function nextStep6() {
     $(".backto5").css('display', 'inline-block');
     $(".backto5Content").css('display', 'block');
     $(".backto1, .backto1Content").css('display', 'none');
+
+    // Toggle the Summary type
+    if (testTotalofTTotal < 70) {
+        $('#summaryTrack1').css('display', 'none');
+        $('#summaryTrack2').css('display', 'block');
+    }
+    else if (testTotalofTTotal >= 70) {
+        $('#summaryTrack1').css('display', 'block');
+        $('#summaryTrack2').css('display', 'none');
+    }
 }
 
 function previousStep5() {

@@ -67,15 +67,17 @@
                                 <label class="form-check-label" for="preoption3">Will the idea reach a high value audience (as defined in a marketing plan) for a period of time?</label>
                               </div>
                             </div>
-                            <label class="control-label" id="labelIntroexistingCreative">Is there an existing creative concept that can be leveraged</label>
-                            <div class="form-group">
-                              <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="introexistingCreative1" name="introexistingCreative" class="custom-control-input">
-                                <label class="custom-control-label" for="introexistingCreative1">Yes</label>
-                              </div>
-                              <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="introexistingCreative2" name="introexistingCreative" class="custom-control-input">
-                                <label class="custom-control-label" for="introexistingCreative2">No</label>
+                            <div id="introexistingCreativeContainer" style="display: none">
+                              <label class="control-label">Is there an existing creative concept that can be leveraged</label>
+                              <div class="form-group">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                  <input type="radio" id="introexistingCreative1" name="introexistingCreative" class="custom-control-input" value="1">
+                                  <label class="custom-control-label" for="introexistingCreative1">Yes</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                  <input type="radio" id="introexistingCreative2" name="introexistingCreative" class="custom-control-input" value="0">
+                                  <label class="custom-control-label" for="introexistingCreative2">No</label>
+                                </div>
                               </div>
                             </div>
                             
@@ -320,7 +322,7 @@
                                 <input class="form-check-input" type="radio" id="return-size-investment3" name="return-size-investment" value="10" data-format="0[.]00" data-cell="BA10">
                                 <label class="form-check-label" for="return-size-investment3">&gt;20% of the business unit’s overall marketing budget and/or 160+hours of resource cost required</label>
                               </div>
-                              
+
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
@@ -703,13 +705,17 @@
                             <div class="row p-t-20 m-b-40">
                               <div class="col-sm-12 col-md-6">
                                 <p>When you dont select a thing, you go straight to this screen.</p>
-                                <p><strong>Didnt select all 3</strong></p>
-                                <div class="alert alert-warning">
-                                  <h3 class="text-warning"><i class="fa fa-check-circle"></i> Type 3</h3> Rapid creation & direct model
+                                <div id="summaryFastTrack3">
+                                  <p><strong>Didnt select all 3</strong></p>
+                                  <div class="alert alert-warning">
+                                    <h3 class="text-warning"><i class="fa fa-check-circle"></i> Type 3</h3> Rapid creation & direct model
+                                  </div>
                                 </div>
-                                <p><strong>Did select existing creative</strong></p>
-                                <div class="alert alert-info">
-                                  <h3 class="text-info"><i class="fa fa-check-circle"></i> Type 2</h3> Tactical (In-house Creative Studio)
+                                <div id="summaryFastTrack2" style="display: none;">
+                                  <p><strong>Did select existing creative</strong></p>
+                                  <div class="alert alert-info">
+                                    <h3 class="text-info"><i class="fa fa-check-circle"></i> Type 2</h3> Tactical (In-house Creative Studio)
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -723,14 +729,15 @@
                                 <h5 class="card-title m-t-20">Result</h5>
                                 <div class="section-info-box">
                                   <p id="testData1"></p>
-                                  <div class="alert alert-success">
-                                    <h3 class="text-success"><i class="fa fa-check-circle"></i> Type 1</h3> Strategic brand (Nation or specialist)
+                                  <div id="summaryTrack1" style="display: none;">
+                                    <div class="alert alert-success">
+                                      <h3 class="text-success"><i class="fa fa-check-circle"></i> Type 1</h3> Strategic brand (Nation or specialist)
+                                    </div>
                                   </div>
-                                  <div class="alert alert-info">
-                                    <h3 class="text-info"><i class="fa fa-check-circle"></i> Type 2</h3> Tactical (In-house Creative Studio)                                                                        
-                                  </div>
-                                  <div class="alert alert-warning">
-                                    <h3 class="text-warning"><i class="fa fa-check-circle"></i> Type 3</h3> Rapid creation & direct model
+                                  <div id="summaryTrack2" style="display: none;">
+                                    <div class="alert alert-info">
+                                      <h3 class="text-info"><i class="fa fa-check-circle"></i> Type 2</h3> Tactical (In-house Creative Studio)                                                                        
+                                    </div>
                                   </div>
                                 </div>
                                 <h5 class="card-title m-t-20">Wild Card</h5>
