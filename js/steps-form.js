@@ -367,7 +367,7 @@ function nextStep6() {
 
     // Personal details
     $("#probudgetData").html('<strong>Project Budget:</strong> ' + probudget);
-    $("#priorityData").html('<strong>priority:</strong> ' + priority);
+    $("#priorityData").html('<strong>Priority:</strong> ' + priority);
     $("#launchdateData").html('<strong>Estimated Launch Date:</strong> ' + launchdate);
     $("#firstNameData").html('<strong>First Name:</strong> ' + fname);
     $("#lastNameData").html('<strong>Last Name:</strong> ' + lname);
