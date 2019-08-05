@@ -137,6 +137,7 @@ $(function() {
             $('#stepOneFast button').addClass('disabled');
         }
         else {
+            $("#categoryData").html('<strong>Type: 3</strong>');
             $('#introexistingCreativeContainer').css('display', 'none');
             $('#summaryFastTrack3').css('display', 'block');
             $('#summaryFastTrack2').css('display', 'none');
