@@ -111,8 +111,17 @@ function isEmail(email) {
     return regex.test(email);
 }
 
+function summaryHiddenType() {
+
+}
+
 // Toggle the fast track next button
 $(function() {
+    var firstStepInputvalue = $('#firstStep').val();
+
+    // Set initial value of Type summary on page load
+    $("#categoryData").html('<strong>Type: 3</strong>');
+
     $("input[name='preoptions']").on("click", function() {
         var total = 0;
 
@@ -121,6 +130,9 @@ $(function() {
         });
 
         if (total == 3) {
+            firstStepInputvalue = 3;
+            $("#categoryData").html('<strong>Type: 2</strong>');
+
             $('#introexistingCreativeContainer').css('display', 'block');
             $('#stepOneFast button').addClass('disabled');
         }
@@ -386,10 +398,12 @@ function nextStep6() {
 
     // Toggle the Summary type
     if (testTotalofTTotal < 70) {
+        $("#categoryData").html('<strong>Type: 2</strong> Based on score: <strong>' + testTotalofTTotal + '</strong>');
         $('#summaryTrack1').css('display', 'none');
         $('#summaryTrack2').css('display', 'block');
     }
     else if (testTotalofTTotal >= 70) {
+        $("#categoryData").html('<strong>Type: 1</strong> Based on score: <strong>' + testTotalofTTotal + '</strong>');
         $('#summaryTrack1').css('display', 'block');
         $('#summaryTrack2').css('display', 'none');
     }
@@ -409,6 +423,7 @@ function previousStep5() {
 }
 
 function nextStep6Fast() {
+
     $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');
     $("#section-1 .help-block.with-errors").html('');
     $("#section-1").removeClass("open");

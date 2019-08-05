@@ -80,6 +80,8 @@
                                 </div>
                               </div>
                             </div>
+
+                            <input class="d-none" id="firstStep" value="0">
                             
                           </div>
                           <div class="form-actions">
@@ -745,7 +747,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="backto5Content" id="output">
+                          <div class="backto5Content">
                             <h3 class="card-title">Your Summary</h3>
                             <hr>
                             <p class="card-subtitle">This is the final stage in this process.</p>
@@ -796,7 +798,11 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-6" id="output">
+                                <div class="d-none">
+                                  <h3 class="card-title">Your Summary</h3>
+                                  <h4 id="categoryData"></h4>
+                                </div>
                                 <h5 class="card-title m-t-20">Personal details</h5>
                                 <div class="section-info-box">
                                   <ul class="list-group">
