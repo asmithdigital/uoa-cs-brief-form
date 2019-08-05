@@ -20,8 +20,8 @@ document.addEventListener("touchstart", function() {}, false);
     $("#QuoteForm").validator().on("submit", function(event) {
         if (event.isDefaultPrevented()) {
             formError();
-            submitMSG(false, "Please fill in the form properly!");
-            sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
+            submitMSG(false, "Please complete all the required form fields!");
+            sweetAlert("Oops...", "Please complete all the required form fields!", "error");
         } else {
             var mathPart_1 = parseInt($("#mathfirstnum").val(), 10);
             var mathPart_2 = parseInt($("#mathsecondnum").val(), 10);
@@ -31,8 +31,8 @@ document.addEventListener("touchstart", function() {}, false);
                 event.preventDefault();
                 submitForm();
             } else {
-                submitMSG(false, "Please solve Human Captcha!!!");
-                sweetAlert("Oops...", "Please solve Human Captcha!!!", "error");
+                submitMSG(false, "Please solve math problem!");
+                sweetAlert("Oops...", "Please solve math problem!", "error");
                 return false;
             }
         }
@@ -98,7 +98,7 @@ document.addEventListener("touchstart", function() {}, false);
     function submitMSG(valid, msg) {
         if (valid) {
             var msgClasses = "alert alert-success h3";
-            $("#final-step-buttons").html('<div class="alert alert-success h3">Thank you for your concern Quote Request. We will get back to you soon!</div>');
+            $("#final-step-buttons").html('<div class="alert alert-success h3">Thank you for your Quote Request. We will get back to you soon!</div>');
         } else {
             var msgClasses = "alert alert-danger h3";
         }
@@ -186,16 +186,16 @@ function nextStep3() {
     var validreach4 = $('#reachMediaSpend').val();
     if (validreach1) $(".validreach1 .help-block.with-errors").html('');
     else
-        $(".validreach1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter Reach</li></ul>');
+        $(".validreach1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please select the size of your audience</li></ul>');
     if (validreach2) $(".validreach2 .help-block.with-errors").html('');
     else
-        $(".validreach2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+        $(".validreach2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please select an option</li></ul>');
     if (validreach3) $(".validreach3 .help-block.with-errors").html('');
     else
-        $(".validreach3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+        $(".validreach3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please select an option</li></ul>');
     if (validreach4) $(".validreach4 .help-block.with-errors").html('');
     else
-        $(".validreach4 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+        $(".validreach4 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please select paid media spend</li></ul>');
     if (validreach1 && validreach2 && validreach3 && validreach4) {
         $("#progress").css('width', "40%").find(".progress-bar-text").html('40% Complete');
         $("#section-2 .help-block.with-errors.mandatory-error").html('');
@@ -210,11 +210,11 @@ function nextStep3() {
         }, 'slow');
 
     } else {
-        $("#section-2 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
+        $("#section-2 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please complete all the required form fields</li></ul>');
         $('html,body').animate({
             scrollTop: $("#section-2 .help-block.with-errors.mandatory-error").offset().top - 80
         }, 'slow');
-        sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
+        sweetAlert("Oops...", "Please complete all the required form fields!", "error");
     } 
 }
 
@@ -237,13 +237,13 @@ function nextStep4() {
     var validreturn3 = $('input[name=return-size-investment]:checked').val();
     if (validreturn1) $(".validreturn1 .help-block.with-errors").html('');
     else
-        $(".validreturn1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter value</li></ul>');
+        $(".validreturn1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please select an option</li></ul>');
     if (validreturn2) $(".validreturn2 .help-block.with-errors").html('');
     else
-        $(".validreturn2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+        $(".validreturn2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please select an option</li></ul>');
     if (validreturn3) $(".validreturn3 .help-block.with-errors").html('');
     else
-        $(".validreturn3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+        $(".validreturn3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please select an option</li></ul>');
     if (validreturn1 && validreturn2 && validreturn3) {
         $("#progress").css('width', "60%").find(".progress-bar-text").html('60% Complete');;
         $("#section-3 .help-block.with-errors.mandatory-error").html('');
@@ -257,11 +257,11 @@ function nextStep4() {
             scrollTop: $("#QuoteForm").offset().top - 80
         }, 'slow');
     } else {
-        $("#section-3 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
+        $("#section-3 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please complete all the required form fields</li></ul>');
         $('html,body').animate({
             scrollTop: $("#section-3 .help-block.with-errors.mandatory-error").offset().top - 80
         }, 'slow');
-        sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
+        sweetAlert("Oops...", "Please complete all the required form fields!", "error");
     } 
 }
 
@@ -285,13 +285,13 @@ function nextStep5() {
     var validdelivery4 = $('input[name=delivery-longevity]:checked').val();
     if (validdelivery1) $(".validdelivery1 .help-block.with-errors").html('');
     else
-        $(".validdelivery1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter value</li></ul>');
+        $(".validdelivery1 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please select an option</li></ul>');
     if (validdelivery2) $(".validdelivery2 .help-block.with-errors").html('');
     else
-        $(".validdelivery2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please enter a value 2</li></ul>');
+        $(".validdelivery2 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please select an option</li></ul>');
     if (validdelivery3) $(".validdelivery3 .help-block.with-errors").html('');
     else
-        $(".validdelivery3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
+        $(".validdelivery3 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please select an option</li></ul>');
     if (validdelivery4) $(".validdelivery4 .help-block.with-errors").html('');
     else
         $(".validdelivery4 .help-block.with-errors").html('<ul class="list-unstyled"><li>Please Select one option</li></ul>');
@@ -308,11 +308,11 @@ function nextStep5() {
             scrollTop: $("#QuoteForm").offset().top - 80
         }, 'slow');
     } else {
-        $("#section-4 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please Fill the Form Properly</li></ul>');
+        $("#section-4 .help-block.with-errors.mandatory-error").html('<ul class="list-unstyled"><li>Please complete all the required form fields</li></ul>');
         $('html,body').animate({
             scrollTop: $("#section-3 .help-block.with-errors.mandatory-error").offset().top - 80
         }, 'slow');
-        sweetAlert("Oops...", "Please fill in the form properly!!!", "error");
+        sweetAlert("Oops...", "Please complete all the required form fields!", "error");
     } 
 }
 

@@ -146,6 +146,8 @@ body {
   top: 5px;
   position: relative;
   /* max-height: 24px; */
+  display: inline-block;
+  font-weight: 600;
 }
 
 .form-group .help-block ul li::after {
