@@ -73,15 +73,11 @@ document.addEventListener("touchstart", function() {}, false);
 
         $.ajax({
             type: "POST",
-            url: "/pages/success",
+            url: "https://mgsdemo.mgscoder.com/mgscode/multi-step-form/quote-cond-multifile-attached.php",
             data: form_data,
             processData: false,
             contentType: false,
             success: function(text) {
-                
-                console.log(text);
-
-
                 if (text === "success") {
                     formSuccess();
                 } else {
@@ -95,6 +91,7 @@ document.addEventListener("touchstart", function() {}, false);
             }
         });
     }
+    
     $(document).on('change', ':file', function() {
         var input = $(this),
             numFiles = input.get(0).files ? input.get(0).files.length : 1,
