@@ -63,15 +63,15 @@ document.addEventListener("touchstart", function() {}, false);
                 body: new URLSearchParams(formData).toString()
             })
             .then(res => {
-            if (res) {
-                console.log(res);
+                if (res) {
+                    console.log(res);
 
-                // M.toast({
-                //     html: 'Thank you for your submission!',
-                //     classes: 'pulse'
-                // });
-            }
-        //     });
+                    // M.toast({
+                    //     html: 'Thank you for your submission!',
+                    //     classes: 'pulse'
+                    // });
+                }
+            });
         // });
 
         // var $form = $("#QuoteForm");
