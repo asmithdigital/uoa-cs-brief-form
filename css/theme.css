@@ -3037,7 +3037,7 @@ body .jqstooltip {
 }
 
 .custom-select {
-    background: url(/images/custom-select.png) right 0.75rem center no-repeat
+    background: url(../images/custom-select.png) right 0.75rem center no-repeat
 }
 
 textarea {
