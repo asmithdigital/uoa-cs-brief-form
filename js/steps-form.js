@@ -38,62 +38,62 @@ document.addEventListener("touchstart", function() {}, false);
         }
     });
 
-    function devsubmitForm() {
+    function submitForm() {
         $("#mgsContactSubmit").html('').css('display', 'none');
         $("#final-step-buttons").html('<div class="alert alert-success h3">You have finished all steps of this html form successfully!!!</div>');
         swal("Good job!", "You have finished all steps of this html form successfully!!!", "success");
         $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');
     }
-    function submitForm() {
+    function prodsubmitForm() {
         var form_data = new FormData($("#QuoteForm")[0]);
         form_data.append('file', form_data);
         $('#loading-image').show();
         $('#final-step-buttons').hide();
 
         // https://www.youtube.com/watch?v=ykrupgQgmkA
-        let testForm = document.querySelector("#QuoteForm");              
-        const formData = new FormData(testForm);
-        fetch(testForm.getAttribute('action'), {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-            },
-            body: new URLSearchParams(formData).toString()
-        })
-        .then(response => {
-            if (response.status == 200) {
-                console.log(response);
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false, response);
-            }
-        });
-
-        // $.ajax({
-        //     type: "POST",
-        //     url: "/pages/success",
-        //     data: form_data,
-        //     processData: false,
-        //     contentType: false,
-        //     success: function(text) {
-                
-        //         console.log(text);
-
-
-        //         if (text === "success") {
-        //             formSuccess();
-        //         } else {
-        //             formError();
-        //             submitMSG(false, text);
-        //         }
+        // let testForm = document.querySelector("#QuoteForm");              
+        // const formData = new FormData(testForm);
+        // fetch(testForm.getAttribute('action'), {
+        //     method: 'POST',
+        //     headers: {
+        //         'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+        //         'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
         //     },
-        //     complete: function() {
-        //         $('#loading-image').hide();
-        //         $('#final-step-buttons').show();
+        //     body: new URLSearchParams(formData).toString()
+        // })
+        // .then(response => {
+        //     if (response.status == 200) {
+        //         console.log(response);
+        //         formSuccess();
+        //     } else {
+        //         formError();
+        //         submitMSG(false, response);
         //     }
         // });
+
+        $.ajax({
+            type: "POST",
+            url: "/pages/success",
+            data: form_data,
+            processData: false,
+            contentType: false,
+            success: function(text) {
+                
+                console.log(text);
+
+
+                if (text === "success") {
+                    formSuccess();
+                } else {
+                    formError();
+                    submitMSG(false, text);
+                }
+            },
+            complete: function() {
+                $('#loading-image').hide();
+                $('#final-step-buttons').show();
+            }
+        });
     }
     $(document).on('change', ':file', function() {
         var input = $(this),
