@@ -51,7 +51,7 @@ document.addEventListener("touchstart", function() {}, false);
         $('#final-step-buttons').hide();
 
         // var $form = $(this);
-        $.post('/#page-wrapper', form_data.serialize()).then(function() {
+        $.post('/#page-wrapper', function() {
             alert("Thank you!");
         });
 
