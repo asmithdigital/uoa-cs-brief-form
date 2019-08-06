@@ -64,11 +64,11 @@ document.addEventListener("touchstart", function() {}, false);
             })
             .then(response => {
                 if (response.status == 200) {
-                    console.log(res);
+                    console.log(response);
                     formSuccess();
                 } else {
                     formError();
-                    submitMSG(false, res);
+                    submitMSG(false, response);
                 }
             });
         // });
