@@ -50,8 +50,8 @@ document.addEventListener("touchstart", function() {}, false);
         $('#loading-image').show();
         $('#final-step-buttons').hide();
 
-        // var $form = $(this);
-        $.post('/#page-wrapper', function() {
+        var $form = $("#QuoteForm")[0];
+        $.post($form.attr("action"), $form.serialize()).then(function() {
             alert("Thank you!");
         });
 
