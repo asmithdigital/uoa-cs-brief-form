@@ -47,31 +47,33 @@ document.addEventListener("touchstart", function() {}, false);
     function submitForm() {
         var form_data = new FormData($("#QuoteForm")[0]);
         form_data.append('file', form_data);
-
-        console.log(form_data);
-
         $('#loading-image').show();
         $('#final-step-buttons').hide();
-        $.ajax({
-            type: "POST",
-            url: "/pages/success",
-            data: form_data,
-            processData: false,
-            contentType: false,
-            success: function(text) {
-                if (text === "success") {
-                    formSuccess();
-                } else {
-                    formError();
-                    console.log(text);
-                    submitMSG(false, text);
-                }
-            },
-            complete: function() {
-                $('#loading-image').hide();
-                $('#final-step-buttons').show();
-            }
+
+        // var $form = $(this);
+        $.post('/#page-wrapper', form_data.serialize()).then(function() {
+            alert("Thank you!");
         });
+
+        // $.ajax({
+        //     type: "POST",
+        //     url: "/pages/success",
+        //     data: form_data,
+        //     processData: false,
+        //     contentType: false,
+        //     success: function(text) {
+        //         if (text === "success") {
+        //             formSuccess();
+        //         } else {
+        //             formError();
+        //             submitMSG(false, text);
+        //         }
+        //     },
+        //     complete: function() {
+        //         $('#loading-image').hide();
+        //         $('#final-step-buttons').show();
+        //     }
+        // });
     }
     $(document).on('change', ':file', function() {
         var input = $(this),
