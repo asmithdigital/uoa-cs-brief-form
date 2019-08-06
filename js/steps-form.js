@@ -50,8 +50,8 @@ document.addEventListener("touchstart", function() {}, false);
         $('#loading-image').show();
         $('#final-step-buttons').hide();
 
-        let testForm = document.querySelector("#QuoteForm");      
-        
+        // https://www.youtube.com/watch?v=ykrupgQgmkA
+        let testForm = document.querySelector("#QuoteForm");              
         const formData = new FormData(testForm);
         fetch(testForm.getAttribute('action'), {
             method: 'POST',
