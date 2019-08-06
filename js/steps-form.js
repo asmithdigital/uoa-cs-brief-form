@@ -38,13 +38,13 @@ document.addEventListener("touchstart", function() {}, false);
         }
     });
 
-    function submitForm() {
+    function devsubmitForm() {
         $("#mgsContactSubmit").html('').css('display', 'none');
         $("#final-step-buttons").html('<div class="alert alert-success h3">You have finished all steps of this html form successfully!!!</div>');
         swal("Good job!", "You have finished all steps of this html form successfully!!!", "success");
         $("#progress").css('width', "100%").find(".progress-bar-text").html('100% Complete');
     }
-    function prodsubmitForm() {
+    function submitForm() {
         var form_data = new FormData($("#QuoteForm")[0]);
         form_data.append('file', form_data);
         $('#loading-image').show();
