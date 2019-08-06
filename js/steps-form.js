@@ -62,14 +62,13 @@ document.addEventListener("touchstart", function() {}, false);
                 },
                 body: new URLSearchParams(formData).toString()
             })
-            .then(res => {
-                if (res) {
+            .then(response => {
+                if (response.status == 200) {
                     console.log(res);
-
-                    // M.toast({
-                    //     html: 'Thank you for your submission!',
-                    //     classes: 'pulse'
-                    // });
+                    formSuccess();
+                } else {
+                    formError();
+                    submitMSG(false, res);
                 }
             });
         // });
