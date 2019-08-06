@@ -63,6 +63,7 @@ document.addEventListener("touchstart", function() {}, false);
                     formSuccess();
                 } else {
                     formError();
+                    console.log(text);
                     submitMSG(false, text);
                 }
             },
