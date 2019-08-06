@@ -50,10 +50,39 @@ document.addEventListener("touchstart", function() {}, false);
         $('#loading-image').show();
         $('#final-step-buttons').hide();
 
-        var $form = $("#QuoteForm")[0];
-        $.post($form.attr("action"), $form.serialize()).then(function() {
-            alert("Thank you!");
-        });
+        let testForm = document.querySelector("#QuoteForm");      
+        // testForm.addEventListener('submit', e => {
+        //     e.preventDefault();
+            const formData = new FormData(testForm);
+            fetch(testForm.getAttribute('action'), {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(res => {
+            if (res) {
+                console.log(res);
+
+                // M.toast({
+                //     html: 'Thank you for your submission!',
+                //     classes: 'pulse'
+                // });
+            }
+        //     });
+        // });
+
+        // var $form = $("#QuoteForm");
+        // console.log($form.attr("action"));
+        // $.post($form.attr("action"), $form.serialize()).then(function() {
+        //     alert("Thank you!");
+        // });
+
+        // $.post( "ajax/test.html", function( data ) {
+        //     $( ".result" ).html( data );
+        // });
 
         // $.ajax({
         //     type: "POST",
@@ -62,6 +91,10 @@ document.addEventListener("touchstart", function() {}, false);
         //     processData: false,
         //     contentType: false,
         //     success: function(text) {
+                
+        //         console.log(text);
+
+
         //         if (text === "success") {
         //             formSuccess();
         //         } else {
